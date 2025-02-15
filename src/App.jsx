@@ -1104,6 +1104,15 @@ function App() {
                     <i className="fab fa-facebook-f"></i>
                   </a>
                 </li>
+                <li className="list-inline-item me-3">
+                  <a
+                    title="Explorer Instagram Profile"
+                    className="text-black"
+                    href="https://www.instagram.com/ba_digital_07/"
+                  >
+                    <i className="fab fa-instagram"></i>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
