@@ -3,15 +3,8 @@ export default function Header() {
     <header className="navigation bg-tertiary">
       <nav className="navbar navbar-expand-xl navbar-light text-center py-3">
         <div className="container">
-          <a className="navbar-brand" href="index.html">
-            <img
-              loading="prelaod"
-              decoding="async"
-              className="img-fluid"
-              width="160"
-              src="images/logo.png"
-              alt="Wallet"
-            />
+          <a className="navbar-brand" href="/">
+            <b>BA</b> <i style={{ fontSize: "22px" }}>Digital</i>
           </a>
           <button
             className="navbar-toggler"

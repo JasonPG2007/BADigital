@@ -266,10 +266,10 @@ function App() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">01</span>
-                  <h3 className="mb-3 service-title">Personal loans</h3>
+                  <h3 className="mb-3 service-title">Cơ bản</h3>
                   <p className="mb-0 service-description">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod
+                    Website 1 trang đơn giản, responsive, có form liên hệ và bàn
+                    giao mã nguồn. Hoàn thành từ 3 - 5 ngày.
                   </p>
                 </div>
               </a>
@@ -279,10 +279,10 @@ function App() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">02</span>
-                  <h3 className="mb-3 service-title">Home Equity Loans</h3>
+                  <h3 className="mb-3 service-title">Tiêu chuẩn</h3>
                   <p className="mb-0 service-description">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod
+                    Website 3 - 5 trang, thiết kế tùy chỉnh, tích hợp Google
+                    Map, chuẩn SEO cơ bản. Hoàn thành trong 5 - 7 ngày.
                   </p>
                 </div>
               </a>
@@ -292,10 +292,10 @@ function App() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">03</span>
-                  <h3 className="mb-3 service-title">Student Loans</h3>
+                  <h3 className="mb-3 service-title">Cao cấp</h3>
                   <p className="mb-0 service-description">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod
+                    Website chuyên nghiệp, quản lý nhân sự, SEO nâng cao. Hoàn
+                    thành trong 7 - 14 ngày.
                   </p>
                 </div>
               </a>
@@ -305,10 +305,11 @@ function App() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">04</span>
-                  <h3 className="mb-3 service-title">Mortgage Loans</h3>
+                  <h3 className="mb-3 service-title">Nâng cao</h3>
                   <p className="mb-0 service-description">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod
+                    Website bán hàng hoặc doanh nghiệp với giỏ hàng, thanh toán
+                    online, UI/UX chuyên nghiệp, SEO nâng cao. Hoàn thành trong
+                    10 - 15 ngày.
                   </p>
                 </div>
               </a>
@@ -318,10 +319,11 @@ function App() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">05</span>
-                  <h3 className="mb-3 service-title">Payday Loans</h3>
+                  <h3 className="mb-3 service-title">Chuyên nghiệp</h3>
                   <p className="mb-0 service-description">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod
+                    Website cao cấp, CMS mạnh mẽ, đa ngôn ngữ, tích hợp API &
+                    tính năng tùy chỉnh. Hỗ trợ SEO toàn diện. Hoàn thành trong
+                    14 - 30 ngày.
                   </p>
                 </div>
               </a>
@@ -338,19 +340,19 @@ function App() {
                 <p className="text-primary text-uppercase fw-bold mb-3">
                   Về chúng tôi
                 </p>
-                <h1>Fast Funding &amp; A Flexible Payment</h1>
+                <h1>Giá Cả Linh Hoạt & Thanh Toán Dễ Dàng</h1>
                 <div className="lead mb-0 mt-4">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Consv allis quam aliquet integer eget magna ullam corper
-                    intesager vulutate aenean nunc quis a urna morbi id vitae.
-                    Vulpuate nisl
+                    Chúng tôi cung cấp các gói dịch vụ với mức giá linh hoạt,
+                    phù hợp với mọi nhu cầu. Quy trình thanh toán đơn giản,
+                    nhanh chóng và minh bạch, giúp bạn dễ dàng sở hữu một
+                    website chuyên nghiệp mà không gặp trở ngại.
                   </p>
                   <p>
-                    sed morbi sit ut placerat eges aeftas et. Pellen tesque
-                    tristisque magnis augue gravida pulvinar placerat. Tellus
-                    massa pretra scelerisque leo. In volutpat arcu nunc nisl et,
-                    viverra faucisfbus
+                    Chúng tôi cam kết mang đến giải pháp tối ưu, giúp bạn tiết
+                    kiệm chi phí nhưng vẫn đảm bảo chất lượng. Với đội ngũ giàu
+                    kinh nghiệm, chúng tôi luôn sẵn sàng hỗ trợ để bạn có được
+                    website hoàn hảo nhất.
                   </p>
                 </div>{" "}
                 <a className="btn btn-primary mt-4" href="about.html">
@@ -727,10 +729,10 @@ function App() {
                 <p className="text-primary text-uppercase fw-bold mb-3">
                   Website
                 </p>
-                <h1 className="mb-4">Được 1,2K+ Người Tin Dùng</h1>
+                <h1 className="mb-4">Hơn 1,2K+ Người Tin Dùng</h1>
                 <p className="lead mb-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing. egestas
-                  cursus pellentesque dignissim dui, congue. Vel etiam ut
+                  Chúng tôi tự hào mang đến dịch vụ chất lượng, giúp hàng nghìn
+                  khách hàng xây dựng website chuyên nghiệp và hiệu quả.
                 </p>
               </div>
             </div>
@@ -953,6 +955,28 @@ function App() {
             />
           </svg>
         </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: "30px",
+          }}
+        >
+          <a
+            type="button"
+            className="btn btn-primary"
+            href="/"
+            data-bs-toggle="modal"
+            data-bs-target="#applyLoan"
+          >
+            Tất cả đánh giá{" "}
+            <span
+              style={{ fontSize: "14px" }}
+              className="ms-2 fas fa-arrow-right"
+            ></span>
+          </a>
+        </div>
       </section>
 
       <footer className="section-sm bg-tertiary">
@@ -963,19 +987,19 @@ function App() {
                 <h5 className="mb-4 text-primary font-secondary">Dịch vụ</h5>
                 <ul className="list-unstyled">
                   <li className="mb-2">
-                    <a href="service-details.html">Personal loans</a>
+                    <a href="service-details.html">Cơ bản</a>
                   </li>
                   <li className="mb-2">
-                    <a href="service-details.html">Home Equity Loans</a>
+                    <a href="service-details.html">Tiêu chuẩn</a>
                   </li>
                   <li className="mb-2">
-                    <a href="service-details.html">Student Loans</a>
+                    <a href="service-details.html">Cao cấp</a>
                   </li>
                   <li className="mb-2">
-                    <a href="service-details.html">Mortgage Loans</a>
+                    <a href="service-details.html">Nâng cao</a>
                   </li>
                   <li className="mb-2">
-                    <a href="service-details.html">Payday Loans</a>
+                    <a href="service-details.html">Chuyên nghiệp</a>
                   </li>
                 </ul>
               </div>
@@ -985,16 +1009,16 @@ function App() {
                 <h5 className="mb-4 text-primary font-secondary">Giới thiệu</h5>
                 <ul className="list-unstyled">
                   <li className="mb-2">
-                    <a href="#!">Benefits</a>
+                    <a href="#!">Lợi ích</a>
                   </li>
                   <li className="mb-2">
-                    <a href="#!">Careers</a>
+                    <a href="#!">Chuyên nghành</a>
                   </li>
                   <li className="mb-2">
                     <a href="#!">Our Story</a>
                   </li>
                   <li className="mb-2">
-                    <a href="#!">Team</a>
+                    <a href="#!">Đội ngũ</a>
                   </li>
                 </ul>
               </div>
@@ -1013,44 +1037,33 @@ function App() {
               </div>
             </div>
             <div className="col-lg-4 col-md-12 newsletter-htmlForm">
-              <div style={{ backgroundColor: "#F4F4F4", padding: "35px" }}>
+              <div style={{ padding: "35px" }}>
                 <h5 className="mb-4 text-primary font-secondary">Đăng ký</h5>
                 <div className="pe-0 pe-xl-5">
-                  <htmlForm
-                    action="#!"
+                  <form
+                    action=""
                     method="post"
                     name="mc-embedded-subscribe-htmlForm"
-                    target="_blank"
                   >
                     <div className="input-group mb-3">
                       <input
                         type="text"
                         className="htmlForm-control shadow-none bg-white border-end-0"
                         placeholder="Địa chỉ email"
+                        required
                       />
                       <span className="input-group-text border-0 p-0">
                         <button
                           className="input-group-text border-0 bg-primary"
-                          type="submit"
                           name="subscribe"
                           aria-label="Subscribe htmlFor Newsletter"
                           title="Gửi"
                         >
-                          <i className="fas fa-arrow-right"></i>
+                          <i className="fa-solid fa-paper-plane"></i>
                         </button>
                       </span>
                     </div>
-                    <div
-                      style={{ position: "absolute", left: "-5000px" }}
-                      aria-hidden="true"
-                    >
-                      <input
-                        type="text"
-                        name="b_463ee871f45d2d93748e77cad_a0a2c6d074"
-                        tabIndex="-1"
-                      />
-                    </div>
-                  </htmlForm>
+                  </form>
                 </div>
                 <p className="mb-0">
                   Chúng tôi sẽ phản hồi sớm nhất có thể để hỗ trợ bạn về dịch vụ
@@ -1061,15 +1074,9 @@ function App() {
           </div>
           <div className="row-custom align-items-center mt-5 text-center text-md-start">
             <div className="col-lg-4">
-              <a href="index.html">
-                <img
-                  loading="prelaod"
-                  decoding="async"
-                  className="img-fluid"
-                  width="160"
-                  src="images/logo.png"
-                  alt="Wallet"
-                />
+              <a href="/" style={{ color: "black" }}>
+                <b style={{ fontSize: "34px", marginRight: "5px" }}>BA</b>{" "}
+                <i style={{ fontSize: "22px" }}>Digital</i>
               </a>
             </div>
             <div className="col-lg-4 col-md-6 mt-4 mt-lg-0">
