@@ -7,19 +7,16 @@ import UnderConstruction from "../pages/UnderConstruction";
 
 export default function routes() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/BADigital">
       <Routes>
+        <Route path="/*" element={<UnderConstruction></UnderConstruction>} />
+        <Route path="/" element={<Home></Home>} />
         <Route
-          path="BADigital/*"
-          element={<UnderConstruction></UnderConstruction>}
-        />
-        <Route path="BADigital/" element={<Home></Home>} />
-        <Route
-          path="BADigital/service-detail"
+          path="/service-detail"
           element={<ServiceDetail></ServiceDetail>}
         />
-        <Route path="BADigital/services" element={<Services></Services>} />
-        <Route path="BADigital/contact" element={<Contact></Contact>} />
+        <Route path="/services" element={<Services></Services>} />
+        <Route path="/contact" element={<Contact></Contact>} />
         {/* <Route path="BADigital/how-to-work" element={<HowItWork></HowItWork>} /> */}
       </Routes>
     </BrowserRouter>
