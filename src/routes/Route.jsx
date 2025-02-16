@@ -7,7 +7,7 @@ import UnderConstruction from "../pages/UnderConstruction";
 
 export default function routes() {
   return (
-    <BrowserRouter basename="/BADigital">
+    <BrowserRouter>
       <Routes>
         <Route path="/*" element={<UnderConstruction></UnderConstruction>} />
         <Route path="/" element={<Home></Home>} />
