@@ -21,27 +21,27 @@ export default function Header() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" href="index.html">
+                <a className="nav-link" href="/">
                   Trang chủ
                 </a>
               </li>
               <li className="nav-item ">
-                <a className="nav-link" href="about.html">
+                <a className="nav-link" href="about">
                   Giới thiệu
                 </a>
               </li>
               <li className="nav-item ">
-                <a className="nav-link" href="how-it-works.html">
+                <a className="nav-link" href="how-it-works">
                   Cách hoạt động
                 </a>
               </li>
               <li className="nav-item ">
-                <a className="nav-link" href="services.html">
+                <a className="nav-link" href="services">
                   Dịch vụ
                 </a>
               </li>
               <li className="nav-item ">
-                <a className="nav-link" href="contact.html">
+                <a className="nav-link" href="contact">
                   Liên hệ
                 </a>
               </li>
@@ -60,11 +60,6 @@ export default function Header() {
                   <li>
                     <a className="dropdown-item " href="blog.html">
                       Blog
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item " href="service-details.html">
-                      Chi tiết dịch vụ
                     </a>
                   </li>
                   <li>
