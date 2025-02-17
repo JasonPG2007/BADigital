@@ -10548,8 +10548,17 @@ textarea.form-control {
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
+  /* filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2)); */
+  animation: updown 2s infinite ease-in-out;
 }
 .message-btn i {
   font-size: 50px;
+}
+@keyframes updown {
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
