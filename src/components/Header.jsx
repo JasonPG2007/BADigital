@@ -1,6 +1,24 @@
+import { useEffect, useState } from "react";
+
 export default function Header() {
+  const [isSticky, setIsSticky] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <header className="navigation bg-tertiary">
+    <header className={`navigation bg-tertiary ${isSticky ? "sticky" : ""}`}>
       <nav className="navbar navbar-expand-xl navbar-light text-center py-3">
         <div className="container">
           <a className="navbar-brand" href="/">
