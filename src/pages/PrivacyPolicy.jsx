@@ -107,80 +107,150 @@ export default function PrivacyPolicy() {
 
       <section className="section-sm">
         <div className="container">
-          <div className="row">
+          <div className="row-custom">
             <div className="col-lg-10 mx-auto">
               <div className="content">
-                <h3 id="application-processing">Xử Lý Đơn Đăng Ký</h3>
-                <p>
-                  You are most welcome to share our themes with your
-                  clients/friends, but please share our license with them so
-                  that they can be aware of our copyrights.
-                </p>
-                <h3 id="intellectual-property-rights">
-                  Intellectual Property Rights
+                <h3 id="application-processing">
+                  Xử lý yêu cầu dịch vụ & triển khai dự án
                 </h3>
                 <ul>
                   <li>
-                    You cannot remove the copyright link to Gethugothemes
-                    without buying the license.
+                    <p>
+                      Chúng tôi cam kết cung cấp dịch vụ thiết kế và phát triển
+                      website/app chuyên nghiệp, đáp ứng nhu cầu cụ thể của từng
+                      khách hàng. Quy trình xử lý yêu cầu và triển khai dự án
+                      được thực hiện theo các bước sau:
+                    </p>
                   </li>
                   <li>
-                    You have the right to use the themes for personal and
-                    commercial project(s).
+                    <p>
+                      Tiếp nhận yêu cầu – Khách hàng gửi yêu cầu về website/app
+                      mong muốn, bao gồm chức năng, giao diện và các yêu cầu đặc
+                      biệt.
+                    </p>
                   </li>
                   <li>
-                    You cannot resell, redistribute, or sub-license any of
-                    Gethugothemes’s themes.
+                    <p>
+                      Phân tích & tư vấn – Đội ngũ chuyên gia sẽ đánh giá nhu
+                      cầu, tư vấn giải pháp tối ưu và đề xuất lộ trình triển
+                      khai phù hợp.
+                    </p>
                   </li>
                   <li>
-                    You can host Gethugothemes’s template to your website with
-                    full author credit
+                    <p>
+                      Lên kế hoạch – Sau khi thống nhất yêu cầu, chúng tôi sẽ
+                      xây dựng kế hoạch chi tiết.
+                    </p>
                   </li>
                   <li>
-                    You are most welcome to share our themes with your
-                    clients/friends, but please share our license with them so
-                    that they can be aware of our copyrights.
+                    <p>
+                      Thiết kế & phát triển – Website/app sẽ được thiết kế
+                      UI/UX, lập trình và kiểm thử để đảm bảo chất lượng tốt
+                      nhất.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Bàn giao & vận hành – Sau khi hoàn thiện, sản phẩm sẽ được
+                      bàn giao kèm theo hướng dẫn sử dụng, hỗ trợ kỹ thuật và
+                      bảo trì theo từng dịch vụ.
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  Chúng tôi luôn đặt bảo mật thông tin khách hàng và bản quyền
+                  sản phẩm lên hàng đầu. Nếu bạn chia sẻ dịch vụ của chúng tôi
+                  với đối tác hoặc bạn bè, vui lòng đảm bảo rằng họ nắm rõ chính
+                  sách sử dụng để bảo vệ quyền lợi của cả hai bên.
+                </p>
+                <h3 id="intellectual-property-rights">
+                  Thu thập thông tin khách hàng
+                </h3>
+                <ul>
+                  <li>
+                    <h5>
+                      Chúng tôi có thể thu thập các loại thông tin sau từ khách
+                      hàng:
+                    </h5>
+                  </li>
+                  <li>
+                    <p>
+                      Thông tin cá nhân: Họ tên, số điện thoại, email, địa chỉ.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Thông tin thanh toán: Số tài khoản, phương thức thanh toán
+                      (không lưu trữ thông tin thẻ).
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Dữ liệu sử dụng dịch vụ: Lịch sử yêu cầu, trao đổi, phản
+                      hồi từ khách hàng.
+                    </p>
                   </li>
                 </ul>
                 <h3 id="the-use-of-the-information">
-                  The Use of the Information
+                  Mục đích sử dụng thông tin
                 </h3>
                 <ul>
                   <li>
-                    You cannot remove the copyright link to Gethugothemes
-                    without buying the license.
+                    <p>
+                      Tư vấn, thiết kế, phát triển website/app theo yêu cầu.
+                    </p>
                   </li>
                   <li>
-                    Themefisher is not responsible for you not receiving your
-                    Theme/Template if you to provide a order to understand valid
-                    email or for technical issues outside our control.
+                    <p>
+                      Hỗ trợ, bảo trì, nâng cấp sản phẩm trong quá trình sử
+                      dụng.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Gửi thông báo, chính sách, chương trình khuyến mãi (nếu
+                      khách hàng đồng ý).
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Đảm bảo tuân thủ quy định pháp luật và hợp đồng dịch vụ.
+                    </p>
                   </li>
                 </ul>
-                <h3 id="what-services-we-render">What Services We Render</h3>
-                <p>
-                  We collect certain identifying personal data when you sign up
-                  to our Service such as your , email address, PayPal address
-                  (if different from email address), and telephone number. The
-                  personal data we collect you is disclosed only in accordance
-                  with our Terms of Service and/or this Privacy Policy.Conclude
-                  collects Slack account and access information from Users for
-                  the purposes of connecting to and the Slack API and to
-                  authenticate to information on
-                </p>
+                <h3 id="what-services-we-render">
+                  Chia sẻ và bảo mật thông tin
+                </h3>
                 <ul>
                   <li>
-                    You cannot remove the copyright link to Gethugothemes
-                    without buying the license.
+                    Chúng tôi cam kết bảo mật thông tin khách hàng, không bán
+                    hoặc chia sẻ cho bên thứ ba ngoài phạm vi dịch vụ.
                   </li>
                   <li>
-                    Themefisher is not responsible for you not receiving your
-                    Theme/Template if you fail to provide a valid email or for
-                    technical issues outside our control.
+                    Thông tin có thể được chia sẻ với đối tác kỹ thuật (nếu cần)
+                    để triển khai dự án và Cơ quan pháp luật khi có yêu cầu hợp
+                    lệ.
+                  </li>
+                </ul>
+                <h3 id="what-services-we-render">Quyền của khách hàng</h3>
+                <ul>
+                  <li>
+                    Truy cập, chỉnh sửa hoặc yêu cầu xóa thông tin cá nhân.
+                  </li>
+                  <li>Yêu cầu ngừng nhận thông báo tiếp thị.</li>
+                  <li>Đề nghị giải thích về việc sử dụng dữ liệu cá nhân.</li>
+                </ul>
+                <h3 id="what-services-we-render">
+                  Thời gian lưu trữ thông tin
+                </h3>
+                <ul>
+                  <li>
+                    Thông tin khách hàng được lưu trữ trong suốt quá trình sử
+                    dụng dịch vụ và tối đa 5 năm sau khi ngừng hợp tác.
                   </li>
                   <li>
-                    You are most welcome to share our themes with your
-                    clients/friends, but please share our license with them so
-                    that they can be aware of our copyrights.
+                    Khách hàng có thể yêu cầu xóa dữ liệu trước thời hạn bằng
+                    cách liên hệ với chúng tôi.
                   </li>
                 </ul>
               </div>
