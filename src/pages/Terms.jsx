@@ -1,4 +1,4 @@
-export default function Contact() {
+export default function Terms() {
   return (
     <>
       <section className="page-header bg-tertiary">

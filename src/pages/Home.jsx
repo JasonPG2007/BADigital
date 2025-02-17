@@ -137,7 +137,7 @@ function Home() {
                 <a
                   type="button"
                   className="btn btn-primary"
-                  href="#popular-website"
+                  href="services"
                   data-bs-toggle="modal"
                   data-bs-target="#applyLoan"
                 >
@@ -277,7 +277,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details.html">
+              <a className="text-black" href="service-details">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">02</span>
@@ -290,7 +290,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details.html">
+              <a className="text-black" href="service-details">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">03</span>
@@ -303,7 +303,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details.html">
+              <a className="text-black" href="service-details">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">04</span>
@@ -317,7 +317,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details.html">
+              <a className="text-black" href="service-details">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">05</span>
@@ -366,7 +366,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details.html">
+              <a className="text-black" href="service-details">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">02</span>
@@ -379,7 +379,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details.html">
+              <a className="text-black" href="service-details">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">03</span>
@@ -426,7 +426,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details.html">
+              <a className="text-black" href="service-details">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">02</span>
@@ -438,7 +438,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details.html">
+              <a className="text-black" href="service-details">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">03</span>
@@ -450,7 +450,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details.html">
+              <a className="text-black" href="service-details">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">04</span>

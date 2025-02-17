@@ -4,6 +4,9 @@ import ServiceDetail from "../pages/ServiceDetail";
 import Services from "../pages/Services";
 import Contact from "../pages/Contact";
 import UnderConstruction from "../pages/UnderConstruction";
+import HowItWork from "../pages/HowItWork";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import Terms from "../pages/Terms";
 
 export default function routes() {
   return (
@@ -17,7 +20,12 @@ export default function routes() {
         />
         <Route path="/services" element={<Services></Services>} />
         <Route path="/contact" element={<Contact></Contact>} />
-        {/* <Route path="BADigital/how-to-work" element={<HowItWork></HowItWork>} /> */}
+        <Route path="/how-to-work" element={<HowItWork></HowItWork>} />
+        <Route
+          path="/privacy-policy"
+          element={<PrivacyPolicy></PrivacyPolicy>}
+        />
+        <Route path="/terms" element={<Terms></Terms>} />
       </Routes>
     </BrowserRouter>
   );

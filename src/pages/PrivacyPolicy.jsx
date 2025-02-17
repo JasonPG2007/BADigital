@@ -1,20 +1,22 @@
-export default function Contact() {
+export default function PrivacyPolicy() {
   return (
     <>
       <section className="page-header bg-tertiary">
         <div className="container">
           <div className="row">
             <div className="col-8 mx-auto text-center">
-              <h2 className="mb-3 text-capitalize">Liên hệ chúng tôi</h2>
+              <h2 className="mb-3 text-capitalize">
+                Quyền riêng tư &amp; Chính sách
+              </h2>
               <ul
                 className="list-inline breadcrumbs text-capitalize"
                 style={{ fontWeight: "500" }}
               >
                 <li className="list-inline-item">
-                  <a href="/">Trang chủ</a>
+                  <a href="index.html">Trang chủ</a>
                 </li>
                 <li className="list-inline-item">
-                  / &nbsp; <a href="contact">Liên hệ</a>
+                  / &nbsp; <a href="privacy-policy.html">Chính sách bảo mật</a>
                 </li>
               </ul>
             </div>
@@ -103,111 +105,84 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section-sm">
         <div className="container">
-          <div className="row justify-content-center align-items-center">
-            <div className="col-lg-6">
-              <div className="section-title text-center">
-                <p className="text-primary text-uppercase fw-bold mb-3">
-                  Liên hệ với chúng tôi
-                </p>
-                <h1>Bạn quan tâm về điều gì?</h1>
+          <div className="row">
+            <div className="col-lg-10 mx-auto">
+              <div className="content">
+                <h3 id="application-processing">Xử Lý Đơn Đăng Ký</h3>
                 <p>
-                  Chúng tôi luôn sẵn sàng hỗ trợ bạn trong việc phát triển
-                  website và ứng dụng. Liên hệ ngay để nhận tư vấn và giải đáp
-                  thắc mắc
+                  You are most welcome to share our themes with your
+                  clients/friends, but please share our license with them so
+                  that they can be aware of our copyrights.
                 </p>
-              </div>
-            </div>
-            <div className="col-lg-10">
-              <div className="shadow rounded p-5 bg-white">
-                <div className="row-custom">
-                  <div className="col-12 mb-4">
-                    <h4>Để Lại Lời Nhắn</h4>
-                  </div>
-                  <div className="col-lg-6">
-                    <div className="contact-form">
-                      <form action="">
-                        <div className="form-group mb-4 pb-2">
-                          <label htmlFor="contact_name" className="form-label">
-                            Tên đầy đủ
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control shadow-none"
-                            id="contact_name"
-                            required
-                          />
-                        </div>
-                        <div className="form-group mb-4 pb-2">
-                          <label htmlFor="contact_email" className="form-label">
-                            Địa chỉ Email
-                          </label>
-                          <input
-                            type="email"
-                            className="form-control shadow-none"
-                            id="contact_email"
-                            required
-                          />
-                        </div>
-                        <div className="form-group mb-4 pb-2">
-                          <label
-                            htmlFor="contact_message"
-                            className="form-label"
-                          >
-                            Tin nhắn
-                          </label>
-                          <textarea
-                            className="form-control shadow-none"
-                            id="contact_message"
-                            rows="3"
-                            required
-                          ></textarea>
-                        </div>
-                        <button className="btn btn-primary w-100">
-                          Gửi tin nhắn
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mt-5 mt-lg-0">
-                    <div className="contact-info">
-                      <div className="block mt-0">
-                        <h4 className="h5">Vẫn câu hỏi?</h4>
-                        <div className="content">
-                          Chúng tôi sẵn sàn hỗ trợ bất kỳ lúc nào
-                          <br /> <a href="tel:+3301563965">+3301563965</a>
-                          <br />
-                          Thứ 2 - Chủ Nhật
-                          <br />
-                          7AM - 11:30PM Giờ khu vực Georgia tại US
-                        </div>
-                      </div>
-                      <div className="block">
-                        <ul className="list-unstyled list-inline my-4 social-icons">
-                          <li className="list-inline-item me-3">
-                            <a
-                              title="Explorer Facebook Profile"
-                              className="text-black"
-                              href="https://www.facebook.com/profile.php?id=61572892182086"
-                            >
-                              <i className="fab fa-facebook-f"></i>
-                            </a>
-                          </li>
-                          <li className="list-inline-item me-3">
-                            <a
-                              title="Explorer Instagram Profile"
-                              className="text-black"
-                              href="https://www.instagram.com/ba_digital_07/"
-                            >
-                              <i className="fab fa-instagram"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <h3 id="intellectual-property-rights">
+                  Intellectual Property Rights
+                </h3>
+                <ul>
+                  <li>
+                    You cannot remove the copyright link to Gethugothemes
+                    without buying the license.
+                  </li>
+                  <li>
+                    You have the right to use the themes for personal and
+                    commercial project(s).
+                  </li>
+                  <li>
+                    You cannot resell, redistribute, or sub-license any of
+                    Gethugothemes’s themes.
+                  </li>
+                  <li>
+                    You can host Gethugothemes’s template to your website with
+                    full author credit
+                  </li>
+                  <li>
+                    You are most welcome to share our themes with your
+                    clients/friends, but please share our license with them so
+                    that they can be aware of our copyrights.
+                  </li>
+                </ul>
+                <h3 id="the-use-of-the-information">
+                  The Use of the Information
+                </h3>
+                <ul>
+                  <li>
+                    You cannot remove the copyright link to Gethugothemes
+                    without buying the license.
+                  </li>
+                  <li>
+                    Themefisher is not responsible for you not receiving your
+                    Theme/Template if you to provide a order to understand valid
+                    email or for technical issues outside our control.
+                  </li>
+                </ul>
+                <h3 id="what-services-we-render">What Services We Render</h3>
+                <p>
+                  We collect certain identifying personal data when you sign up
+                  to our Service such as your , email address, PayPal address
+                  (if different from email address), and telephone number. The
+                  personal data we collect you is disclosed only in accordance
+                  with our Terms of Service and/or this Privacy Policy.Conclude
+                  collects Slack account and access information from Users for
+                  the purposes of connecting to and the Slack API and to
+                  authenticate to information on
+                </p>
+                <ul>
+                  <li>
+                    You cannot remove the copyright link to Gethugothemes
+                    without buying the license.
+                  </li>
+                  <li>
+                    Themefisher is not responsible for you not receiving your
+                    Theme/Template if you fail to provide a valid email or for
+                    technical issues outside our control.
+                  </li>
+                  <li>
+                    You are most welcome to share our themes with your
+                    clients/friends, but please share our license with them so
+                    that they can be aware of our copyrights.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

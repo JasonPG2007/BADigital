@@ -58,32 +58,32 @@ export default function Header() {
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item " href="blog.html">
+                    <a className="dropdown-item " href="blog">
                       Blog
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item " href="faq.html">
+                    <a className="dropdown-item " href="faqs">
                       FAQs
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item " href="terms.html">
+                    <a className="dropdown-item " href="terms">
                       Điều khoản &amp; Điều kiện
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item " href="privacy-policy.html">
-                      Quyền riêng tư &amp; Chính sách
+                    <a className="dropdown-item " href="privacy-policy">
+                      Chính sách bảo mật
                     </a>
                   </li>
                 </ul>
               </li>
             </ul>
-            <a href="#!" className="btn btn-outline-primary">
+            <a href="sign-in" className="btn btn-outline-primary">
               Đăng nhập
             </a>
-            <a href="#!" className="btn btn-primary ms-2 ms-lg-3">
+            <a href="sign-up" className="btn btn-primary ms-2 ms-lg-3">
               Đăng ký
             </a>
           </div>

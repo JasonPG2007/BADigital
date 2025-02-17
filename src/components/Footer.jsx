@@ -20,7 +20,7 @@ export default function Footer() {
                   <a href="how-to-work">Cách hoạt động</a>
                 </li>
                 <li className="mb-2">
-                  <a href="FAQs">FAQs</a>
+                  <a href="faqs">FAQs</a>
                 </li>
               </ul>
             </div>
@@ -30,13 +30,13 @@ export default function Footer() {
               <h5 className="mb-4 text-primary font-secondary">Giới thiệu</h5>
               <ul className="list-unstyled">
                 <li className="mb-2">
-                  <a href="#!">Lợi ích</a>
+                  <a href="about/#benefit">Lợi ích</a>
                 </li>
                 <li className="mb-2">
-                  <a href="#!">Chuyên nghành</a>
+                  <a href="about/#major">Chuyên nghành</a>
                 </li>
                 <li className="mb-2">
-                  <a href="#!">Đội ngũ</a>
+                  <a href="about/#team">Đội ngũ</a>
                 </li>
               </ul>
             </div>
@@ -46,10 +46,7 @@ export default function Footer() {
               <h5 className="mb-4 text-primary font-secondary">Hỗ trợ</h5>
               <ul className="list-unstyled">
                 <li className="mb-2">
-                  <a href="contact.html">Liên hệ chúng tôi</a>
-                </li>
-                <li className="mb-2">
-                  <a href="faq.html">FAQs</a>
+                  <a href="contact">Liên hệ chúng tôi</a>
                 </li>
               </ul>
             </div>
@@ -100,12 +97,12 @@ export default function Footer() {
           <div className="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <ul className="list-unstyled list-inline mb-0 text-lg-center">
               <li className="list-inline-item me-4">
-                <a className="text-black" href="privacy-policy.html">
+                <a className="text-black" href="privacy-policy">
                   Chính sách bảo mật
                 </a>
               </li>
               <li className="list-inline-item me-4">
-                <a className="text-black" href="terms.html">
+                <a className="text-black" href="terms">
                   Điều khoản &amp; Điều kiện
                 </a>
               </li>

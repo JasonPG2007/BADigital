@@ -138,7 +138,7 @@ export default function Services() {
                 <p className="mb-4">Website & Ứng dụng (App)</p>{" "}
                 <a
                   className="btn btn-sm btn-outline-primary"
-                  href="service-details.html"
+                  href="service-detail"
                 >
                   Xem chi tiết{" "}
                   <span
@@ -158,9 +158,13 @@ export default function Services() {
                 <p className="mb-4">Website & Ứng dụng (App)</p>{" "}
                 <a
                   className="btn btn-sm btn-outline-primary"
-                  href="service-details.html"
+                  href="service-detail"
                 >
-                  Xem chi tiết <i className="las la-arrow-right ms-1"></i>
+                  Xem chi tiết{" "}
+                  <span
+                    style={{ fontSize: "14px" }}
+                    className="ms-2 fas fa-arrow-right"
+                  ></span>
                 </a>
               </div>
             </div>
@@ -174,9 +178,13 @@ export default function Services() {
                 <p className="mb-4">Website</p>{" "}
                 <a
                   className="btn btn-sm btn-outline-primary"
-                  href="service-details.html"
+                  href="service-detail"
                 >
-                  Xem chi tiết <i className="las la-arrow-right ms-1"></i>
+                  Xem chi tiết{" "}
+                  <span
+                    style={{ fontSize: "14px" }}
+                    className="ms-2 fas fa-arrow-right"
+                  ></span>
                 </a>
               </div>
             </div>
@@ -190,9 +198,13 @@ export default function Services() {
                 <p className="mb-4">Website</p>{" "}
                 <a
                   className="btn btn-sm btn-outline-primary"
-                  href="service-details.html"
+                  href="service-detail?si="
                 >
-                  View Details <i className="las la-arrow-right ms-1"></i>
+                  Xem chi tiết{" "}
+                  <span
+                    style={{ fontSize: "14px" }}
+                    className="ms-2 fas fa-arrow-right"
+                  ></span>
                 </a>
               </div>
             </div>

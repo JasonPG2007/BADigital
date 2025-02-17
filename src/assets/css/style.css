@@ -10481,3 +10481,12 @@ textarea.htmlForm-control {
   display: flex;
   flex-wrap: wrap;
 }
+.waiting {
+  animation: rotate 1.3s infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
