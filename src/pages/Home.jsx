@@ -264,7 +264,7 @@ function Home() {
               </div>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details">
+              <a className="text-black" href="service-detail">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">01</span>
@@ -277,7 +277,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details">
+              <a className="text-black" href="service-detail">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">02</span>
@@ -290,7 +290,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details">
+              <a className="text-black" href="service-detail">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">03</span>
@@ -303,7 +303,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details">
+              <a className="text-black" href="service-detail">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">04</span>
@@ -317,7 +317,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details">
+              <a className="text-black" href="service-detail">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">05</span>
@@ -353,7 +353,7 @@ function Home() {
               </div>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details">
+              <a className="text-black" href="service-detail">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">01</span>
@@ -366,7 +366,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details">
+              <a className="text-black" href="service-detail">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">02</span>
@@ -379,7 +379,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details">
+              <a className="text-black" href="service-detail">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">03</span>
@@ -414,7 +414,7 @@ function Home() {
               </div>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details">
+              <a className="text-black" href="service-detail">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">01</span>
@@ -426,7 +426,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details">
+              <a className="text-black" href="service-detail">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">02</span>
@@ -438,7 +438,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details">
+              <a className="text-black" href="service-detail">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">03</span>
@@ -450,7 +450,7 @@ function Home() {
               </a>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="service-details">
+              <a className="text-black" href="service-detail">
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">04</span>
