@@ -8,19 +8,19 @@ export default function Footer() {
               <h5 className="mb-4 text-primary font-secondary">Trang</h5>
               <ul className="list-unstyled">
                 <li className="mb-2">
-                  <a href="services">Dịch vụ</a>
+                  <a href="/services">Dịch vụ</a>
                 </li>
                 <li className="mb-2">
-                  <a href="contact">Liên hệ</a>
+                  <a href="/contact">Liên hệ</a>
                 </li>
                 <li className="mb-2">
-                  <a href="about">Giới thiệu</a>
+                  <a href="/about">Giới thiệu</a>
                 </li>
                 <li className="mb-2">
-                  <a href="how-to-work">Cách hoạt động</a>
+                  <a href="/how-to-work">Cách hoạt động</a>
                 </li>
                 <li className="mb-2">
-                  <a href="faqs">FAQs</a>
+                  <a href="/faqs">FAQs</a>
                 </li>
               </ul>
             </div>
@@ -30,13 +30,13 @@ export default function Footer() {
               <h5 className="mb-4 text-primary font-secondary">Giới thiệu</h5>
               <ul className="list-unstyled">
                 <li className="mb-2">
-                  <a href="about/#benefit">Lợi ích</a>
+                  <a href="/about/#benefit">Lợi ích</a>
                 </li>
                 <li className="mb-2">
-                  <a href="about/#major">Chuyên nghành</a>
+                  <a href="/about/#major">Chuyên nghành</a>
                 </li>
                 <li className="mb-2">
-                  <a href="about/#team">Đội ngũ</a>
+                  <a href="/about/#team">Đội ngũ</a>
                 </li>
               </ul>
             </div>
@@ -46,7 +46,7 @@ export default function Footer() {
               <h5 className="mb-4 text-primary font-secondary">Hỗ trợ</h5>
               <ul className="list-unstyled">
                 <li className="mb-2">
-                  <a href="contact">Liên hệ chúng tôi</a>
+                  <a href="/contact">Liên hệ chúng tôi</a>
                 </li>
               </ul>
             </div>
@@ -97,12 +97,12 @@ export default function Footer() {
           <div className="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <ul className="list-unstyled list-inline mb-0 text-lg-center">
               <li className="list-inline-item me-4">
-                <a className="text-black" href="privacy-policy">
+                <a className="text-black" href="/privacy-policy">
                   Chính sách bảo mật
                 </a>
               </li>
               <li className="list-inline-item me-4">
-                <a className="text-black" href="terms">
+                <a className="text-black" href="/terms">
                   Điều khoản &amp; Điều kiện
                 </a>
               </li>
@@ -123,7 +123,7 @@ export default function Footer() {
                 <a
                   title="Explorer Instagram Profile"
                   className="text-black"
-                  href="https://www.instagram.com/ba_digital_07/"
+                  href="https://www.instagram.com/badigitalwebapp/"
                 >
                   <i className="fab fa-instagram"></i>
                 </a>

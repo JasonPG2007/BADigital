@@ -7,6 +7,7 @@ import UnderConstruction from "../pages/UnderConstruction";
 import HowItWork from "../pages/HowItWork";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import Terms from "../pages/Terms";
+import About from "../pages/About";
 
 export default function routes() {
   return (
@@ -26,6 +27,7 @@ export default function routes() {
           element={<PrivacyPolicy></PrivacyPolicy>}
         />
         <Route path="/terms" element={<Terms></Terms>} />
+        <Route path="/about" element={<About></About>} />
       </Routes>
     </BrowserRouter>
   );

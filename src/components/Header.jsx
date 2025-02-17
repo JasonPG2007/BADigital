@@ -26,22 +26,22 @@ export default function Header() {
                 </a>
               </li>
               <li className="nav-item ">
-                <a className="nav-link" href="about">
+                <a className="nav-link" href="/about">
                   Giới thiệu
                 </a>
               </li>
               <li className="nav-item ">
-                <a className="nav-link" href="how-it-works">
+                <a className="nav-link" href="/how-it-works">
                   Cách hoạt động
                 </a>
               </li>
               <li className="nav-item ">
-                <a className="nav-link" href="services">
+                <a className="nav-link" href="/services">
                   Dịch vụ
                 </a>
               </li>
               <li className="nav-item ">
-                <a className="nav-link" href="contact">
+                <a className="nav-link" href="/contact">
                   Liên hệ
                 </a>
               </li>
@@ -58,32 +58,32 @@ export default function Header() {
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item " href="blog">
+                    <a className="dropdown-item " href="/blog">
                       Blog
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item " href="faqs">
+                    <a className="dropdown-item " href="/faqs">
                       FAQs
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item " href="terms">
+                    <a className="dropdown-item " href="/terms">
                       Điều khoản &amp; Điều kiện
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item " href="privacy-policy">
+                    <a className="dropdown-item " href="/privacy-policy">
                       Chính sách bảo mật
                     </a>
                   </li>
                 </ul>
               </li>
             </ul>
-            <a href="sign-in" className="btn btn-outline-primary">
+            <a href="/sign-in" className="btn btn-outline-primary">
               Đăng nhập
             </a>
-            <a href="sign-up" className="btn btn-primary ms-2 ms-lg-3">
+            <a href="/sign-up" className="btn btn-primary ms-2 ms-lg-3">
               Đăng ký
             </a>
           </div>
