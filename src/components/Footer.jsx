@@ -51,32 +51,42 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          <div className="col-lg-4 col-md-12 newsletter-htmlForm">
+          <div className="col-lg-4 col-md-12 newsletter-form">
             <div style={{ padding: "35px" }}>
               <h5 className="mb-4 text-primary font-secondary">Đăng ký</h5>
               <div className="pe-0 pe-xl-5">
                 <form
-                  action=""
+                  action="#!"
                   method="post"
-                  name="mc-embedded-subscribe-htmlForm"
+                  name="mc-embedded-subscribe-form"
+                  target="_blank"
                 >
                   <div className="input-group mb-3">
                     <input
                       type="text"
-                      className="htmlForm-control shadow-none bg-white border-end-0"
+                      className="form-control shadow-none bg-white border-end-0"
                       placeholder="Địa chỉ email"
-                      required
-                    />
+                    />{" "}
                     <span className="input-group-text border-0 p-0">
                       <button
                         className="input-group-text border-0 bg-primary"
+                        type="submit"
                         name="subscribe"
-                        aria-label="Subscribe htmlFor Newsletter"
-                        title="Gửi"
+                        aria-label="Subscribe for Newsletter"
                       >
-                        <i className="fa-solid fa-paper-plane"></i>
+                        <i className="fas fa-arrow-right"></i>
                       </button>
                     </span>
+                  </div>
+                  <div
+                    style={{ position: "absolute", left: "-5000px" }}
+                    aria-hidden="true"
+                  >
+                    <input
+                      type="text"
+                      name="b_463ee871f45d2d93748e77cad_a0a2c6d074"
+                      tabIndex="-1"
+                    />
                   </div>
                 </form>
               </div>
@@ -90,8 +100,13 @@ export default function Footer() {
         <div className="row-custom align-items-center mt-5 text-center text-md-start">
           <div className="col-lg-4">
             <a href="/" style={{ color: "black" }}>
-              <b style={{ fontSize: "34px", marginRight: "5px" }}>BA</b>{" "}
-              <i style={{ fontSize: "22px" }}>Digital</i>
+              <img
+                loading="preload"
+                decoding="async"
+                width="200"
+                src="/images/Logo.png"
+                alt="Ảnh logo"
+              ></img>
             </a>
           </div>
           <div className="col-lg-4 col-md-6 mt-4 mt-lg-0">

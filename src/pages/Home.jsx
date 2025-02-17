@@ -1,122 +1,6 @@
-import "../assets/plugins/slick/slick.css";
-import "../assets/plugins/font-awesome/fontawesome.min.css";
-import "../assets/plugins/font-awesome/brands.css";
-import "../assets/plugins/font-awesome/solid.css";
-import "../assets/css/style.css";
-
 function Home() {
   return (
     <div>
-      <div
-        className="modal applyLoanModal fade"
-        id="applyLoan"
-        tabIndex="-1"
-        aria-labelledby="applyLoanLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-dialog-centered">
-          <div className="modal-content">
-            <div className="modal-header border-bottom-0">
-              <h4 className="modal-title" id="exampleModalLabel">
-                How much do you need?
-              </h4>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div className="modal-body">
-              <htmlForm action="#!" method="post">
-                <div className="row">
-                  <div className="col-lg-6 mb-4 pb-2">
-                    <div className="htmlForm-group">
-                      <label htmlFor="loan_amount" className="htmlForm-label">
-                        Amount
-                      </label>
-                      <input
-                        type="number"
-                        className="htmlForm-control shadow-none"
-                        id="loan_amount"
-                        placeholder="ex: 25000"
-                      />
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mb-4 pb-2">
-                    <div className="htmlForm-group">
-                      <label
-                        htmlFor="loan_how_long_htmlFor"
-                        className="htmlForm-label"
-                      >
-                        How long htmlFor?
-                      </label>
-                      <input
-                        type="number"
-                        className="htmlForm-control shadow-none"
-                        id="loan_how_long_htmlFor"
-                        placeholder="ex: 12"
-                      />
-                    </div>
-                  </div>
-                  <div className="col-lg-12 mb-4 pb-2">
-                    <div className="htmlForm-group">
-                      <label
-                        htmlFor="loan_repayment"
-                        className="htmlForm-label"
-                      >
-                        Repayment
-                      </label>
-                      <input
-                        type="number"
-                        className="htmlForm-control shadow-none"
-                        id="loan_repayment"
-                        disabled
-                      />
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mb-4 pb-2">
-                    <div className="htmlForm-group">
-                      <label
-                        htmlFor="loan_full_name"
-                        className="htmlForm-label"
-                      >
-                        Full Name
-                      </label>
-                      <input
-                        type="text"
-                        className="htmlForm-control shadow-none"
-                        id="loan_full_name"
-                      />
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mb-4 pb-2">
-                    <div className="htmlForm-group">
-                      <label
-                        htmlFor="loan_email_address"
-                        className="htmlForm-label"
-                      >
-                        Email address
-                      </label>
-                      <input
-                        type="email"
-                        className="htmlForm-control shadow-none"
-                        id="loan_email_address"
-                      />
-                    </div>
-                  </div>
-                  <div className="col-lg-12">
-                    <button type="submit" className="btn btn-primary w-100">
-                      Get Your Loan Now
-                    </button>
-                  </div>
-                </div>
-              </htmlForm>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <section className="banner bg-tertiary position-relative overflow-hidden">
         <div className="container">
           <div className="row-custom align-items-center justify-content-center">
@@ -134,14 +18,8 @@ function Home() {
                   Việc còn lại là chọn lựa gói phù hợp nhất cho bạn – nhanh
                   chóng và chuyên nghiệp
                 </p>
-                <a
-                  type="button"
-                  className="btn btn-primary"
-                  href="/services"
-                  data-bs-toggle="modal"
-                  data-bs-target="#applyLoan"
-                >
-                  Đặt Ngay{" "}
+                <a className="btn btn-primary" href="/services">
+                  Khám phá Ngay{" "}
                   <span
                     style={{ fontSize: "14px" }}
                     className="ms-2 fas fa-arrow-right"
@@ -570,93 +448,6 @@ function Home() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
-          <div className="row-custom align-items-center justify-content-between">
-            <div className="col-lg-5">
-              <div className="section-title">
-                <p className="text-primary text-uppercase fw-bold mb-3">
-                  Sự khác biệt của chúng tôi
-                </p>
-                <h1>Lý do chúng tôi nổi bật?</h1>
-                <div className="content mb-0 mt-4">
-                  <p>
-                    Chúng tôi cung cấp dịch vụ thiết kế website chuyên nghiệp,
-                    tối ưu hiệu suất và giao diện đẹp mắt. Quy trình làm việc
-                    linh hoạt, đảm bảo chất lượng và tiến độ nhanh chóng. Đội
-                    ngũ giàu kinh nghiệm của chúng tôi luôn sẵn sàng hỗ trợ,
-                    giúp khách hàng phát triển doanh nghiệp hiệu quả.
-                  </p>
-                  <p>
-                    Chúng tôi cam kết mang đến những giải pháp tối ưu, giúp
-                    website của bạn không chỉ thu hút mà còn nâng cao giá trị
-                    kinh doanh.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="difference-of-us-item p-3 rounded mr-0 me-lg-4">
-                <div className="d-block d-sm-flex align-items-center m-2">
-                  <div className="icon me-4 mb-4 mb-sm-0">
-                    {" "}
-                    <i
-                      className="fas fa-shield-alt mt-4"
-                      style={{ fontSize: "36px" }}
-                    ></i>
-                  </div>
-                  <div className="block">
-                    <h3 className="mb-3">Nhanh & Quá Trình An Toàn</h3>
-                    <p className="mb-0">
-                      Chúng tôi cam kết mang đến dịch vụ thiết kế website nhanh
-                      gọn, quy trình rõ ràng, bảo mật thông tin tuyệt đối cho
-                      khách hàng.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="difference-of-us-item p-3 rounded mr-0 me-lg-4">
-                <div className="d-block d-sm-flex align-items-center m-2">
-                  <div className="icon me-4 mb-4 mb-sm-0">
-                    {" "}
-                    <i
-                      className="fas fa-blender-phone mt-4"
-                      style={{ fontSize: "36px" }}
-                    ></i>
-                  </div>
-                  <div className="block">
-                    <h3 className="mb-3">Phản Hồi Nhanh</h3>
-                    <p className="mb-0">
-                      Chúng tôi luôn sẵn sàng giải đáp mọi thắc mắc của bạn về
-                      dịch vụ thiết kế website một cách nhanh chóng và chính xác
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="difference-of-us-item p-3 rounded mr-0 me-lg-4">
-                <div className="d-block d-sm-flex align-items-center m-2">
-                  <div className="icon me-4 mb-4 mb-sm-0">
-                    {" "}
-                    <i
-                      className="fas fa-globe mt-4"
-                      style={{ fontSize: "36px" }}
-                    ></i>
-                  </div>
-                  <div className="block">
-                    <h3 className="mb-3">Website Chuyên Nghiệp, Nhanh Chóng</h3>
-                    <p className="mb-0">
-                      Dịch vụ thiết kế website của chúng tôi giúp bạn có website
-                      chất lượng, nhanh chóng và phù hợp với nhu cầu kinh doanh
-                      của bạn.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="homepage_tab position-relative">
         <div className="section container">
           <div className="row justify-content-center">
@@ -669,6 +460,54 @@ function Home() {
               </div>
             </div>
             <div className="col-lg-10">
+              <ul
+                className="payment_info_tab nav nav-pills justify-content-center mb-4"
+                id="pills-tab"
+                role="tablist"
+              >
+                <li className="nav-item m-2" role="presentation">
+                  {" "}
+                  <a
+                    className="nav-link btn btn-outline-primary effect-none text-dark active"
+                    id="pills-how-much-can-i-recive-tab"
+                    data-bs-toggle="pill"
+                    href="#pills-how-much-can-i-recive"
+                    role="tab"
+                    aria-controls="pills-how-much-can-i-recive"
+                    aria-selected="true"
+                  >
+                    Tôi có thể nhận được gì?
+                  </a>
+                </li>
+                <li className="nav-item m-2" role="presentation">
+                  {" "}
+                  <a
+                    className="nav-link btn btn-outline-primary effect-none text-dark "
+                    id="pills-how-much-does-it-costs-tab"
+                    data-bs-toggle="pill"
+                    href="#pills-how-much-does-it-costs"
+                    role="tab"
+                    aria-controls="pills-how-much-does-it-costs"
+                    aria-selected="true"
+                  >
+                    Giá cả như thế nào?
+                  </a>
+                </li>
+                <li className="nav-item m-2" role="presentation">
+                  {" "}
+                  <a
+                    className="nav-link btn btn-outline-primary effect-none text-dark "
+                    id="pills-how-do-i-repay-tab"
+                    data-bs-toggle="pill"
+                    href="#pills-how-do-i-repay"
+                    role="tab"
+                    aria-controls="pills-how-do-i-repay"
+                    aria-selected="true"
+                  >
+                    Thanh toán như thế nào?
+                  </a>
+                </li>
+              </ul>
               <div
                 className="rounded shadow bg-white p-5 tab-content"
                 id="pills-tabContent"
@@ -679,18 +518,22 @@ function Home() {
                   role="tabpanel"
                   aria-labelledby="pills-how-much-can-i-recive-tab"
                 >
-                  <div className="row-custom align-items-center">
+                  <div className="row align-items-center">
                     <div className="col-md-6 order-1 order-md-0">
                       <div className="content-block">
-                        <h3 className="mb-4">Giá Cả Linh Hoạt & Phù Hợp</h3>
+                        <h3 className="mb-4">Tôi Có Thể Nhận Được Gì?</h3>
                         <div className="content">
                           <p>
-                            Chúng tôi cung cấp các gói dịch vụ với mức giá linh
-                            hoạt, phù hợp với nhu cầu và ngân sách của từng
-                            khách hàng. Mỗi gói đều được thiết kế để mang lại
-                            giá trị tối ưu nhất, giúp bạn phát triển website
-                            hiệu quả. Quy trình thanh toán đơn giản, đảm bảo sự
-                            minh bạch và thuận tiện cho khách hàng.
+                            Khi sử dụng dịch vụ của chúng tôi, bạn sẽ nhận được
+                            sự hỗ trợ tận tâm và giải pháp tối ưu cho nhu cầu
+                            của mình. Chúng tôi cam kết mang lại giá trị bền
+                            vững, giúp bạn tiết kiệm thời gian và chi phí, đồng
+                            thời đạt được kết quả tốt nhất.
+                          </p>
+                          <p>
+                            Với đội ngũ chuyên nghiệp, bạn có thể yên tâm về
+                            chất lượng và hiệu quả mà dịch vụ của chúng tôi mang
+                            lại.
                           </p>
                         </div>
                       </div>
@@ -717,18 +560,18 @@ function Home() {
                   <div className="row align-items-center">
                     <div className="col-md-6 order-1 order-md-0">
                       <div className="content-block">
-                        <h3 className="mb-4">How Much Does It Costs?</h3>
+                        <h3 className="mb-4">Giá Cả Như Thế Nào?</h3>
                         <div className="content">
                           <p>
-                            Lorem ipsum dolor sit amet, consec tetasssur
-                            adipiscing elit. Tellus integer proin nisl pretium,
-                            vestibulum dictum blandit risus. Nisl commodo
+                            Chúng tôi cam kết mang đến giá cả hợp lý và minh
+                            bạch cho tất cả các dịch vụ. Với các gói dịch vụ đa
+                            dạng, bạn có thể dễ dàng lựa chọn giải pháp phù hợp
+                            với nhu cầu và ngân sách của mình.
                           </p>
                           <p>
-                            turpis vivamus donec. Id congue vesti bualum odio
-                            dignissim at quisque viverra. Non semper in sed
-                            quisque dui. Platea posuere ullamcorper id fames ut
-                            sed urna cursus eget. Neque, vel
+                            Tất cả thông tin về giá cả sẽ được thông báo rõ ràng
+                            trước khi bắt đầu, giúp bạn yên tâm và tin tưởng vào
+                            chất lượng dịch vụ mà chúng tôi cung cấp.
                           </p>
                         </div>
                       </div>
@@ -755,18 +598,18 @@ function Home() {
                   <div className="row align-items-center">
                     <div className="col-md-6 order-1 order-md-0">
                       <div className="content-block">
-                        <h3 className="mb-4">How Do I Repay?</h3>
+                        <h3 className="mb-4"> Thanh toán như thế nào?</h3>
                         <div className="content">
                           <p>
-                            Lorem ipsum dolor sit amet, consec tetasssur
-                            adipiscing elit. Tellus integer proin nisl pretium,
-                            vestibulum dictum blandit risus. Nisl commodo
+                            Chúng tôi cung cấp phương thức thanh toán nhanh
+                            chóng và an toàn qua các tài khoản ngân hàng trực
+                            tuyến.
                           </p>
                           <p>
-                            turpis vivamus donec. Id congue vesti bualum odio
-                            dignissim at quisque viverra. Non semper in sed
-                            quisque dui. Platea posuere ullamcorper id fames ut
-                            sed urna cursus eget. Neque, vel
+                            Bạn có thể dễ dàng thanh toán qua các nền tảng ngân
+                            hàng phổ biến, đảm bảo giao dịch thuận tiện và bảo
+                            mật. Chúng tôi cam kết mang đến trải nghiệm thanh
+                            toán tiện lợi và nhanh chóng cho khách hàng.
                           </p>
                         </div>
                       </div>
@@ -855,6 +698,93 @@ function Home() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="container">
+          <div className="row-custom align-items-center justify-content-between">
+            <div className="col-lg-5">
+              <div className="section-title">
+                <p className="text-primary text-uppercase fw-bold mb-3">
+                  Sự khác biệt của chúng tôi
+                </p>
+                <h1>Lý do chúng tôi nổi bật?</h1>
+                <div className="content mb-0 mt-4">
+                  <p>
+                    Chúng tôi cung cấp dịch vụ thiết kế website chuyên nghiệp,
+                    tối ưu hiệu suất và giao diện đẹp mắt. Quy trình làm việc
+                    linh hoạt, đảm bảo chất lượng và tiến độ nhanh chóng. Đội
+                    ngũ giàu kinh nghiệm của chúng tôi luôn sẵn sàng hỗ trợ,
+                    giúp khách hàng phát triển doanh nghiệp hiệu quả.
+                  </p>
+                  <p>
+                    Chúng tôi cam kết mang đến những giải pháp tối ưu, giúp
+                    website của bạn không chỉ thu hút mà còn nâng cao giá trị
+                    kinh doanh.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="difference-of-us-item p-3 rounded mr-0 me-lg-4">
+                <div className="d-block d-sm-flex align-items-center m-2">
+                  <div className="icon me-4 mb-4 mb-sm-0">
+                    {" "}
+                    <i
+                      className="fas fa-shield-alt mt-4"
+                      style={{ fontSize: "36px" }}
+                    ></i>
+                  </div>
+                  <div className="block">
+                    <h3 className="mb-3">Nhanh & Quá Trình An Toàn</h3>
+                    <p className="mb-0">
+                      Chúng tôi cam kết mang đến dịch vụ thiết kế website nhanh
+                      gọn, quy trình rõ ràng, bảo mật thông tin tuyệt đối cho
+                      khách hàng.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="difference-of-us-item p-3 rounded mr-0 me-lg-4">
+                <div className="d-block d-sm-flex align-items-center m-2">
+                  <div className="icon me-4 mb-4 mb-sm-0">
+                    {" "}
+                    <i
+                      className="fas fa-blender-phone mt-4"
+                      style={{ fontSize: "36px" }}
+                    ></i>
+                  </div>
+                  <div className="block">
+                    <h3 className="mb-3">Phản Hồi Nhanh</h3>
+                    <p className="mb-0">
+                      Chúng tôi luôn sẵn sàng giải đáp mọi thắc mắc của bạn về
+                      dịch vụ thiết kế website một cách nhanh chóng và chính xác
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="difference-of-us-item p-3 rounded mr-0 me-lg-4">
+                <div className="d-block d-sm-flex align-items-center m-2">
+                  <div className="icon me-4 mb-4 mb-sm-0">
+                    {" "}
+                    <i
+                      className="fas fa-globe mt-4"
+                      style={{ fontSize: "36px" }}
+                    ></i>
+                  </div>
+                  <div className="block">
+                    <h3 className="mb-3">Website Chuyên Nghiệp, Nhanh Chóng</h3>
+                    <p className="mb-0">
+                      Dịch vụ thiết kế website của chúng tôi giúp bạn có website
+                      chất lượng, nhanh chóng và phù hợp với nhu cầu kinh doanh
+                      của bạn.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* <section
         className="section testimonials overflow-hidden bg-tertiary"
         id="popular-website"
@@ -864,12 +794,13 @@ function Home() {
             <div className="col-lg-6">
               <div className="section-title text-center">
                 <p className="text-primary text-uppercase fw-bold mb-3">
-                  Website
+                  Dịch vụ
                 </p>
                 <h1 className="mb-4">Hơn 1,2K+ Người Tin Dùng</h1>
                 <p className="lead mb-0">
                   Chúng tôi tự hào mang đến dịch vụ chất lượng, giúp hàng nghìn
-                  khách hàng xây dựng website chuyên nghiệp và hiệu quả.
+                  khách hàng xây dựng website và ứng dụng chuyên nghiệp và hiệu
+                  quả.
                 </p>
               </div>
             </div>

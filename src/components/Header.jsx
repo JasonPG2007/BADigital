@@ -4,7 +4,13 @@ export default function Header() {
       <nav className="navbar navbar-expand-xl navbar-light text-center py-3">
         <div className="container">
           <a className="navbar-brand" href="/">
-            <b>BA</b> <i style={{ fontSize: "22px" }}>Digital</i>
+            <img
+              loading="preload"
+              decoding="async"
+              width="200"
+              src="/images/Logo.png"
+              alt="Ảnh Logo"
+            />
           </a>
           <button
             className="navbar-toggler"
@@ -54,7 +60,7 @@ export default function Header() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Trang <i className="fa-solid fa-chevron-down"></i>
+                  Trang
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>

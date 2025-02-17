@@ -173,14 +173,21 @@ export default function Contact() {
                   <div className="col-lg-6 mt-5 mt-lg-0">
                     <div className="contact-info">
                       <div className="block mt-0">
-                        <h4 className="h5">Vẫn câu hỏi?</h4>
+                        <h4 className="h5">Vẫn còn câu hỏi?</h4>
                         <div className="content">
-                          Chúng tôi sẵn sàn hỗ trợ bất kỳ lúc nào
-                          <br /> <a href="tel:+3301563965">+3301563965</a>
+                          Chúng tôi sẵn sàn hỗ trợ bất kỳ lúc nào thông qua
+                          <br /> <a href="tel:+14703949585">
+                            +1 470 394 9585
+                          </a>{" "}
+                          hoặc <br />
+                          <a href="https://www.facebook.com/profile.php?id=61572892182086">
+                            Fanpage
+                          </a>{" "}
+                          của chúng tôi
                           <br />
-                          Thứ 2 - Chủ Nhật
+                          Ngày làm việc: Thứ 2 - Thứ 6
                           <br />
-                          7AM - 11:30PM Giờ khu vực Georgia tại US
+                          Giờ làm việc: 7AM - 11:30PM Giờ khu vực Georgia tại US
                         </div>
                       </div>
                       <div className="block">
@@ -198,7 +205,7 @@ export default function Contact() {
                             <a
                               title="Explorer Instagram Profile"
                               className="text-black"
-                              href="https://www.instagram.com/ba_digital_07/"
+                              href="https://www.instagram.com/badigitalwebapp/"
                             >
                               <i className="fab fa-instagram"></i>
                             </a>
