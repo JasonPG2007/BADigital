@@ -8,7 +8,7 @@ export default function Header() {
               loading="preload"
               decoding="async"
               width="200"
-              src="/images/Logo.png"
+              src="/images/logo.png"
               alt="Ảnh Logo"
             />
           </a>
