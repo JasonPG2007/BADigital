@@ -5,7 +5,7 @@ export default function Terms() {
         <div className="container">
           <div className="row">
             <div className="col-8 mx-auto text-center">
-              <h2 className="mb-3 text-capitalize">Liên hệ chúng tôi</h2>
+              <h2 className="mb-3 text-capitalize">Điều Khoản & điều kiện</h2>
               <ul
                 className="list-inline breadcrumbs text-capitalize"
                 style={{ fontWeight: "500" }}
@@ -14,7 +14,7 @@ export default function Terms() {
                   <a href="/">Trang chủ</a>
                 </li>
                 <li className="list-inline-item">
-                  / &nbsp; <a href="contact">Liên hệ</a>
+                  / &nbsp; <a href="contact">Điều khoản & điều kiện</a>
                 </li>
               </ul>
             </div>

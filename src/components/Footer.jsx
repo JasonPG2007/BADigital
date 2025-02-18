@@ -97,7 +97,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="row-custom align-items-center mt-5 text-center text-md-start">
+        <div className="row align-items-center mt-5 text-center text-md-start">
           <div className="col-lg-4">
             <a href="/" style={{ color: "black" }}>
               <img

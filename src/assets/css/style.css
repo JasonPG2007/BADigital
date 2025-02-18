@@ -949,7 +949,7 @@ progress {
 
 .col-8 {
   flex: 0 0 auto;
-  width: 66.66666667%;
+  /* width: 66.66666667%; */
 }
 
 .col-9 {
@@ -10502,7 +10502,7 @@ textarea.form-control {
 /* CSS FOR FIXED NAVIGATION ON TOP WHEN SCROLL */
 .navigation {
   position: relative;
-  z-index: 1000;
+  z-index: 2000;
   transition: all 0.8s ease-in-out;
 }
 
