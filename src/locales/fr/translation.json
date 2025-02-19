@@ -1,0 +1,52 @@
+{
+  "header": {
+    "contact": "Contact",
+    "home": "Maison",
+    "about": "Introduire",
+    "service": "Service",
+    "how-it-works": "Comment ça marche",
+    "language": "Langue",
+    "page": "Pages",
+    "login": "Se connecter",
+    "sign-up": "Registre",
+    "vi": "vietnamien",
+    "en": "Anglais",
+    "ko": "coréen",
+    "ja": "japonais",
+    "zh": "Chinois",
+    "fr": "Français",
+    "blog": "Blog",
+    "faqs": "FAQ",
+    "terms": "Termes et conditions",
+    "privacy-policy": "Politique de confidentialité"
+  },
+  "body": {
+    "intro": "Développement Web et d'applications de qualité et rapide",
+    "subIntro": "Nous avons compilé de bonnes solutions de conception de sites Web. meilleur. <br/> Il ne vous reste plus qu’à choisir le forfait qui vous convient le mieux – et vite. rapide et professionnel",
+    "buttonExplore": "Découvrir maintenant",
+    "our-service-packages": "Nos forfaits de services",
+    "website-design": "Conception de site Web",
+    "under-website-design": "Service de conception de sites Web professionnel, optimisation SEO, belle interface, vous aidant à développer efficacement votre entreprise",
+    "basic": "Basique",
+    "basic-web-description": "Site Web simple d'une page, réactif, avec formulaire de contact et tableau livraison du code source Réalisé en 3 à 5 jours.",
+    "standard": "De grande classe",
+    "advanced": "Avancé",
+    "professional": "Professionnel"
+  },
+  "footer": {
+    "page": "Pages",
+    "service": "Service",
+    "contact": "Contact",
+    "about": "Introduire",
+    "how-it-works": "Comment ça marche",
+    "faqs": "FAQ",
+    "benefit": "Prestation",
+    "majoring": "Spécialiste",
+    "team": "L'équipe",
+    "support": "Soutien",
+    "contact-with-us": "Contactez-nous",
+    "register": "Registre",
+    "email-address": "Adresse email",
+    "under-input-email": "Nous vous répondrons dans les plus brefs délais pour vous aider avec les services de conception de sites Web ou d'autres demandes."
+  }
+}

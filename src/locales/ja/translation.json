@@ -1,0 +1,53 @@
+{
+  "header": {
+    "contact": "接触",
+    "home": "家",
+    "about": "導入",
+    "service": "サービス",
+    "how-it-works": "仕組み",
+    "language": "言語",
+    "page": "ページ",
+    "login": "ログイン",
+    "sign-up": "登録する",
+    "vi": "ベトナム語",
+    "en": "英語",
+    "ko": "韓国語",
+    "ja": "日本語",
+    "zh": "中国語",
+    "fr": "フランス語",
+    "blog": "ブログ",
+    "faqs": "よくある質問",
+    "terms": "規約と条件",
+    "privacy-policy": "プライバシーポリシー"
+  },
+  "body": {
+    "intro": "高品質で高速なウェブとアプリの開発",
+    "subIntro": "優れたウェブサイトデザインソリューションをまとめました。最高. <br/> 残っているのは、自分に最適なパッケージをすぐに選択することだけです。 迅速かつプロフェッショナル",
+    "buttonExplore": "今すぐ探索",
+    "our-service-packages": "当社のサービスパッケージ",
+    "website-design": "ウェブサイトデザイン",
+    "under-website-design": "プロフェッショナルなウェブサイトデザインサービス、SEO最適化、美しいインターフェースで、ビジネスの効果的な発展をお手伝いします",
+    "basic": "基本",
+    "basic-web-description": "シンプルな1ページのウェブサイト、レスポンシブ、お問い合わせフォームとテーブル付き ソースコード配信3〜5日で完了します。",
+    "standard": "スタンダード",
+    "high-class": "高級",
+    "advanced": "高度な",
+    "professional": "プロ"
+  },
+  "footer": {
+    "page": "ページ",
+    "service": "サービス",
+    "contact": "接触",
+    "about": "導入",
+    "how-it-works": "仕組み",
+    "faqs": "よくある質問",
+    "benefit": "利点",
+    "majoring": "特化した",
+    "team": "チーム",
+    "support": "サポート",
+    "contact-with-us": "お問い合わせください",
+    "register": "登録する",
+    "email-address": "電子メールアドレス",
+    "under-input-email": "ウェブサイトのデザインサービスやその他のリクエストについては、できるだけ早く対応してサポートいたします。"
+  }
+}

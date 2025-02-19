@@ -1,59 +1,74 @@
+import { useTranslation } from "react-i18next";
+
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="section-sm bg-tertiary pt-5">
       <div className="container">
         <div className="row justify-content-between">
           <div className="col-lg-2 col-md-4 col-6 mb-4">
             <div className="footer-widget">
-              <h5 className="mb-4 text-primary font-secondary">Trang</h5>
+              <h5 className="mb-4 text-primary font-secondary">
+                {t("footer.page")}
+              </h5>
               <ul className="list-unstyled">
                 <li className="mb-2">
-                  <a href="/services">Dịch vụ</a>
+                  <a href="/services">{t("footer.service")}</a>
                 </li>
                 <li className="mb-2">
-                  <a href="/contact">Liên hệ</a>
+                  <a href="/contact">{t("footer.contact")}</a>
                 </li>
                 <li className="mb-2">
-                  <a href="/about">Giới thiệu</a>
+                  <a href="/about">{t("footer.about")}</a>
                 </li>
                 <li className="mb-2">
-                  <a href="/how-to-work">Cách hoạt động</a>
+                  <a href="/how-to-work">{t("footer.how-it-works")}</a>
                 </li>
                 <li className="mb-2">
-                  <a href="/faqs">FAQs</a>
+                  <a href="/faqs">{t("footer.faqs")}</a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-lg-2 col-md-4 col-6 mb-4">
             <div className="footer-widget">
-              <h5 className="mb-4 text-primary font-secondary">Giới thiệu</h5>
+              <h5 className="mb-4 text-primary font-secondary">
+                {t("footer.about")}
+              </h5>
               <ul className="list-unstyled">
                 <li className="mb-2">
-                  <a href="/about/#benefit">Lợi ích</a>
+                  <a href="/#pills-how-much-can-i-recive-tab">
+                    {" "}
+                    {t("footer.benefit")}
+                  </a>
                 </li>
                 <li className="mb-2">
-                  <a href="/about/#major">Chuyên nghành</a>
+                  <a href="/about/#major"> {t("footer.majoring")}</a>
                 </li>
                 <li className="mb-2">
-                  <a href="/about/#team">Đội ngũ</a>
+                  <a href="/about/#team"> {t("footer.team")}</a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-lg-2 col-md-4 col-6 mb-4">
             <div className="footer-widget">
-              <h5 className="mb-4 text-primary font-secondary">Hỗ trợ</h5>
+              <h5 className="mb-4 text-primary font-secondary">
+                {t("footer.support")}
+              </h5>
               <ul className="list-unstyled">
                 <li className="mb-2">
-                  <a href="/contact">Liên hệ chúng tôi</a>
+                  <a href="/contact">{t("footer.contact-with-us")}</a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-lg-4 col-md-12 newsletter-form">
             <div style={{ padding: "35px" }}>
-              <h5 className="mb-4 text-primary font-secondary">Đăng ký</h5>
+              <h5 className="mb-4 text-primary font-secondary">
+                {t("footer.register")}
+              </h5>
               <div className="pe-0 pe-xl-5">
                 <form
                   action="#!"
@@ -65,8 +80,8 @@ export default function Footer() {
                     <input
                       type="text"
                       className="form-control shadow-none bg-white border-end-0"
-                      placeholder="Địa chỉ email"
-                    />{" "}
+                      placeholder={t("footer.email-address")}
+                    />
                     <span className="input-group-text border-0 p-0">
                       <button
                         className="input-group-text border-0 bg-primary"
@@ -90,10 +105,7 @@ export default function Footer() {
                   </div>
                 </form>
               </div>
-              <p className="mb-0">
-                Chúng tôi sẽ phản hồi sớm nhất có thể để hỗ trợ bạn về dịch vụ
-                thiết kế website hoặc các yêu cầu khác
-              </p>
+              <p className="mb-0">{t("footer.under-input-email")}</p>
             </div>
           </div>
         </div>
@@ -113,12 +125,12 @@ export default function Footer() {
             <ul className="list-unstyled list-inline mb-0 text-lg-center">
               <li className="list-inline-item me-4">
                 <a className="text-black" href="/privacy-policy">
-                  Chính sách bảo mật
+                  {t("header.privacy-policy")}
                 </a>
               </li>
               <li className="list-inline-item me-4">
                 <a className="text-black" href="/terms">
-                  Điều khoản &amp; Điều kiện
+                  {t("header.terms")}
                 </a>
               </li>
             </ul>

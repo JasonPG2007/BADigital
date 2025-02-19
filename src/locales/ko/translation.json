@@ -1,0 +1,53 @@
+{
+  "header": {
+    "contact": "연락하다",
+    "home": "집",
+    "about": "소개하다",
+    "service": "서비스",
+    "how-it-works": "작동 원리",
+    "language": "언어",
+    "page": "페이지",
+    "login": "로그인",
+    "sign-up": "등록하다",
+    "vi": "베트남 사람",
+    "en": "영어",
+    "ko": "한국인",
+    "ja": "일본어",
+    "zh": "중국인",
+    "fr": "프랑스 국민",
+    "blog": "블로그",
+    "faqs": "자주 묻는 질문",
+    "terms": "이용약관",
+    "privacy-policy": "개인정보 보호정책"
+  },
+  "body": {
+    "intro": "고품질, 빠른 웹 및 앱 개발",
+    "subIntro": "우리는 좋은 웹사이트 디자인 솔루션을 모아놓았습니다. 최상의. <br/> 남은 것은 당신에게 가장 적합한 패키지를 빠르게 선택하는 것입니다. 빠르고 전문적",
+    "buttonExplore": "지금 탐색하기",
+    "our-service-packages": "우리의 서비스 패키지",
+    "website-design": "웹사이트 디자인",
+    "under-website-design": "전문적인 웹사이트 디자인 서비스, SEO 최적화, 아름다운 인터페이스로 귀하의 사업을 효과적으로 개발할 수 있도록 도와드립니다.",
+    "basic": "기본적인",
+    "basic-web-description": "연락처 양식과 표가 포함된 간단한 1페이지 웹사이트, 반응형 소스코드 전달 3~5일 안에 완료됩니다.",
+    "standard": "기준",
+    "high-class": "고급",
+    "advanced": "고급의",
+    "professional": "전문적인"
+  },
+  "footer": {
+    "page": "페이지",
+    "service": "서비스",
+    "contact": "연락하다",
+    "about": "소개하다",
+    "how-it-works": "작동 원리",
+    "faqs": "자주 묻는 질문",
+    "benefit": "자선 공연",
+    "majoring": "전문화된",
+    "team": "팀",
+    "support": "지원하다",
+    "contact-with-us": "문의하기",
+    "register": "등록하다",
+    "email-address": "이메일 주소",
+    "under-input-email": "웹사이트 디자인 서비스나 기타 요청에 관해 최대한 빨리 답변해 드리겠습니다."
+  }
+}

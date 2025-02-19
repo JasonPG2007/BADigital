@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 function Home() {
+  const { t } = useTranslation();
   return (
     <div>
       <section className="banner bg-tertiary position-relative overflow-hidden">
@@ -6,20 +9,14 @@ function Home() {
           <div className="row-custom align-items-center justify-content-center">
             <div className="col-lg-6 mb-5 mb-lg-0">
               <div className="block text-center text-lg-start pe-0 pe-xl-5">
-                <h1 className="text-capitalize mb-4">
-                  Phát triển web & app
-                  <br />
-                  Chất lượng, nhanh chóng!
-                </h1>
+                <h1 className="text-capitalize mb-4">{t("body.intro")}</h1>
                 <p className="mb-4">
-                  Chúng tôi đã tổng hợp những giải pháp thiết kế website tốt
-                  nhất.
-                  <br />
-                  Việc còn lại là chọn lựa gói phù hợp nhất cho bạn – nhanh
-                  chóng và chuyên nghiệp
+                  <span
+                    dangerouslySetInnerHTML={{ __html: t("body.subIntro") }}
+                  ></span>
                 </p>
                 <a className="btn btn-primary" href="/services">
-                  Khám phá Ngay{" "}
+                  {t("body.buttonExplore")}{" "}
                   <span
                     style={{ fontSize: "14px" }}
                     className="ms-2 fas fa-arrow-right"
@@ -132,13 +129,10 @@ function Home() {
                 style={{ paddingLeft: "15px" }}
               >
                 <p className="text-primary text-uppercase fw-bold mb-3">
-                  Gói dịch Vụ của chúng tôi
+                  {t("body.our-service-packages")}
                 </p>
-                <h1>Thiết kế website</h1>
-                <p>
-                  Dịch vụ thiết kế website chuyên nghiệp, tối ưu SEO, giao diện
-                  đẹp, giúp bạn phát triển doanh nghiệp hiệu quả
-                </p>
+                <h1>{t("body.website-design")}</h1>
+                <p>{t("body.under-website-design")}</p>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
@@ -146,10 +140,9 @@ function Home() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">01</span>
-                  <h3 className="mb-3 service-title">Cơ bản</h3>
+                  <h3 className="mb-3 service-title">{t("body.basic")}</h3>
                   <p className="mb-0 service-description">
-                    Website 1 trang đơn giản, responsive, có form liên hệ và bàn
-                    giao mã nguồn. Hoàn thành từ 3 - 5 ngày.
+                    {t("body.basic-web-description")}
                   </p>
                 </div>
               </a>
@@ -159,7 +152,7 @@ function Home() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">02</span>
-                  <h3 className="mb-3 service-title">Tiêu chuẩn</h3>
+                  <h3 className="mb-3 service-title">{t("body.standard")}</h3>
                   <p className="mb-0 service-description">
                     Website 3 - 5 trang, thiết kế tùy chỉnh, tích hợp Google
                     Map, chuẩn SEO cơ bản. Hoàn thành trong 5 - 7 ngày.
@@ -172,7 +165,7 @@ function Home() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">03</span>
-                  <h3 className="mb-3 service-title">Cao cấp</h3>
+                  <h3 className="mb-3 service-title">{t("body.high-class")}</h3>
                   <p className="mb-0 service-description">
                     Website chuyên nghiệp, quản lý nhân sự, SEO nâng cao. Hoàn
                     thành trong 7 - 14 ngày.
@@ -185,7 +178,7 @@ function Home() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">04</span>
-                  <h3 className="mb-3 service-title">Nâng cao</h3>
+                  <h3 className="mb-3 service-title">{t("body.advanced")}</h3>
                   <p className="mb-0 service-description">
                     Website bán hàng hoặc doanh nghiệp với giỏ hàng, thanh toán
                     online, UI/UX chuyên nghiệp, SEO nâng cao. Hoàn thành trong
@@ -199,7 +192,9 @@ function Home() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">05</span>
-                  <h3 className="mb-3 service-title">Chuyên nghiệp</h3>
+                  <h3 className="mb-3 service-title">
+                    {t("body.professional")}
+                  </h3>
                   <p className="mb-0 service-description">
                     Website cao cấp, CMS mạnh mẽ, đa ngôn ngữ, tích hợp API &
                     tính năng tùy chỉnh. Hỗ trợ SEO toàn diện. Hoàn thành trong
@@ -235,7 +230,7 @@ function Home() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">01</span>
-                  <h3 className="mb-3 service-title">Cơ bản</h3>
+                  <h3 className="mb-3 service-title">{t("body.basic")}</h3>
                   <p className="mb-0 service-description">
                     Ứng dụng di động đơn giản, phù hợp cho nhu cầu cơ bản. Hoàn
                     thành trong 5 - 7 ngày.
@@ -248,7 +243,7 @@ function Home() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">02</span>
-                  <h3 className="mb-3 service-title">Tiêu chuẩn</h3>
+                  <h3 className="mb-3 service-title">{t("body.standard")}</h3>
                   <p className="mb-0 service-description">
                     Ứng dụng tùy chỉnh, hỗ trợ iOS, Android, Windows. Hoàn thành
                     trong 7 - 10 ngày.
@@ -261,7 +256,7 @@ function Home() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">03</span>
-                  <h3 className="mb-3 service-title">Cao cấp</h3>
+                  <h3 className="mb-3 service-title">{t("body.high-class")}</h3>
                   <p className="mb-0 service-description">
                     Ứng dụng đa nền tảng, quản lý dữ liệu & khách hàng hiệu quả.
                     Hoàn thành trong 14 - 20 ngày.
@@ -296,7 +291,7 @@ function Home() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">01</span>
-                  <h3 className="mb-3 service-title">Cơ bản</h3>
+                  <h3 className="mb-3 service-title">{t("body.basic")}</h3>
                   <p className="mb-0 service-description">
                     Website Cơ Bản + Ứng dụng Cơ Bản
                   </p>
@@ -308,7 +303,7 @@ function Home() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">02</span>
-                  <h3 className="mb-3 service-title">Tiêu chuẩn</h3>
+                  <h3 className="mb-3 service-title">{t("body.standard")}</h3>
                   <p className="mb-0 service-description">
                     Website Tiêu Chuẩn + Ứng dụng Tiêu Chuẩn.
                   </p>
@@ -320,7 +315,7 @@ function Home() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">03</span>
-                  <h3 className="mb-3 service-title">Cao cấp</h3>
+                  <h3 className="mb-3 service-title">{t("body.high-class")}</h3>
                   <p className="mb-0 service-description">
                     Website Cao Cấp + Ứng dụng Cao Cấp.
                   </p>
@@ -332,7 +327,7 @@ function Home() {
                 <div className="block">
                   {" "}
                   <span className="colored-box text-center h3 mb-4">04</span>
-                  <h3 className="mb-3 service-title">Nâng cao</h3>
+                  <h3 className="mb-3 service-title">{t("body.advanced")}</h3>
                   <p className="mb-0 service-description">
                     Website Nâng Cao + Ứng dụng Cao Cấp.
                   </p>

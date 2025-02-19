@@ -1,0 +1,53 @@
+{
+  "header": {
+    "contact": "接触",
+    "home": "家",
+    "about": "介绍",
+    "service": "服务",
+    "how-it-works": "工作原理",
+    "language": "语言",
+    "page": "页面",
+    "login": "登录",
+    "sign-up": "登记",
+    "vi": "越南语",
+    "en": "英语",
+    "ko": "韩国人",
+    "ja": "日本人",
+    "zh": "中国人",
+    "fr": "法语",
+    "blog": "博客",
+    "faqs": "常见问题解答",
+    "terms": "条款与条件",
+    "privacy-policy": "隐私政策"
+  },
+  "body": {
+    "intro": "优质、快速的网站和应用程序开发",
+    "subIntro": "我们整理了优秀的网站设计解决方案。最好的。<br/> 剩下的就是快速选择最适合您的套餐。快速且专业",
+    "buttonExplore": "立即探索",
+    "our-service-packages": "我们的服务套餐",
+    "website-design": "网站设计",
+    "under-website-design": "专业的网站设计服务，SEO优化，界面美观，帮助您有效拓展业务",
+    "basic": "基本",
+    "basic-web-description": "简单的单页网站，响应式，带有联系表单和表格 源代码交付3至5天完成。",
+    "standard": "标准的",
+    "high-class": "高档",
+    "advanced": "先进的",
+    "professional": "专业的"
+  },
+  "footer": {
+    "page": "页面",
+    "service": "服务",
+    "contact": "接触",
+    "about": "介绍",
+    "how-it-works": "工作原理",
+    "faqs": "常见问题解答",
+    "benefit": "利益",
+    "majoring": "专门",
+    "team": "队",
+    "support": "支持",
+    "contact-with-us": "联系我们",
+    "register": "注册",
+    "email-address": "邮箱地址",
+    "under-input-email": "我们将尽快回复，协助您提供网站设计服务或其他请求。"
+  }
+}

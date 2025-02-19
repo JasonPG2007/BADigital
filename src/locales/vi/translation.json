@@ -1,0 +1,53 @@
+{
+  "header": {
+    "contact": "Liên hệ",
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "service": "Dịch vụ",
+    "how-it-works": "Cách hoạt động",
+    "language": "Ngôn ngữ",
+    "page": "Trang",
+    "login": "Đăng nhập",
+    "sign-up": "Đăng ký",
+    "vi": "Tiếng Việt",
+    "en": "Tiếng Anh",
+    "ko": "Tiếng Hàn",
+    "ja": "Tiếng Nhật",
+    "zh": "Tiếng Trung",
+    "fr": "Tiếng Pháp",
+    "blog": "Blog",
+    "faqs": "FAQs",
+    "terms": "Điều khoản & điều kiện",
+    "privacy-policy": "Chính sách bảo mật"
+  },
+  "body": {
+    "intro": "Phát triển web & app Chất lượng, nhanh chóng",
+    "subIntro": "Chúng tôi đã tổng hợp những giải pháp thiết kế website tốt nhất. <br /> Việc còn lại là chọn lựa gói phù hợp nhất cho bạn – nhanh chóng và chuyên nghiệp",
+    "buttonExplore": "Khám phá ngay",
+    "our-service-packages": "Gói dịch Vụ của chúng tôi",
+    "website-design": "Thiết kế website",
+    "under-website-design": "Dịch vụ thiết kế website chuyên nghiệp, tối ưu SEO, giao diện đẹp, giúp bạn phát triển doanh nghiệp hiệu quả",
+    "basic": "Cơ bản",
+    "basic-web-description": "Website 1 trang đơn giản, responsive, có form liên hệ và bàn giao mã nguồn. Hoàn thành từ 3 - 5 ngày.",
+    "standard": "Tiêu chuẩn",
+    "high-class": "Cao cấp",
+    "advanced": "Nâng cao",
+    "professional": "Chuyên nghiệp"
+  },
+  "footer": {
+    "page": "Trang",
+    "service": "Dịch vụ",
+    "contact": "Liên hệ",
+    "about": "Giới thiệu",
+    "how-it-works": "Cách hoạt động",
+    "faqs": "FAQs",
+    "benefit": "Lợi ích",
+    "majoring": "Chuyên ngành",
+    "team": "Đội ngũ",
+    "support": "Hỗ trợ",
+    "contact-with-us": "Liên hệ với chúng tôi",
+    "register": "Đăng ký",
+    "email-address": "Địa chỉ email",
+    "under-input-email": "Chúng tôi sẽ phản hồi sớm nhất có thể để hỗ trợ bạn về dịch vụ thiết kế website hoặc các yêu cầu khác"
+  }
+}

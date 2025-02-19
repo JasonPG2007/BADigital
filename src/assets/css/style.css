@@ -10562,3 +10562,13 @@ textarea.form-control {
     transform: translateY(0);
   }
 }
+select {
+  border: none;
+  border-radius: 8px; /* Bo góc */
+  background-color: transparent;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

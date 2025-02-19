@@ -144,7 +144,10 @@ export default function About() {
         </div>
       </section>
 
-      <section className="about-section section bg-tertiary position-relative overflow-hidden">
+      <section
+        className="about-section section bg-tertiary position-relative overflow-hidden"
+        id="major"
+      >
         <div className="container">
           <div className="row justify-content-around">
             <div className="col-lg-5">
@@ -158,10 +161,12 @@ export default function About() {
                 triển doanh nghiệp.
               </p>
               <div className="content">
-                Với đội ngũ giàu kinh nghiệm, chúng tôi cam kết mang đến giải
-                pháp hiệu quả, tối ưu và phù hợp với nhu cầu của bạn. Dù bạn cần
-                một trang web bán hàng, một ứng dụng di động hay hệ thống quản
-                lý doanh nghiệp, chúng tôi đều sẵn sàng đồng hành cùng bạn.
+                Với đội ngũ kỹ sư phần mềm, nhà phát triển và chuyên gia công
+                nghệ giàu kinh nghiệm, chúng tôi cam kết mang đến giải pháp hiệu
+                quả, tối ưu và phù hợp với nhu cầu của bạn. Dù bạn cần một trang
+                web bán hàng, một ứng dụng di động hay hệ thống quản lý doanh
+                nghiệp, chúng tôi đều sẵn sàng đồng hành cùng bạn để biến ý
+                tưởng thành hiện thực.
               </div>
             </div>
             <div className="col-lg-5">
@@ -530,7 +535,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section teams">
+      <section className="section teams" id="team">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12">
@@ -538,7 +543,7 @@ export default function About() {
                 <p className="text-primary text-uppercase fw-bold mb-3">
                   Có Thể Bạn Thắc Mắc
                 </p>
-                <h1>Tổ Chức</h1>
+                <h1>Đội ngũ</h1>
                 <p className="mb-0">
                   Chúng tôi được thành lập bởi những người đam mê
                   <br />

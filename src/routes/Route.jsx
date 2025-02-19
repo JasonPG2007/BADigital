@@ -21,7 +21,7 @@ export default function routes() {
         />
         <Route path="/services" element={<Services></Services>} />
         <Route path="/contact" element={<Contact></Contact>} />
-        <Route path="/how-to-work" element={<HowItWork></HowItWork>} />
+        <Route path="/how-it-works" element={<HowItWork></HowItWork>} />
         <Route
           path="/privacy-policy"
           element={<PrivacyPolicy></PrivacyPolicy>}
