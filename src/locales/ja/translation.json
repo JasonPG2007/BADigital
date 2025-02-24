@@ -30,9 +30,16 @@
     "basic": "基本",
     "basic-web-description": "シンプルな1ページのウェブサイト、レスポンシブ、お問い合わせフォームとテーブル付き ソースコード配信3〜5日で完了します。",
     "standard": "スタンダード",
+    "standard-web-description": "3〜5 ページの Web サイト、カスタム デザイン、統合された Google マップ、基本的な SEO 標準。 5～7日で完了します。",
     "high-class": "高級",
+    "high-class-web-description": "専門的な Web サイト、人事管理、登録などのいずれかを選択します。 7～14日で完了します。",
     "advanced": "高度な",
-    "professional": "プロ"
+    "advanced-web-description": "ショッピング カート、オンライン決済、プロフェッショナルな UI/UX、高度な SEO を備えた販売またはビジネス ウェブサイト。 14〜20日で完了します。",
+    "professional": "プロ",
+    "professional-web-description": "プレミアム Web サイト、強力な CMS、多言語、API 統合およびカスタマイズ機能。包括的な SEO サポート。 15〜30日で完了します。",
+    "combo": "コンボウェブとアプリ",
+    "app-development": "アプリ開発",
+    "about-us": "私たちに関しては"
   },
   "footer": {
     "page": "ページ",

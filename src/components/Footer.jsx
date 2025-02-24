@@ -1,7 +1,37 @@
 import { useTranslation } from "react-i18next";
+import emailjs from "emailjs-com";
+import { useRef, useState } from "react";
 
 export default function Footer() {
   const { t } = useTranslation();
+  const form = useRef();
+  const [isSendEmail, setIsSendEmail] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSendEmail(true);
+    emailjs
+      .sendForm(
+        "service_jrgaq57",
+        "template_j6snca8",
+        form.current,
+        "36B1PoPlACVPxMI_K"
+      )
+      .then(
+        (result) => {
+          console.log("Email sent:", result.text);
+          alert(
+            "🎉 Chúc mừng bạn đã đăng ký thành công! 😊\n BA Digital sẽ liên hệ với bạn trong vòng 24h. Bạn hãy để ý tin nhắn qua email nhé!"
+          );
+          setIsSendEmail(false);
+          form.current.reset();
+        },
+        (error) => {
+          console.log("Error:", error.text);
+          alert("❌ Đăng ký thất bại! 😢. Vui lòng thử lại sau! ");
+        }
+      );
+  };
 
   return (
     <footer className="section-sm bg-tertiary pt-5">
@@ -70,27 +100,37 @@ export default function Footer() {
                 {t("footer.register")}
               </h5>
               <div className="pe-0 pe-xl-5">
-                <form
-                  action="#!"
-                  method="post"
-                  name="mc-embedded-subscribe-form"
-                  target="_blank"
-                >
+                <form ref={form} onSubmit={sendEmail}>
                   <div className="input-group mb-3">
                     <input
-                      type="text"
+                      type="email"
                       className="form-control shadow-none bg-white border-end-0"
                       placeholder={t("footer.email-address")}
+                      name="email_register"
+                      required
                     />
                     <span className="input-group-text border-0 p-0">
-                      <button
-                        className="input-group-text border-0 bg-primary"
-                        type="submit"
-                        name="subscribe"
-                        aria-label="Subscribe for Newsletter"
-                      >
-                        <i className="fas fa-arrow-right"></i>
-                      </button>
+                      {!isSendEmail && (
+                        <button
+                          className="input-group-text border-0 bg-primary"
+                          type="submit"
+                          name="subscribe"
+                          aria-label="Subscribe for Newsletter"
+                        >
+                          <i className="fas fa-arrow-right"></i>
+                        </button>
+                      )}
+                      {isSendEmail && (
+                        <button
+                          className="input-group-text border-0 bg-primary"
+                          type="submit"
+                          name="subscribe"
+                          aria-label="Subscribe for Newsletter"
+                          disabled
+                        >
+                          <i className="fas fa-spinner fa-spin"></i>
+                        </button>
+                      )}
                     </span>
                   </div>
                   <div
@@ -116,7 +156,7 @@ export default function Footer() {
                 loading="preload"
                 decoding="async"
                 width="200"
-                src="/images/logo.png"
+                src="/images/logo-ngang.png"
                 alt="Ảnh logo"
               ></img>
             </a>

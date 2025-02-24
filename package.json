@@ -12,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "emailjs-com": "^3.2.0",
     "i18next": "^24.2.2",
     "instafeed.js": "^2.0.0",
     "react": "^19.0.0",

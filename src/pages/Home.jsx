@@ -154,8 +154,7 @@ function Home() {
                   <span className="colored-box text-center h3 mb-4">02</span>
                   <h3 className="mb-3 service-title">{t("body.standard")}</h3>
                   <p className="mb-0 service-description">
-                    Website 3 - 5 trang, thiết kế tùy chỉnh, tích hợp Google
-                    Map, chuẩn SEO cơ bản. Hoàn thành trong 5 - 7 ngày.
+                    {t("body.standard-web-description")}
                   </p>
                 </div>
               </a>
@@ -167,8 +166,7 @@ function Home() {
                   <span className="colored-box text-center h3 mb-4">03</span>
                   <h3 className="mb-3 service-title">{t("body.high-class")}</h3>
                   <p className="mb-0 service-description">
-                    Website chuyên nghiệp, quản lý nhân sự, SEO nâng cao. Hoàn
-                    thành trong 7 - 14 ngày.
+                    {t("body.high-class-web-description")}
                   </p>
                 </div>
               </a>
@@ -180,9 +178,7 @@ function Home() {
                   <span className="colored-box text-center h3 mb-4">04</span>
                   <h3 className="mb-3 service-title">{t("body.advanced")}</h3>
                   <p className="mb-0 service-description">
-                    Website bán hàng hoặc doanh nghiệp với giỏ hàng, thanh toán
-                    online, UI/UX chuyên nghiệp, SEO nâng cao. Hoàn thành trong
-                    10 - 15 ngày.
+                    {t("body.advanced-web-description")}
                   </p>
                 </div>
               </a>
@@ -196,9 +192,7 @@ function Home() {
                     {t("body.professional")}
                   </h3>
                   <p className="mb-0 service-description">
-                    Website cao cấp, CMS mạnh mẽ, đa ngôn ngữ, tích hợp API &
-                    tính năng tùy chỉnh. Hỗ trợ SEO toàn diện. Hoàn thành trong
-                    14 - 30 ngày.
+                    {t("body.professional-web-description")}
                   </p>
                 </div>
               </a>
@@ -216,13 +210,10 @@ function Home() {
                 style={{ paddingLeft: "15px" }}
               >
                 <p className="text-primary text-uppercase fw-bold mb-3">
-                  Gói dịch Vụ của chúng tôi
+                  {t("body.our-service-packages")}
                 </p>
-                <h1>Phát triển App</h1>
-                <p>
-                  Thiết kế & tối ưu ứng dụng chuyên nghiệp, giúp doanh nghiệp
-                  phát triển bền vững.
-                </p>
+                <h1>{t("body.app-development")}</h1>
+                <p>{t("body.under-app-development")}</p>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 service-item">
@@ -277,9 +268,9 @@ function Home() {
                 style={{ paddingLeft: "15px" }}
               >
                 <p className="text-primary text-uppercase fw-bold mb-3">
-                  Gói dịch Vụ của chúng tôi
+                  {t("body.our-service-packages")}
                 </p>
-                <h1>Combo Web & App</h1>
+                <h1>{t("body.combo")}</h1>
                 <p>
                   Combo Website + App – Tiết kiệm lên đến 3 triệu VNĐ và sở hữu
                   bộ đôi hoàn hảo cho doanh nghiệp!
@@ -344,7 +335,7 @@ function Home() {
             <div className="col-lg-5">
               <div className="section-title">
                 <p className="text-primary text-uppercase fw-bold mb-3">
-                  Về chúng tôi
+                  {t("body.about-us")}
                 </p>
                 <h1>Giá Cả Linh Hoạt & Thanh Toán Dễ Dàng</h1>
                 <div className="lead mb-0 mt-4">

@@ -175,7 +175,8 @@ export default function PrivacyPolicy() {
                   </li>
                   <li>
                     <p>
-                      Thông tin cá nhân: Họ tên, số điện thoại, email, địa chỉ.
+                      Thông tin cá nhân: Họ tên, số điện thoại, email, địa chỉ,
+                      v.v
                     </p>
                   </li>
                   <li>

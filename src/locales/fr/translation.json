@@ -29,9 +29,17 @@
     "under-website-design": "Service de conception de sites Web professionnel, optimisation SEO, belle interface, vous aidant à développer efficacement votre entreprise",
     "basic": "Basique",
     "basic-web-description": "Site Web simple d'une page, réactif, avec formulaire de contact et tableau livraison du code source Réalisé en 3 à 5 jours.",
-    "standard": "De grande classe",
+    "standard": "Standard",
+    "standard-web-description": "Site Web de 3 à 5 pages, conception personnalisée, Google Map intégré, normes SEO de base. Réalisé en 5 à 7 jours.",
+    "high-class": "De grande classe",
+    "high-class-web-description": "Choisissez parmi des sites Web professionnels, de gestion des ressources humaines, de recrutement, etc. Réalisé en 7 à 14 jours.",
     "advanced": "Avancé",
-    "professional": "Professionnel"
+    "advanced-web-description": "Site Web de vente ou d'entreprise avec panier d'achat, paiement en ligne, UI/UX professionnel, SEO avancé. Réalisé en 14 à 20 jours.",
+    "professional": "Professionnel",
+    "professional-web-description": "Site Web premium, CMS puissant, multilingue, intégration API et fonctionnalités de personnalisation. Support SEO complet. Réalisé en 15 à 30 jours.",
+    "combo": "Combinaison Web et application",
+    "app-development": "Développement d'applications",
+    "about-us": "À propos de nous"
   },
   "footer": {
     "page": "Pages",

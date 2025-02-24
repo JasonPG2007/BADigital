@@ -30,9 +30,16 @@
     "basic": "기본적인",
     "basic-web-description": "연락처 양식과 표가 포함된 간단한 1페이지 웹사이트, 반응형 소스코드 전달 3~5일 안에 완료됩니다.",
     "standard": "기준",
+    "standard-web-description": "3~5페이지 규모의 웹사이트, 맞춤형 디자인, 통합된 Google 지도, 기본적인 SEO 표준을 갖추고 있습니다. 5~7일 안에 완료됩니다.",
     "high-class": "고급",
+    "high-class-web-description": "전문 웹사이트, 인사관리, 채용 등에서 선택하세요. 7~14일 안에 완료됩니다.",
     "advanced": "고급의",
-    "professional": "전문적인"
+    "advanced-web-description": "쇼핑 카트, 온라인 결제, 전문적인 UI/UX, 고급 SEO 기능을 갖춘 판매 또는 사업용 웹사이트. 14~20일 안에 완료됩니다.",
+    "professional": "전문적인",
+    "professional-web-description": "프리미엄 웹사이트, 강력한 CMS, 다국어, API 통합 및 사용자 정의 기능. 포괄적인 SEO 지원. 15~30일 안에 완료됩니다.",
+    "combo": "콤보 웹 및 앱",
+    "app-development": "앱 개발",
+    "about-us": "우리에 대해서"
   },
   "footer": {
     "page": "페이지",

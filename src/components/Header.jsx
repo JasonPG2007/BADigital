@@ -36,7 +36,7 @@ export default function Header() {
               loading="preload"
               decoding="async"
               width="200"
-              src="/images/logo.png"
+              src="/images/logo-ngang.png"
               alt="Ảnh Logo"
             />
           </a>

@@ -212,9 +212,13 @@ export default function HowItWork() {
             <div className="col-lg-7">
               <div className="section-title text-center">
                 <p className="text-primary text-uppercase fw-bold mb-3">
-                  Apply Loan
+                  Phát Triển Website và Ứng Dụng
                 </p>
-                <h1>Applying For A Loan Is Very Easy In Just 3 Easy Steps</h1>
+                <h1>
+                  Quy Trình 7 Bước Tạo Nên
+                  <br />
+                  Thành Công
+                </h1>
               </div>
             </div>
           </div>
@@ -224,30 +228,81 @@ export default function HowItWork() {
                 <div className="step-item col-lg-4 col-md-6">
                   <div className="text-center">
                     <p className="count">01</p>
-                    <h3 className="mb-3">Fill Out The Form</h3>
+                    <h3 className="mb-3">Thu thập thông tin</h3>
                     <p className="mb-0">
-                      Lorem ipsum dolor, consectetur adipiscing. Id egestas
-                      sceleriue dui id sed velit facsi eget. Magnis etra.
+                      Tiếp nhận yêu cầu từ khách hàng qua email, Facebook, điện
+                      thoại hoặc trực tiếp. Thu thập đầy đủ thông tin về nhu
+                      cầu, mong muốn và yêu cầu cụ thể của khách hàng. Phân tích
+                      và đề xuất giải pháp phù hợp.
                     </p>
                   </div>
                 </div>
                 <div className="step-item col-lg-4 col-md-6">
                   <div className="text-center">
                     <p className="count">02</p>
-                    <h3 className="mb-3">Data verification</h3>
+                    <h3 className="mb-3">Gặp mặt khách hàng</h3>
                     <p className="mb-0">
-                      Lorem ipsum dolor, consectetur adipiscing. Id egestas
-                      sceleriue dui id sed velit facsi eget. Magnis etra.
+                      Tổ chức cuộc họp online để trao đổi chi tiết về dự án tầm
+                      30 phút. Làm rõ các yêu cầu kỹ thuật, thời gian triển khai
+                      và phạm vi công việc.
                     </p>
                   </div>
                 </div>
                 <div className="step-item col-lg-4 col-md-6">
                   <div className="text-center">
                     <p className="count">03</p>
-                    <h3 className="mb-3">Get your money</h3>
+                    <h3 className="mb-3">Báo giá</h3>
                     <p className="mb-0">
-                      Lorem ipsum dolor, consectetur adipiscing. Id egestas
-                      sceleriue dui id sed velit facsi eget. Magnis etra.
+                      Xây dựng bảng báo giá dựa trên yêu cầu của khách hàng. Gửi
+                      báo giá chi tiết kèm theo phạm vi công việc và thời gian
+                      thực hiện.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="row justify-content-center">
+                <div className="step-item col-lg-4 col-md-6">
+                  <div className="text-center">
+                    <p className="count">04</p>
+                    <h3 className="mb-3">Thanh toán 50% giá trị dự án</h3>
+                    <p className="mb-0">
+                      Sau khi thống nhất báo giá, khách hàng thanh toán 50% giá
+                      trị dự án. Xác nhận thanh toán mới có thể tiến hành các
+                      bước tiếp theo.
+                    </p>
+                  </div>
+                </div>
+                <div className="step-item col-lg-4 col-md-6">
+                  <div className="text-center">
+                    <p className="count">05</p>
+                    <h3 className="mb-3">Triển khai dự án</h3>
+                    <p className="mb-0">
+                      Lập kế hoạch và phân công công việc cho đội ngũ thực hiện.
+                      Tiến hành thiết kế, lập trình và phát triển theo yêu cầu
+                      đã thu thập. Cập nhật tiến độ thường xuyên cho khách hàng
+                      2 - 3 lần/tuần.
+                    </p>
+                  </div>
+                </div>
+                <div className="step-item col-lg-4 col-md-6">
+                  <div className="text-center">
+                    <p className="count">06</p>
+                    <h3 className="mb-3">Test sản phẩm</h3>
+                    <p className="mb-0">
+                      Gửi bản demo sản phẩm để khách hàng kiểm tra. Thu thập
+                      phản hồi và điều chỉnh theo yêu cầu của khách hàng. Kiểm
+                      tra lần 2 để đảm bảo sản phẩm đáp ứng đúng mong muốn.
+                    </p>
+                  </div>
+                </div>
+                <div className="step-item col-lg-4 col-md-6">
+                  <div className="text-center">
+                    <p className="count">07</p>
+                    <h3 className="mb-3">Bàn giao</h3>
+                    <p className="mb-0">
+                      Hoàn thiện sản phẩm và bàn giao mã nguồn cho khách hàng.
+                      Hướng dẫn sử dụng và hỗ trợ kỹ thuật nếu cần. Khách hàng
+                      thanh toán nốt 50% còn lại để hoàn tất dự án.
                     </p>
                   </div>
                 </div>
@@ -264,10 +319,11 @@ export default function HowItWork() {
                 <p className="text-primary text-uppercase fw-bold mb-3">
                   Những câu hỏi bạn có
                 </p>
-                <h1>You Will Get In Wallet</h1>
+                <h1>Lý Do Chọn Chúng Tôi</h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing . egestas
-                  cursus pellentesque dignissim dui, congue. Vel etiam ut
+                  Khi làm việc với chúng tôi, bạn không chỉ nhận được một
+                  website và app đẹp mà còn có một sản phẩm đáp ứng đầy đủ các
+                  tiêu chí về hiệu suất, bảo mật và trải nghiệm người dùng.
                 </p>
               </div>
             </div>
@@ -277,13 +333,13 @@ export default function HowItWork() {
               <div className="block">
                 <div className="icon">
                   {" "}
-                  <i className="fas fa-truck"></i>
+                  <i className="fas fa-bolt"></i>
                 </div>
-                <h3 className="mb-3">Fast and convenient</h3>
+                <h3 className="mb-3">Nhanh chóng và dễ dàng</h3>
                 <p className="mb-0">
-                  Lorem ipsum dolor sit amet, conse cteatur adipiscing elit. Sit
-                  eros, in adipia scing non tellus netus. Pharetra egestas
-                  laciansfsia.
+                  Chúng tôi giúp bạn thiết kế website và ứng dụng nhanh chóng,
+                  tối ưu hóa quy trình để bạn có thể sớm sở hữu website chuyên
+                  nghiệp mà không mất nhiều thời gian.
                 </p>
               </div>
             </div>
@@ -293,11 +349,11 @@ export default function HowItWork() {
                   {" "}
                   <i className="fas fa-shield-alt"></i>
                 </div>
-                <h3 className="mb-3">Vey Safe and reliable</h3>
+                <h3 className="mb-3">An toàn và đáng tin cậy</h3>
                 <p className="mb-0">
-                  Lorem ipsum dolor sit amet, conse cteatur adipiscing elit. Sit
-                  eros, in adipia scing non tellus netus. Pharetra egestas
-                  laciansfsia.
+                  Chúng tôi cung cấp dịch vụ thiết kế website và ứng dụng với
+                  tiêu chuẩn bảo mật, đảm bảo chất lượng và hiệu quả, giúp bạn
+                  ra mắt sản phẩm trực tuyến một cách nhanh chóng và an toàn.
                 </p>
               </div>
             </div>
@@ -307,11 +363,12 @@ export default function HowItWork() {
                   {" "}
                   <i className="fas fa-handshake"></i>
                 </div>
-                <h3 className="mb-3">Trusted by customers</h3>
+                <h3 className="mb-3">Được khách hàng tin tưởng</h3>
                 <p className="mb-0">
-                  Lorem ipsum dolor sit amet, conse cteatur adipiscing elit. Sit
-                  eros, in adipia scing non tellus netus. Pharetra egestas
-                  laciansfsia.
+                  Chúng tôi đã xây dựng được lòng tin từ nhiều khách hàng nhờ
+                  vào dịch vụ thiết kế website và ứng dụng chất lượng cao, luôn
+                  đáp ứng đúng yêu cầu và mang lại giá trị thực tế cho doanh
+                  nghiệp.
                 </p>
               </div>
             </div>
@@ -324,7 +381,7 @@ export default function HowItWork() {
             <div className="col-lg-6">
               <div className="section-title text-center">
                 <p className="text-primary text-uppercase fw-bold mb-3">
-                  QUIESTIONS fOR LOAN
+                  Hỗ Trợ Khách Hàng
                 </p>
                 <h1>Thông Tin Bổ Sung</h1>
               </div>
@@ -338,47 +395,6 @@ export default function HowItWork() {
               >
                 <div className="accordion-item bg-transparent">
                   <h2
-                    className="accordion-header accordion-button h5 border-0 active"
-                    id="heading-8a4ed081f8ec73b6e9377f609cffed128b925ed9"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse-8a4ed081f8ec73b6e9377f609cffed128b925ed9"
-                    aria-expanded="true"
-                    aria-controls="collapse-8a4ed081f8ec73b6e9377f609cffed128b925ed9"
-                  >
-                    How can I integrate Avocode to my current tool stack?
-                  </h2>
-                  <div
-                    id="collapse-8a4ed081f8ec73b6e9377f609cffed128b925ed9"
-                    className="accordion-collapse collapse border-0 show"
-                    aria-labelledby="heading-8a4ed081f8ec73b6e9377f609cffed128b925ed9"
-                    data-bs-parent="#additional_Info"
-                  >
-                    <div className="accordion-body py-0 content">
-                      <h6 id="service-provided-as-is">
-                        Service Provided AS IS:
-                      </h6>
-                      <p>
-                        The Service is provided for free during this pilot
-                        project, and is provided as is with no warranty.
-                        Conclude will provide User support for the Service,
-                        however; Conclude is not committed to any level of
-                        service or availability of the Service. A further
-                        description of the Service and our user support is
-                        available at the Site.
-                      </p>
-                      <h6 id="company-liability">Company Liability:</h6>
-                      <p>
-                        If you enter into this agreement on behalf of a company,
-                        you hereby agree that the company is responsible under
-                        this Agreement for all actions and omissions conducted
-                        by its designated users of the Service.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item bg-transparent">
-                  <h2
                     className="accordion-header accordion-button h5 border-0 "
                     id="heading-5547386a6e7381108d294d5eebe26d464fcd8c2c"
                     type="button"
@@ -387,94 +403,22 @@ export default function HowItWork() {
                     aria-expanded="false"
                     aria-controls="collapse-5547386a6e7381108d294d5eebe26d464fcd8c2c"
                   >
-                    How can I use Avocode with cloud documents?
+                    Công nghệ sử dụng?
                   </h2>
                   <div
                     id="collapse-5547386a6e7381108d294d5eebe26d464fcd8c2c"
-                    className="accordion-collapse collapse border-0 "
+                    className="accordion-collapse collapse border-0"
                     aria-labelledby="heading-5547386a6e7381108d294d5eebe26d464fcd8c2c"
                     data-bs-parent="#additional_Info"
                   >
                     <div className="accordion-body py-0 content">
-                      The difference between and premium product consist number
-                      of components, plugins, page in each. The Free versions
-                      contain only a few elements and pages that.
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item bg-transparent">
-                  <h2
-                    className="accordion-header accordion-button h5 border-0 "
-                    id="heading-c9475aed4d896279ec43e21b49f55179d31b95ee"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse-c9475aed4d896279ec43e21b49f55179d31b95ee"
-                    aria-expanded="false"
-                    aria-controls="collapse-c9475aed4d896279ec43e21b49f55179d31b95ee"
-                  >
-                    If I cancel, can I archive my designs to keep them safe
-                    until I come back?
-                  </h2>
-                  <div
-                    id="collapse-c9475aed4d896279ec43e21b49f55179d31b95ee"
-                    className="accordion-collapse collapse border-0 "
-                    aria-labelledby="heading-c9475aed4d896279ec43e21b49f55179d31b95ee"
-                    data-bs-parent="#additional_Info"
-                  >
-                    <div className="accordion-body py-0 content">
-                      The difference between and premium product consist number
-                      of components, plugins, page in each. The Free versions
-                      contain only a few elements and pages that.
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item bg-transparent">
-                  <h2
-                    className="accordion-header accordion-button h5 border-0 "
-                    id="heading-202f9ad39223c3254b19b10ed0e635bc52686306"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse-202f9ad39223c3254b19b10ed0e635bc52686306"
-                    aria-expanded="false"
-                    aria-controls="collapse-202f9ad39223c3254b19b10ed0e635bc52686306"
-                  >
-                    How can I adjust user permissions &amp; admin provileges?
-                  </h2>
-                  <div
-                    id="collapse-202f9ad39223c3254b19b10ed0e635bc52686306"
-                    className="accordion-collapse collapse border-0 "
-                    aria-labelledby="heading-202f9ad39223c3254b19b10ed0e635bc52686306"
-                    data-bs-parent="#additional_Info"
-                  >
-                    <div className="accordion-body py-0 content">
-                      The difference between and premium product consist number
-                      of components, plugins, page in each. The Free versions
-                      contain only a few elements and pages that.
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item bg-transparent">
-                  <h2
-                    className="accordion-header accordion-button h5 border-0 "
-                    id="heading-85282f95ad03ef14f79af368179d94939e4ed160"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse-85282f95ad03ef14f79af368179d94939e4ed160"
-                    aria-expanded="false"
-                    aria-controls="collapse-85282f95ad03ef14f79af368179d94939e4ed160"
-                  >
-                    How do I get back to Avocode and resume my subscription?
-                  </h2>
-                  <div
-                    id="collapse-85282f95ad03ef14f79af368179d94939e4ed160"
-                    className="accordion-collapse collapse border-0 "
-                    aria-labelledby="heading-85282f95ad03ef14f79af368179d94939e4ed160"
-                    data-bs-parent="#additional_Info"
-                  >
-                    <div className="accordion-body py-0 content">
-                      The difference between and premium product consist number
-                      of components, plugins, page in each. The Free versions
-                      contain only a few elements and pages that.
+                      Chúng tôi sử dụng các công nghệ tiên tiến và phổ biến để
+                      đảm bảo chất lượng và hiệu suất cao: Frontend: React,
+                      Vite, HTML5, CSS, Bootstrap 5; Backend: Node.js, PHP,
+                      Spring Boot, .NET Core Database: SQL Server, MySQL,
+                      MongoDB; CMS: WordPress; Ứng dụng di động: Flutter; Các
+                      công nghệ này giúp đảm bảo sản phẩm của bạn hoạt động ổn
+                      định và dễ dàng bảo trì.
                     </div>
                   </div>
                 </div>

@@ -30,9 +30,17 @@
     "basic": "Cơ bản",
     "basic-web-description": "Website 1 trang đơn giản, responsive, có form liên hệ và bàn giao mã nguồn. Hoàn thành từ 3 - 5 ngày.",
     "standard": "Tiêu chuẩn",
+    "standard-web-description": "Website từ 3 - 5 trang, thiết kế tùy chỉnh, tích hợp Google Map, chuẩn SEO cơ bản. Hoàn thành trong 5 - 7 ngày.",
     "high-class": "Cao cấp",
+    "high-class-web-description": "Chọn 1 trong các website chuyên nghiệp, quản lý nhân sự, tuyển sinh, v.v. Hoàn thành trong 7 - 14 ngày.",
     "advanced": "Nâng cao",
-    "professional": "Chuyên nghiệp"
+    "advanced-web-description": "Website bán hàng hoặc doanh nghiệp với giỏ hàng, thanh toán online, UI/UX chuyên nghiệp, SEO nâng cao. Hoàn thành trong 14 - 20 ngày.",
+    "professional": "Chuyên nghiệp",
+    "professional-web-description": "Website cao cấp, CMS mạnh mẽ, đa ngôn ngữ, tích hợp API & tính năng tùy chỉnh. Hỗ trợ SEO toàn diện. Hoàn thành trong 15 - 30 ngày.",
+    "combo": "Combo Web & App",
+    "app-development": "Phát triển App",
+    "under-app-development": "Thiết kế & tối ưu ứng dụng chuyên nghiệp, giúp doanh nghiệp phát triển bền vững.",
+    "about-us": "Về chúng tôi"
   },
   "footer": {
     "page": "Trang",

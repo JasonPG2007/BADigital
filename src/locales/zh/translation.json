@@ -30,9 +30,17 @@
     "basic": "基本",
     "basic-web-description": "简单的单页网站，响应式，带有联系表单和表格 源代码交付3至5天完成。",
     "standard": "标准的",
+    "standard-web-description": "网站有 3 到 5 页，定制设计，集成 Google 地图，基本 SEO 标准。 5至7天完成。",
     "high-class": "高档",
+    "high-class-web-description": "选择专业网站之一，人力资源管理、招生等。 7至14天内完成。",
     "advanced": "先进的",
-    "professional": "专业的"
+    "advanced-web-description": "具有购物车、在线支付、专业 UI/UX、高级 SEO 的销售或商业网站。 14至20天内完成。",
+    "professional": "专业的",
+    "professional-web-description": "优质网站、强大的 CMS、多语言、API 集成和定制功能。全面的 SEO 支持。 15至30天内完成。",
+    "combo": "网页与应用组合",
+    "app-development": "应用程序开发",
+    "under-app-development": "专业的应用设计和优化，帮助企业可持续发展。",
+    "about-us": "关于我们"
   },
   "footer": {
     "page": "页面",

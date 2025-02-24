@@ -175,7 +175,7 @@ export default function Contact() {
                       <div className="block mt-0">
                         <h4 className="h5">Vẫn còn câu hỏi?</h4>
                         <div className="content">
-                          Chúng tôi sẵn sàn hỗ trợ bất kỳ lúc nào thông qua
+                          Chúng tôi sẵn sàng hỗ trợ bất kỳ lúc nào thông qua
                           <br /> <a href="tel:+14703949585">
                             +1 470 394 9585
                           </a>{" "}

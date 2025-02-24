@@ -30,9 +30,16 @@
     "basic": "Basic",
     "basic-web-description": "Simple 1-page website, responsive, with contact form and source code handover. Completed in 3 - 5 days.",
     "standard": "Standard",
+    "standard-web-description": "Website from 3 - 5 pages, custom design, integrated Google Map, basic SEO standards. Completed in 5 - 7 days.",
     "high-class": "High-class",
+    "high-class-web-description": "Choose from professional websites, HR management, admissions, etc. Complete in 7 - 14 days.",
     "advanced": "Advanced",
-    "professional": "Professional"
+    "advanced-web-description": "Sales or business website with shopping cart, online payment, professional UI/UX, advanced SEO. Completed in 14 - 20 days.",
+    "professional": "Professional",
+    "professional-web-description": "Premium website, powerful CMS, multilingual, API integration & customization features. Full SEO support. Complete in 15 - 30 days.",
+    "combo": "Web & App Combo",
+    "app-development": "App Development",
+    "about-us": "About Us"
   },
   "footer": {
     "page": "Pages",
