@@ -10,12 +10,12 @@
   <meta property="og:image" content="/images/avatar-web.png">
   <meta property="og:title" content="Thiết Kế Website Chuẩn SEO | Web Chuyên Nghiệp, Hiệu Quả Cao">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
   <link rel="stylesheet" href="./src/assets/plugins/slick/slick.css">
   <link rel="stylesheet" href="./src/assets/plugins/font-awesome/fontawesome.min.css">
   <link rel="stylesheet" href="./src/assets/plugins/font-awesome/brands.css">
   <link rel="stylesheet" href="./src/assets/css/style.css">
 
+  <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <title>Thiết Kế Website Chuẩn SEO - BA Digital</title>
 </head>
@@ -42,14 +42,25 @@
   </script>
   <!--End of Tawk.to Script-->
   <!-- Zalo Chat Button -->
-  <a href="https://zalo.me/0911040107" target="_blank">
+  <a href="https://zalo.me/0911040107" id="zalo" target="_blank">
     <div class="zalo-button">
       <i class="zalo-icon">Zalo</i>
     </div>
   </a>
-  <a href="https://m.me/603681139484860" class="message-btn" target="_blank">
+  <a href="https://m.me/603681139484860" id="message" class="message-btn" target="_blank">
     <i class="fa-brands fa-facebook-messenger" style="color: #0967FF;"></i>
   </a>
+  <script>
+    if (window.location.pathname.startsWith("/admin/")) {
+      document.getElementById("zalo").style.display = "none";
+      document.getElementById("message").style.display = "none";
+      setTimeout(function () {
+        if (typeof Tawk_API !== "undefined" && Tawk_API.hideWidget) {
+          Tawk_API.hideWidget();
+        }
+      }, 500);
+    }
+  </script>
 </body>
 <script>
   window.addEventListener('scroll', () => {
@@ -67,5 +78,6 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </html>

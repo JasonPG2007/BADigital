@@ -1,7 +1,22 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 function Home() {
+  // Variables
   const { t } = useTranslation();
+  const [serviceCate, setServiceCate] = useState([]);
+  const API_URL = "https://localhost:44350/api/Home";
+  useEffect(() => {
+    axios
+      .get(API_URL)
+      .then((response) => {
+        setServiceCate(response.data);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the data:", error);
+      });
+  }, []);
   return (
     <div>
       <section className="banner bg-tertiary position-relative overflow-hidden">
@@ -119,88 +134,92 @@ function Home() {
           </svg>
         </div>
       </section>
+      {serviceCate.map((category) => (
+        <section key={category.serviceCategoryId} className="section">
+          <div className="container">
+            <div className="row-custom-2">
+              <div className="col-lg-4 col-md-6">
+                <div
+                  className="section-title pt-4"
+                  style={{ paddingLeft: "15px" }}
+                >
+                  <p className="text-primary text-uppercase fw-bold mb-3">
+                    {t("body.our-service-packages")}
+                  </p>
 
-      <section className="section">
-        <div className="container">
-          <div className="row-custom-2">
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="section-title pt-4"
-                style={{ paddingLeft: "15px" }}
-              >
-                <p className="text-primary text-uppercase fw-bold mb-3">
-                  {t("body.our-service-packages")}
-                </p>
-                <h1>{t("body.website-design")}</h1>
-                <p>{t("body.under-website-design")}</p>
+                  <h1>{category.cateServiceName}</h1>
+
+                  <p>{t("body.under-website-design")}</p>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 service-item">
+                <a className="text-black" href="/service-detail">
+                  <div className="block">
+                    {" "}
+                    <span className="colored-box text-center h3 mb-4">01</span>
+                    <h3 className="mb-3 service-title">{t("body.basic")}</h3>
+                    <p className="mb-0 service-description">
+                      {t("body.basic-web-description")}
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div className="col-lg-4 col-md-6 service-item">
+                <a className="text-black" href="/service-detail">
+                  <div className="block">
+                    {" "}
+                    <span className="colored-box text-center h3 mb-4">02</span>
+                    <h3 className="mb-3 service-title">{t("body.standard")}</h3>
+                    <p className="mb-0 service-description">
+                      {t("body.standard-web-description")}
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div className="col-lg-4 col-md-6 service-item">
+                <a className="text-black" href="/service-detail">
+                  <div className="block">
+                    {" "}
+                    <span className="colored-box text-center h3 mb-4">03</span>
+                    <h3 className="mb-3 service-title">
+                      {t("body.high-class")}
+                    </h3>
+                    <p className="mb-0 service-description">
+                      {t("body.high-class-web-description")}
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div className="col-lg-4 col-md-6 service-item">
+                <a className="text-black" href="/service-detail">
+                  <div className="block">
+                    {" "}
+                    <span className="colored-box text-center h3 mb-4">04</span>
+                    <h3 className="mb-3 service-title">{t("body.advanced")}</h3>
+                    <p className="mb-0 service-description">
+                      {t("body.advanced-web-description")}
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div className="col-lg-4 col-md-6 service-item">
+                <a className="text-black" href="/service-detail">
+                  <div className="block">
+                    {" "}
+                    <span className="colored-box text-center h3 mb-4">05</span>
+                    <h3 className="mb-3 service-title">
+                      {t("body.professional")}
+                    </h3>
+                    <p className="mb-0 service-description">
+                      {t("body.professional-web-description")}
+                    </p>
+                  </div>
+                </a>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="/service-detail">
-                <div className="block">
-                  {" "}
-                  <span className="colored-box text-center h3 mb-4">01</span>
-                  <h3 className="mb-3 service-title">{t("body.basic")}</h3>
-                  <p className="mb-0 service-description">
-                    {t("body.basic-web-description")}
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="/service-detail">
-                <div className="block">
-                  {" "}
-                  <span className="colored-box text-center h3 mb-4">02</span>
-                  <h3 className="mb-3 service-title">{t("body.standard")}</h3>
-                  <p className="mb-0 service-description">
-                    {t("body.standard-web-description")}
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="/service-detail">
-                <div className="block">
-                  {" "}
-                  <span className="colored-box text-center h3 mb-4">03</span>
-                  <h3 className="mb-3 service-title">{t("body.high-class")}</h3>
-                  <p className="mb-0 service-description">
-                    {t("body.high-class-web-description")}
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="/service-detail">
-                <div className="block">
-                  {" "}
-                  <span className="colored-box text-center h3 mb-4">04</span>
-                  <h3 className="mb-3 service-title">{t("body.advanced")}</h3>
-                  <p className="mb-0 service-description">
-                    {t("body.advanced-web-description")}
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="/service-detail">
-                <div className="block">
-                  {" "}
-                  <span className="colored-box text-center h3 mb-4">05</span>
-                  <h3 className="mb-3 service-title">
-                    {t("body.professional")}
-                  </h3>
-                  <p className="mb-0 service-description">
-                    {t("body.professional-web-description")}
-                  </p>
-                </div>
-              </a>
-            </div>
           </div>
-        </div>
-      </section>
-
+        </section>
+      ))}
       <section className="section">
         <div className="container">
           <div className="row-custom-2">
