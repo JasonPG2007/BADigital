@@ -14,8 +14,8 @@ import "../../../assets/js/main.js";
 import LeftMenu from "../LeftMenu/LeftMenu";
 import Header from "../Header/Header";
 import Dashboard from "../Dashboard/Dashboard";
-import SignIn from "../Signin/Signin.jsx";
-import SignUp from "../Signup/Signup.jsx";
+import SignIn from "../Signin/SignIn.jsx";
+import SignUp from "../Signup/SignUp.jsx";
 import Profile from "../Profile/Profile.jsx";
 
 export default function Admin() {
