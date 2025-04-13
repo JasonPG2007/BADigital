@@ -34,7 +34,7 @@ export default function Header() {
         <div className="container">
           <a className="navbar-brand" href="/">
             <img
-              loading="preload"
+              loading="lazy"
               decoding="async"
               width="200"
               src="/images/logo-ngang.png"

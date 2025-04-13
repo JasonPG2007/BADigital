@@ -50,10 +50,18 @@ export default function SignUp() {
                     </p>
                   </div>
                   <div className="cover-image">
-                    <img src="/images/auth/signin-image.svg" alt="image" />
+                    <img
+                      src="/images/auth/signin-image.svg"
+                      alt="image"
+                      loading="lazy"
+                    />
                   </div>
                   <div className="shape-image">
-                    <img src="/images/auth/shape.svg" alt="image" />
+                    <img
+                      src="/images/auth/shape.svg"
+                      alt="image"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
               </div>

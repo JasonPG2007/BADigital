@@ -47,6 +47,9 @@ export default function Footer() {
                   <a href="/services">{t("footer.service")}</a>
                 </li>
                 <li className="mb-2">
+                  <a href="/projects">Dự án</a>
+                </li>
+                <li className="mb-2">
                   <a href="/contact">{t("footer.contact")}</a>
                 </li>
                 <li className="mb-2">
@@ -54,9 +57,6 @@ export default function Footer() {
                 </li>
                 <li className="mb-2">
                   <a href="/how-to-work">{t("footer.how-it-works")}</a>
-                </li>
-                <li className="mb-2">
-                  <a href="/faqs">{t("footer.faqs")}</a>
                 </li>
               </ul>
             </div>
@@ -181,7 +181,8 @@ export default function Footer() {
                 <a
                   title="Explorer Facebook Profile"
                   className="text-black"
-                  href="https://www.facebook.com/profile.php?id=61572892182086"
+                  href="https://www.facebook.com/badigitalwebapp/"
+                  target="_blank"
                 >
                   <i className="fab fa-facebook-f"></i>
                 </a>
@@ -191,6 +192,7 @@ export default function Footer() {
                   title="Explorer Instagram Profile"
                   className="text-black"
                   href="https://www.instagram.com/badigitalwebapp/"
+                  target="_blank"
                 >
                   <i className="fab fa-instagram"></i>
                 </a>

@@ -180,14 +180,17 @@ export default function Contact() {
                             +1 470 394 9585
                           </a>{" "}
                           hoặc <br />
-                          <a href="https://www.facebook.com/profile.php?id=61572892182086">
+                          <a
+                            href="https://www.facebook.com/badigitalwebapp/"
+                            target="_blank"
+                          >
                             Fanpage
                           </a>{" "}
                           của chúng tôi
                           <br />
                           Ngày làm việc: Thứ 2 - Thứ 6
                           <br />
-                          Giờ làm việc: 7AM - 11:30PM Giờ khu vực Georgia tại US
+                          Giờ làm việc: 7AM - 11:30PM Giờ khu vực Georgia tại Mỹ
                         </div>
                       </div>
                       <div className="block">
@@ -196,7 +199,8 @@ export default function Contact() {
                             <a
                               title="Explorer Facebook Profile"
                               className="text-black"
-                              href="https://www.facebook.com/profile.php?id=61572892182086"
+                              href="https://www.facebook.com/badigitalwebapp/"
+                              target="_blank"
                             >
                               <i className="fab fa-facebook-f"></i>
                             </a>
@@ -206,6 +210,7 @@ export default function Contact() {
                               title="Explorer Instagram Profile"
                               className="text-black"
                               href="https://www.instagram.com/badigitalwebapp/"
+                              target="_blank"
                             >
                               <i className="fab fa-instagram"></i>
                             </a>

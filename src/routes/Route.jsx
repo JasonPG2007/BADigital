@@ -37,10 +37,7 @@ export default function routes() {
       <Routes>
         <Route path="*" element={<UnderConstruction></UnderConstruction>} />
         <Route path="/" element={<Home></Home>} />
-        <Route
-          path="/service-detail"
-          element={<ServiceDetail></ServiceDetail>}
-        />
+        <Route path="/service/*" element={<ServiceDetail></ServiceDetail>} />
         <Route path="/services" element={<Services></Services>} />
         <Route path="/contact" element={<Contact></Contact>} />
         <Route path="/how-it-works" element={<HowItWork></HowItWork>} />

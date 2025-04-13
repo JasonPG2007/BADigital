@@ -1,4 +1,24 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 export default function Services() {
+  // Variables
+  const [listPackage, setListPackage] = useState([]);
+  const API_URL = `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Package/`;
+  // End Variables
+
+  useEffect(() => {
+    axios
+      .get(API_URL)
+      .then((response) => {
+        setListPackage(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
   return (
     <>
       <section className="page-header bg-tertiary">
@@ -108,106 +128,44 @@ export default function Services() {
       <section className="section">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="icon-box-item text-center col-lg-4 col-md-6 mb-4">
-              <div className="rounded shadow py-5 px-4">
-                <div className="icon">
-                  {" "}
-                  <i className="fas fa-home"></i>
+            {listPackage.map((item) => (
+              <div
+                className="icon-box-item text-center col-lg-4 col-md-6 mb-4"
+                key={item.packageId}
+              >
+                <div className="rounded shadow py-5 px-4">
+                  <div className="icon">
+                    {item.packageName === "Cơ bản" && (
+                      <i className="fas fa-home"></i>
+                    )}
+                    {item.packageName === "Tiêu chuẩn" && (
+                      <i className="fas fa-gear"></i>
+                    )}
+                    {item.packageName === "Cao cấp" && (
+                      <i className="fas fa-crown"></i>
+                    )}
+                    {item.packageName === "Nâng cao" && (
+                      <i className="fas fa-key"></i>
+                    )}
+                    {item.packageName === "Chuyên nghiệp" && (
+                      <i className="fas fa-trophy"></i>
+                    )}
+                  </div>
+                  <h3 className="mb-3">{item.packageName}</h3>
+                  <p className="mb-4">Website</p>
+                  <a
+                    className="btn btn-sm btn-outline-primary"
+                    href={`/service/${item.packageId}`}
+                  >
+                    Xem chi tiết{" "}
+                    <span
+                      style={{ fontSize: "14px" }}
+                      className="ms-2 fas fa-arrow-right"
+                    ></span>
+                  </a>
                 </div>
-                <h3 className="mb-3">Cơ bản</h3>
-                <p className="mb-4">Website & Ứng dụng (App)</p>{" "}
-                <a
-                  className="btn btn-sm btn-outline-primary"
-                  href="service-detail"
-                >
-                  Xem chi tiết{" "}
-                  <span
-                    style={{ fontSize: "14px" }}
-                    className="ms-2 fas fa-arrow-right"
-                  ></span>
-                </a>
               </div>
-            </div>
-            <div className="icon-box-item text-center col-lg-4 col-md-6 mb-4">
-              <div className="rounded shadow py-5 px-4">
-                <div className="icon">
-                  {" "}
-                  <i className="fas fa-gear"></i>
-                </div>
-                <h3 className="mb-3">Tiêu chuẩn</h3>
-                <p className="mb-4">Website & Ứng dụng (App)</p>{" "}
-                <a
-                  className="btn btn-sm btn-outline-primary"
-                  href="service-detail"
-                >
-                  Xem chi tiết{" "}
-                  <span
-                    style={{ fontSize: "14px" }}
-                    className="ms-2 fas fa-arrow-right"
-                  ></span>
-                </a>
-              </div>
-            </div>
-            <div className="icon-box-item text-center col-lg-4 col-md-6 mb-4">
-              <div className="rounded shadow py-5 px-4">
-                <div className="icon">
-                  {" "}
-                  <i className="fas fa-crown"></i>
-                </div>
-                <h3 className="mb-3">Cao cấp</h3>
-                <p className="mb-4">Website & Ứng dụng (App)</p>{" "}
-                <a
-                  className="btn btn-sm btn-outline-primary"
-                  href="service-detail"
-                >
-                  Xem chi tiết{" "}
-                  <span
-                    style={{ fontSize: "14px" }}
-                    className="ms-2 fas fa-arrow-right"
-                  ></span>
-                </a>
-              </div>
-            </div>
-            <div className="icon-box-item text-center col-lg-4 col-md-6 mb-4">
-              <div className="rounded shadow py-5 px-4">
-                <div className="icon">
-                  {" "}
-                  <i className="fas fa-key"></i>
-                </div>
-                <h3 className="mb-3">Nâng cao</h3>
-                <p className="mb-4">Website</p>{" "}
-                <a
-                  className="btn btn-sm btn-outline-primary"
-                  href="service-detail"
-                >
-                  Xem chi tiết{" "}
-                  <span
-                    style={{ fontSize: "14px" }}
-                    className="ms-2 fas fa-arrow-right"
-                  ></span>
-                </a>
-              </div>
-            </div>
-            <div className="icon-box-item text-center col-lg-4 col-md-6 mb-4">
-              <div className="rounded shadow py-5 px-4">
-                <div className="icon">
-                  {" "}
-                  <i className="fas fa-trophy"></i>
-                </div>
-                <h3 className="mb-3">Chuyên nghiệp</h3>
-                <p className="mb-4">Website</p>{" "}
-                <a
-                  className="btn btn-sm btn-outline-primary"
-                  href="service-detail?si="
-                >
-                  Xem chi tiết{" "}
-                  <span
-                    style={{ fontSize: "14px" }}
-                    className="ms-2 fas fa-arrow-right"
-                  ></span>
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

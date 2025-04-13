@@ -103,10 +103,14 @@ export default function SignIn() {
                     </p>
                   </div>
                   <div className="cover-image">
-                    <img src="/images/auth/signin-image.svg" alt="" />
+                    <img
+                      src="/images/auth/signin-image.svg"
+                      alt=""
+                      loading="lazy"
+                    />
                   </div>
                   <div className="shape-image">
-                    <img src="/images/auth/shape.svg" alt="" />
+                    <img src="/images/auth/shape.svg" alt="" loading="lazy" />
                   </div>
                 </div>
               </div>

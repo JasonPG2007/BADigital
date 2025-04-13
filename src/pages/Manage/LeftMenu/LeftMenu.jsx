@@ -7,7 +7,7 @@ export default function LeftMenu() {
       <aside className="sidebar-nav-wrapper">
         <div className="navbar-logo">
           <a href="/">
-            <img src="/images/logo-ngang.png" alt="logo" />
+            <img src="/images/logo-ngang.png" alt="logo" loading="lazy" />
           </a>
         </div>
         <nav className="sidebar-nav">

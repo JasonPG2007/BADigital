@@ -74,6 +74,7 @@ export default function SignIn() {
                   <div className="text-center mb-3">
                     <a href="/">
                       <img
+                        loading="lazy"
                         src="/images/logo-ngang.png"
                         alt="BootstrapBrain Logo"
                         width="175"

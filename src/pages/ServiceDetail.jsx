@@ -3,27 +3,47 @@ import "../assets/plugins/font-awesome/fontawesome.min.css";
 import "../assets/plugins/font-awesome/brands.css";
 import "../assets/plugins/font-awesome/solid.css";
 import "../assets/css/style.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function ServiceDetail() {
+  // Variables
+  const [item, setItem] = useState([]);
+  const id = window.location.pathname.split("/").pop();
+  const API_URL = `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Package/${id}`;
+  // End Variables
+
+  useEffect(() => {
+    axios
+      .get(API_URL)
+      .then((response) => {
+        setItem(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
   return (
     <div>
       <section className="page-header bg-tertiary">
         <div className="container">
           <div className="row">
             <div className="col-8 mx-auto text-center">
-              <h2 className="mb-3 text-capitalize">Personal loans</h2>
+              <h2 className="mb-3 text-capitalize">{item.packageName}</h2>
               <ul
                 className="list-inline breadcrumbs text-capitalize"
                 style={{ fontWeight: "500" }}
               >
                 <li className="list-inline-item">
-                  <a href="/">Home</a>
+                  <a href="/">Trang chủ</a>
                 </li>
                 <li className="list-inline-item">
-                  / &nbsp; <a href="services.html">Services</a>
+                  / &nbsp; <a href="services.html">Dịch vụ</a>
                 </li>
                 <li className="list-inline-item">
-                  / &nbsp; <a href="service-details.html">Personal Loans</a>
+                  / &nbsp; <a href="service-details.html">{item.packageName}</a>
                 </li>
               </ul>
             </div>
@@ -120,30 +140,26 @@ export default function ServiceDetail() {
                 className="bg-white shadow rounded-lg p-4 sticky-top"
                 style={{ top: "30px" }}
               >
-                <h4 className="has-line-end">Personal loans</h4>
+                <h4 className="has-line-end">{item.packageName}</h4>
                 <nav id="TableOfContents">
                   <ul>
                     <li>
-                      <a href="#how-a-payday-loan-online-works">
-                        How a Payday Loan Online Works
+                      <a
+                        href="javascript:void(0)"
+                        style={{ cursor: "default" }}
+                      >
+                        Thông tin về dịch vụ
                       </a>
                       <ul>
                         <li>
-                          <a href="#payday-loan-application-processing">
-                            Payday Loan Application Processing
+                          <a
+                            href="javascript:void(0)"
+                            style={{ cursor: "default" }}
+                          >
+                            Mô tả
                           </a>
                         </li>
                       </ul>
-                    </li>
-                    <li>
-                      <a href="#what-you-know-about-loans">
-                        What You Know About Loans
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#what-services-we-render">
-                        What Services We Render
-                      </a>
                     </li>
                   </ul>
                 </nav>
@@ -151,89 +167,10 @@ export default function ServiceDetail() {
             </div>
             <div className="col-lg-8">
               <div className="content">
-                <h2 id="how-a-payday-loan-online-works">
-                  How a Payday Loan Online Works
+                <h2 id="what-services-we-render">
+                  Gói dịch vụ - {item.packageName} gồm những gì
                 </h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Egestas at eu purus eleme nergtum. Nisl turpis consectetur
-                  amet, nam arcu at dolor. Nunc, etiam pellentesque facilisis
-                  elementum nisl. Id scelerisque gravida augue senectus dolor
-                  nascetur. Aliquet quam ut eget aliquam ultricr geries
-                  volutpat. Enim condimentum quisque at mauris malesuada.
-                  Phasellus sed elemee rgerntdsum in bibendum morbi id phasellus
-                  arcu. Tempus, venenatis sagittis volutpat egestas. Sceler
-                  egerisque
-                </p>
-                <p>
-                  pellentesque ut varius gravida aliquet et. Bibendum viverra
-                  dictum leo iaculis convallis lacus, parturient amet ut. Mi et
-                  hendrerit sit massa faucibus sed rhoncus. Faucibus dolor in
-                  quis sapien, faucibus sem et. Sagittis nam eu, lorem nam morbi
-                  euismod amet et. Non lectus nibh quis et leo Elementum non
-                  pharetra leo ipsum morbi euismod mus. Amet adipiscing est
-                  mauris non dictum. At elementum, fermentum quam odio eros sem.
-                  Morbi mattis eu dictum malesuada. Tellus in.
-                </p>
-                <h3 id="payday-loan-application-processing">
-                  Payday Loan Application Processing
-                </h3>
-                <ul>
-                  <li>
-                    Interest may vary, be fixed, or mixed, will on the
-                    lender&rsquo;s and characteristics
-                  </li>
-                  <li>
-                    Depending on the granting institution and the amount of the
-                    loan, goods
-                  </li>
-                  <li>
-                    The loan can be granted to anyone, as long as they make the
-                    loan application
-                  </li>
-                </ul>
-                <hr />
-                <h2 id="what-you-know-about-loans">
-                  What You Know About Loans
-                </h2>
-                <div
-                  style={{
-                    position: "relative",
-                    paddingBottom: "56.25%",
-                    height: 0,
-                    overflow: "hidden",
-                  }}
-                >
-                  <iframe
-                    src="https://www.youtube.com/embed/jgAsPXRhTLQ"
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%",
-                      border: 0,
-                    }}
-                    allowfullscreen
-                    title="YouTube Video"
-                  ></iframe>
-                </div>
-                <hr />
-                <h2 id="what-services-we-render">What Services We Render</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Ultrices accumsan ultricies morbi purus dui pharetra, diam
-                  congue. Facilisi sapien eros, a sagittis, at quam dolor elit.
-                  Malesuada elementum leo, ac volud rhtpat integer. Amet, dolor
-                  risus lectus platea lectus faucibus mi, dictum. Ultricies
-                </p>
-                <p>
-                  cursus. Diam risus mauris id pretium vel. Ac amet netus
-                  imperdiet scel eerghp iejroin ris tque elit id sapien.habitant
-                  commodo enm at duiaAt consequat facilisi aenean consectetur
-                  dolor cursus at a. Risus auctor amet, iaculis sed mi arcu
-                  ante. Sit etiam semper non, nunc gravida volutpat
-                </p>
+                <p>{item.describe}</p>
               </div>
             </div>
           </div>

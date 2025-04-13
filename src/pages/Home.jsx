@@ -12,6 +12,8 @@ function Home() {
     "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Package";
   const API_URL_Category =
     "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/ServiceCategory";
+  // End Variables
+
   useEffect(() => {
     axios
       .get(API_URL_Package)
@@ -172,7 +174,8 @@ function Home() {
                 >
                   <a
                     className="text-black"
-                    href={`/service/${itemPackage.packageId}`}
+                    href="javascript:void(0)"
+                    style={{ cursor: "default" }}
                   >
                     <div className="block">
                       <span className="colored-box text-center h3 mb-4">

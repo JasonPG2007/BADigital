@@ -82,7 +82,11 @@ export default function Profile() {
                   <div className="profile-info">
                     <div className="d-flex align-items-center mb-30">
                       <div className="profile-image">
-                        <img src="/images/profile/profile-1.png" alt="" />
+                        <img
+                          src="/images/profile/profile-1.png"
+                          alt=""
+                          loading="lazy"
+                        />
                         <div className="update-image">
                           <input type="file" id="avatar" />
                           <label htmlFor="avatar">

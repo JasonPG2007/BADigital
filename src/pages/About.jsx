@@ -561,7 +561,7 @@ export default function About() {
                     loading="lazy"
                     decoding="async"
                     src="/images/avatar_USA.jpg"
-                    alt="Nguyen Quoc Bao An"
+                    alt="Nguyễn Quốc Bảo An"
                     className="rounded w-100"
                     width="300"
                     height="332"
@@ -570,7 +570,8 @@ export default function About() {
                     <li className="list-inline-item">
                       <a
                         className="facebook"
-                        href="https://www.facebook.com/profile.php?id=61572892182086"
+                        href="https://www.facebook.com/badigitalwebapp/"
+                        target="_blank"
                       >
                         <i className="fab fa-facebook"></i>
                       </a>
@@ -579,6 +580,7 @@ export default function About() {
                       <a
                         className="instagram"
                         href="https://www.instagram.com/badigitalwebapp/"
+                        target="_blank"
                       >
                         <i className="fab fa-instagram"></i>
                       </a>
@@ -586,7 +588,7 @@ export default function About() {
                   </ul>
                 </div>
                 <div className="card-body">
-                  <h3>Nguyen Quoc Bao An</h3>
+                  <h3>Nguyễn Quốc Bảo An</h3>
                   <p>Người sáng lập</p>
                 </div>
               </div>
@@ -598,7 +600,7 @@ export default function About() {
                     loading="lazy"
                     decoding="async"
                     src="/images/avatar_dua_xe_oto.jpg"
-                    alt="Nguyen Quoc Bao An"
+                    alt="Nguyễn Quốc Bảo An"
                     className="rounded w-100"
                     width="300"
                     height="333"
@@ -607,7 +609,8 @@ export default function About() {
                     <li className="list-inline-item">
                       <a
                         className="facebook"
-                        href="https://www.facebook.com/profile.php?id=61572892182086"
+                        href="https://www.facebook.com/badigitalwebapp/"
+                        target="_blank"
                       >
                         <i className="fab fa-facebook"></i>
                       </a>
@@ -616,6 +619,7 @@ export default function About() {
                       <a
                         className="instagram"
                         href="https://www.instagram.com/badigitalwebapp/"
+                        target="_blank"
                       >
                         <i className="fab fa-instagram"></i>
                       </a>
@@ -623,7 +627,7 @@ export default function About() {
                   </ul>
                 </div>
                 <div className="card-body">
-                  <h3>Nguyen Quoc Bao An</h3>
+                  <h3>Nguyễn Quốc Bảo An</h3>
                   <p>Người hướng dẫn</p>
                 </div>
               </div>
@@ -635,7 +639,7 @@ export default function About() {
                     loading="lazy"
                     decoding="async"
                     src="/images/avatar_khoanh_tay.jpg"
-                    alt="Nguyen Quoc Bao An"
+                    alt="Nguyễn Quốc Bảo An"
                     className="rounded w-100"
                     width="300"
                     height="333"
@@ -644,7 +648,8 @@ export default function About() {
                     <li className="list-inline-item">
                       <a
                         className="facebook"
-                        href="https://www.facebook.com/profile.php?id=61572892182086"
+                        href="https://www.facebook.com/badigitalwebapp/"
+                        target="_blank"
                       >
                         <i className="fab fa-facebook"></i>
                       </a>
@@ -653,6 +658,7 @@ export default function About() {
                       <a
                         className="instagram"
                         href="https://www.instagram.com/badigitalwebapp/"
+                        target="_blank"
                       >
                         <i className="fab fa-instagram"></i>
                       </a>
@@ -660,7 +666,7 @@ export default function About() {
                   </ul>
                 </div>
                 <div className="card-body">
-                  <h3>Nguyen Quoc Bao An</h3>
+                  <h3>Nguyễn Quốc Bảo An</h3>
                   <p>Kỹ sư phần mềm</p>
                 </div>
               </div>
@@ -672,7 +678,7 @@ export default function About() {
                     loading="lazy"
                     decoding="async"
                     src="/images/avatar_vuot_toc.jpg"
-                    alt="Nguyen Quoc Bao An"
+                    alt="Nguyễn Quốc Bảo An"
                     className="rounded w-100"
                     width="300"
                     height="332"
@@ -681,7 +687,8 @@ export default function About() {
                     <li className="list-inline-item">
                       <a
                         className="facebook"
-                        href="https://www.facebook.com/profile.php?id=61572892182086"
+                        href="https://www.facebook.com/badigitalwebapp/"
+                        target="_blank"
                       >
                         <i className="fab fa-facebook"></i>
                       </a>
@@ -690,6 +697,7 @@ export default function About() {
                       <a
                         className="instagram"
                         href="https://www.instagram.com/badigitalwebapp/"
+                        target="_blank"
                       >
                         <i className="fab fa-instagram"></i>
                       </a>
@@ -697,7 +705,7 @@ export default function About() {
                   </ul>
                 </div>
                 <div className="card-body">
-                  <h3>Nguyen Quoc Bao An</h3>
+                  <h3>Nguyễn Quốc Bảo An</h3>
                   <p>Nhà phát triển</p>
                 </div>
               </div>

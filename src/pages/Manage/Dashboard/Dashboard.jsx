@@ -175,6 +175,7 @@ export default function Dashboard() {
                             <div className="product">
                               <div className="image">
                                 <img
+                                  loading="lazy"
                                   src="/images/products/product-mini-1.jpg"
                                   alt=""
                                 />
@@ -236,6 +237,7 @@ export default function Dashboard() {
                             <div className="product">
                               <div className="image">
                                 <img
+                                  loading="lazy"
                                   src="/images/products/product-mini-2.jpg"
                                   alt=""
                                 />
@@ -298,6 +300,7 @@ export default function Dashboard() {
                               <div className="image">
                                 <img
                                   src="/images/products/product-mini-3.jpg"
+                                  loading="lazy"
                                   alt=""
                                 />
                               </div>
@@ -359,6 +362,7 @@ export default function Dashboard() {
                               <div className="image">
                                 <img
                                   src="/images/products/product-mini-4.jpg"
+                                  loading="lazy"
                                   alt=""
                                 />
                               </div>
@@ -470,6 +474,7 @@ export default function Dashboard() {
                               <div className="image">
                                 <img
                                   src="/images/products/product-mini-1.jpg"
+                                  loading="lazy"
                                   alt=""
                                 />
                               </div>
@@ -521,6 +526,7 @@ export default function Dashboard() {
                               <div className="image">
                                 <img
                                   src="/images/products/product-mini-2.jpg"
+                                  loading="lazy"
                                   alt=""
                                 />
                               </div>
@@ -572,6 +578,7 @@ export default function Dashboard() {
                               <div className="image">
                                 <img
                                   src="/images/products/product-mini-3.jpg"
+                                  loading="lazy"
                                   alt=""
                                 />
                               </div>
@@ -623,6 +630,7 @@ export default function Dashboard() {
                               <div className="image">
                                 <img
                                   src="/images/products/product-mini-4.jpg"
+                                  loading="lazy"
                                   alt=""
                                 />
                               </div>
