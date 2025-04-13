@@ -168,9 +168,12 @@ function Home() {
               {packages.map((itemPackage) => (
                 <div
                   className="col-lg-4 col-md-6 service-item"
-                  key={itemPackage.serviceCategoryId}
+                  key={itemPackage.packageId}
                 >
-                  <a className="text-black" href="/service-detail">
+                  <a
+                    className="text-black"
+                    href={`/service/${itemPackage.packageId}`}
+                  >
                     <div className="block">
                       <span className="colored-box text-center h3 mb-4">
                         0{digitOrder++}
