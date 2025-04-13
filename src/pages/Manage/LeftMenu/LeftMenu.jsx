@@ -18,7 +18,7 @@ export default function LeftMenu() {
                 data-bs-toggle="collapse"
                 data-bs-target="#ddmenu_1"
                 aria-controls="ddmenu_1"
-                aria-expanded="false"
+                aria-expanded="true"
                 aria-label="Toggle navigation"
               >
                 <span className="icon">
@@ -55,16 +55,40 @@ export default function LeftMenu() {
                 aria-label="Toggle navigation"
               >
                 <span className="icon">
-                  <i className="fa-solid fa-user-tie"></i>
+                  <i className="fa-solid fa-box"></i>
                 </span>
-                <span className="text">Manage</span>
+                <span className="text">Package</span>
               </a>
               <ul id="ddmenu_2" className="collapse dropdown-nav">
                 <li>
-                  <a href="settings.html"> Settings </a>
+                  <a href="/manage/packages">List</a>
                 </li>
                 <li>
-                  <a href="blank-page.html"> Blank Page </a>
+                  <a href="/manage/package/create">Create</a>
+                </li>
+              </ul>
+            </li>
+            <li className="nav-item nav-item-has-children">
+              <a
+                href="#0"
+                className="collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#ddmenu_3"
+                aria-controls="ddmenu_3"
+                aria-expanded="true"
+                aria-label="Toggle navigation"
+              >
+                <span className="icon">
+                  <i className="fa-solid fa-layer-group"></i>
+                </span>
+                <span className="text">Category service</span>
+              </a>
+              <ul id="ddmenu_3" className="collapse dropdown-nav">
+                <li>
+                  <a href="/manage/service-categories">List</a>
+                </li>
+                <li>
+                  <a href="/manage/service-categories/create">Create</a>
                 </li>
               </ul>
             </li>
@@ -75,30 +99,6 @@ export default function LeftMenu() {
                 </span>
                 <span className="text">Profile</span>
               </a>
-            </li>
-            <li className="nav-item nav-item-has-children">
-              <a
-                href="#0"
-                className="collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#ddmenu_3"
-                aria-controls="ddmenu_3"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span className="icon">
-                  <i className="fa-solid fa-shield-alt"></i>
-                </span>
-                <span className="text">Auth</span>
-              </a>
-              <ul id="ddmenu_3" className="collapse dropdown-nav">
-                <li>
-                  <a href="/manage/sign-in"> Sign In </a>
-                </li>
-                <li>
-                  <a href="/manage/sign-up"> Sign Up </a>
-                </li>
-              </ul>
             </li>
             <span className="divider">
               <hr />
@@ -151,7 +151,7 @@ export default function LeftMenu() {
                 data-bs-toggle="collapse"
                 data-bs-target="#ddmenu_55"
                 aria-controls="ddmenu_55"
-                aria-expanded="false"
+                aria-expanded="true"
                 aria-label="Toggle navigation"
               >
                 <span className="icon">

@@ -62,7 +62,7 @@ export default function Header() {
                     <li>
                       <a href="#0">
                         <div className="image">
-                          <img src="assets/images/lead/lead-6.png" alt="" />
+                          <img src="/images/lead/lead-6.png" alt="" />
                         </div>
                         <div className="content">
                           <h6>
@@ -82,7 +82,7 @@ export default function Header() {
                     <li>
                       <a href="#0">
                         <div className="image">
-                          <img src="assets/images/lead/lead-1.png" alt="" />
+                          <img src="/images/lead/lead-1.png" alt="" />
                         </div>
                         <div className="content">
                           <h6>
@@ -136,7 +136,7 @@ export default function Header() {
                     <li>
                       <a href="#0">
                         <div className="image">
-                          <img src="assets/images/lead/lead-5.png" alt="" />
+                          <img src="/images/lead/lead-5.png" alt="" />
                         </div>
                         <div className="content">
                           <h6>Jacob Jones</h6>
@@ -148,7 +148,7 @@ export default function Header() {
                     <li>
                       <a href="#0">
                         <div className="image">
-                          <img src="assets/images/lead/lead-3.png" alt="" />
+                          <img src="/images/lead/lead-3.png" alt="" />
                         </div>
                         <div className="content">
                           <h6>John Doe</h6>
@@ -160,7 +160,7 @@ export default function Header() {
                     <li>
                       <a href="#0">
                         <div className="image">
-                          <img src="assets/images/lead/lead-2.png" alt="" />
+                          <img src="/images/lead/lead-2.png" alt="" />
                         </div>
                         <div className="content">
                           <h6>Anee Lee</h6>
@@ -228,7 +228,15 @@ export default function Header() {
                       </li>
                       <li className="divider"></li>
                       <li>
-                        <a href="#0">
+                        <a
+                          href="javascript:void(0)"
+                          onClick={() => {
+                            Cookies.remove("username");
+                            Cookies.remove("role");
+                            Cookies.remove("accountId");
+                            window.location.href = "/";
+                          }}
+                        >
                           {" "}
                           <i className="fa-solid fa-arrow-right-from-bracket"></i>{" "}
                           Sign Out{" "}

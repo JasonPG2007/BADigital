@@ -5,13 +5,26 @@ import { useTranslation } from "react-i18next";
 function Home() {
   // Variables
   const { t } = useTranslation();
-  const [serviceCate, setServiceCate] = useState([]);
-  const API_URL = "https://localhost:44350/api/Home";
+  const [packages, setPackage] = useState([]);
+  const [categories, setCategories] = useState([]);
+  let digitOrder = 1;
+  const API_URL_Package =
+    "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Package";
+  const API_URL_Category =
+    "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/ServiceCategory";
   useEffect(() => {
     axios
-      .get(API_URL)
+      .get(API_URL_Package)
       .then((response) => {
-        setServiceCate(response.data);
+        setPackage(response.data);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the data:", error);
+      });
+    axios
+      .get(API_URL_Category)
+      .then((response) => {
+        setCategories(response.data);
       })
       .catch((error) => {
         console.error("There was an error fetching the data:", error);
@@ -134,8 +147,8 @@ function Home() {
           </svg>
         </div>
       </section>
-      {serviceCate.map((category) => (
-        <section key={category.serviceCategoryId} className="section">
+      {categories.map((category) => (
+        <section className="section" key={category.serviceCategoryId}>
           <div className="container">
             <div className="row-custom-2">
               <div className="col-lg-4 col-md-6">
@@ -149,205 +162,33 @@ function Home() {
 
                   <h1>{category.cateServiceName}</h1>
 
-                  <p>{t("body.under-website-design")}</p>
+                  <p>{category.description}</p>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 service-item">
-                <a className="text-black" href="/service-detail">
-                  <div className="block">
-                    {" "}
-                    <span className="colored-box text-center h3 mb-4">01</span>
-                    <h3 className="mb-3 service-title">{t("body.basic")}</h3>
-                    <p className="mb-0 service-description">
-                      {t("body.basic-web-description")}
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-md-6 service-item">
-                <a className="text-black" href="/service-detail">
-                  <div className="block">
-                    {" "}
-                    <span className="colored-box text-center h3 mb-4">02</span>
-                    <h3 className="mb-3 service-title">{t("body.standard")}</h3>
-                    <p className="mb-0 service-description">
-                      {t("body.standard-web-description")}
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-md-6 service-item">
-                <a className="text-black" href="/service-detail">
-                  <div className="block">
-                    {" "}
-                    <span className="colored-box text-center h3 mb-4">03</span>
-                    <h3 className="mb-3 service-title">
-                      {t("body.high-class")}
-                    </h3>
-                    <p className="mb-0 service-description">
-                      {t("body.high-class-web-description")}
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-md-6 service-item">
-                <a className="text-black" href="/service-detail">
-                  <div className="block">
-                    {" "}
-                    <span className="colored-box text-center h3 mb-4">04</span>
-                    <h3 className="mb-3 service-title">{t("body.advanced")}</h3>
-                    <p className="mb-0 service-description">
-                      {t("body.advanced-web-description")}
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-md-6 service-item">
-                <a className="text-black" href="/service-detail">
-                  <div className="block">
-                    {" "}
-                    <span className="colored-box text-center h3 mb-4">05</span>
-                    <h3 className="mb-3 service-title">
-                      {t("body.professional")}
-                    </h3>
-                    <p className="mb-0 service-description">
-                      {t("body.professional-web-description")}
-                    </p>
-                  </div>
-                </a>
-              </div>
+              {packages.map((itemPackage) => (
+                <div
+                  className="col-lg-4 col-md-6 service-item"
+                  key={itemPackage.serviceCategoryId}
+                >
+                  <a className="text-black" href="/service-detail">
+                    <div className="block">
+                      <span className="colored-box text-center h3 mb-4">
+                        0{digitOrder++}
+                      </span>
+                      <h3 className="mb-3 service-title">
+                        {itemPackage.packageName}
+                      </h3>
+                      <p className="mb-0 service-description">
+                        {itemPackage.describe}
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
         </section>
       ))}
-      <section className="section">
-        <div className="container">
-          <div className="row-custom-2">
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="section-title pt-4"
-                style={{ paddingLeft: "15px" }}
-              >
-                <p className="text-primary text-uppercase fw-bold mb-3">
-                  {t("body.our-service-packages")}
-                </p>
-                <h1>{t("body.app-development")}</h1>
-                <p>{t("body.under-app-development")}</p>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="/service-detail">
-                <div className="block">
-                  {" "}
-                  <span className="colored-box text-center h3 mb-4">01</span>
-                  <h3 className="mb-3 service-title">{t("body.basic")}</h3>
-                  <p className="mb-0 service-description">
-                    Ứng dụng di động đơn giản, phù hợp cho nhu cầu cơ bản. Hoàn
-                    thành trong 5 - 7 ngày.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="/service-detail">
-                <div className="block">
-                  {" "}
-                  <span className="colored-box text-center h3 mb-4">02</span>
-                  <h3 className="mb-3 service-title">{t("body.standard")}</h3>
-                  <p className="mb-0 service-description">
-                    Ứng dụng tùy chỉnh, hỗ trợ iOS, Android, Windows. Hoàn thành
-                    trong 7 - 10 ngày.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="/service-detail">
-                <div className="block">
-                  {" "}
-                  <span className="colored-box text-center h3 mb-4">03</span>
-                  <h3 className="mb-3 service-title">{t("body.high-class")}</h3>
-                  <p className="mb-0 service-description">
-                    Ứng dụng đa nền tảng, quản lý dữ liệu & khách hàng hiệu quả.
-                    Hoàn thành trong 14 - 20 ngày.
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="row-custom-2">
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="section-title pt-4"
-                style={{ paddingLeft: "15px" }}
-              >
-                <p className="text-primary text-uppercase fw-bold mb-3">
-                  {t("body.our-service-packages")}
-                </p>
-                <h1>{t("body.combo")}</h1>
-                <p>
-                  Combo Website + App – Tiết kiệm lên đến 3 triệu VNĐ và sở hữu
-                  bộ đôi hoàn hảo cho doanh nghiệp!
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="/service-detail">
-                <div className="block">
-                  {" "}
-                  <span className="colored-box text-center h3 mb-4">01</span>
-                  <h3 className="mb-3 service-title">{t("body.basic")}</h3>
-                  <p className="mb-0 service-description">
-                    Website Cơ Bản + Ứng dụng Cơ Bản
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="/service-detail">
-                <div className="block">
-                  {" "}
-                  <span className="colored-box text-center h3 mb-4">02</span>
-                  <h3 className="mb-3 service-title">{t("body.standard")}</h3>
-                  <p className="mb-0 service-description">
-                    Website Tiêu Chuẩn + Ứng dụng Tiêu Chuẩn.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="/service-detail">
-                <div className="block">
-                  {" "}
-                  <span className="colored-box text-center h3 mb-4">03</span>
-                  <h3 className="mb-3 service-title">{t("body.high-class")}</h3>
-                  <p className="mb-0 service-description">
-                    Website Cao Cấp + Ứng dụng Cao Cấp.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div className="col-lg-4 col-md-6 service-item">
-              <a className="text-black" href="/service-detail">
-                <div className="block">
-                  {" "}
-                  <span className="colored-box text-center h3 mb-4">04</span>
-                  <h3 className="mb-3 service-title">{t("body.advanced")}</h3>
-                  <p className="mb-0 service-description">
-                    Website Nâng Cao + Ứng dụng Cao Cấp.
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="about-section section bg-tertiary position-relative overflow-hidden">
         <div className="container">
           <div className="row-custom align-items-center">

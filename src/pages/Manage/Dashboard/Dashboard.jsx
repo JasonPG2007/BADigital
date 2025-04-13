@@ -489,9 +489,6 @@ export default function Dashboard() {
                           </td>
                           <td>
                             <div className="action justify-content-end">
-                              <button className="edit">
-                                <i className="lni lni-pencil"></i>
-                              </button>
                               <button
                                 className="more-btn ml-10 dropdown-toggle"
                                 id="moreAction1"
@@ -543,9 +540,6 @@ export default function Dashboard() {
                           </td>
                           <td>
                             <div className="action justify-content-end">
-                              <button className="edit">
-                                <i className="lni lni-pencil"></i>
-                              </button>
                               <button
                                 className="more-btn ml-10 dropdown-toggle"
                                 id="moreAction1"
@@ -597,9 +591,6 @@ export default function Dashboard() {
                           </td>
                           <td>
                             <div className="action justify-content-end">
-                              <button className="edit">
-                                <i className="lni lni-pencil"></i>
-                              </button>
                               <button
                                 className="more-btn ml-10 dropdown-toggle"
                                 id="moreAction1"
@@ -651,9 +642,6 @@ export default function Dashboard() {
                           </td>
                           <td>
                             <div className="action justify-content-end">
-                              <button className="edit">
-                                <i className="lni lni-pencil"></i>
-                              </button>
                               <button
                                 className="more-btn ml-10 dropdown-toggle"
                                 id="moreAction1"
@@ -695,6 +683,9 @@ export default function Dashboard() {
       </main>
     </>
   ) : (
-    (window.location.href = "/manage/sign-in")
+    <div className="container-custom">
+      <h1 className="text-center">You are already logged in</h1>
+      {(window.location.href = "/manage/sign-in")}
+    </div>
   );
 }

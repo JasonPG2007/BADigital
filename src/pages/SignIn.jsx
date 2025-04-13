@@ -63,7 +63,7 @@ export default function SignIn() {
     }
   };
 
-  return (
+  return Cookies.get("username") == null ? (
     <>
       <section className="bg-light py-3 py-md-5 container-custom">
         <div className="container">
@@ -185,5 +185,10 @@ export default function SignIn() {
         </div>
       </section>
     </>
+  ) : (
+    <div className="container-custom">
+      <h1 className="text-center">Bạn đã đăng nhập rồi</h1>
+      {(window.location.href = "/manage/dashboard")}
+    </div>
   );
 }
