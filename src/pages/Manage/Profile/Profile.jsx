@@ -13,7 +13,7 @@ export default function Profile() {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          `https://localhost:44336/api/Account/${id}`,
+          `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Account/${id}`,
           {
             validateStatus: () => true,
           }
