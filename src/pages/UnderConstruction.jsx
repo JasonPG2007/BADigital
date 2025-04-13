@@ -6,8 +6,8 @@ export default function UnderConstruction() {
           <div className="row">
             <div className="col-8 mx-auto text-center">
               <h2 className="mb-3 text-capitalize">
-                <i className="fas fa-hourglass-half waiting"></i> Trang này đang
-                được phát triển
+                <i className="fas fa-hourglass-half waiting"></i> Không tìm thấy
+                trang
               </h2>
               <ul
                 className="list-inline breadcrumbs text-capitalize"

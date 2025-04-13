@@ -1,10 +1,12 @@
+import Cookies from "js-cookie";
+
 export default function LeftMenu() {
   return (
     <>
       {/* sidebar-nav start */}
       <aside className="sidebar-nav-wrapper">
         <div className="navbar-logo">
-          <a href="/admin/dashboard">
+          <a href="/">
             <img src="/images/logo-ngang.png" alt="logo" />
           </a>
         </div>
@@ -35,7 +37,7 @@ export default function LeftMenu() {
               </a>
               <ul id="ddmenu_1" className="collapse show dropdown-nav">
                 <li>
-                  <a href="/admin/dashboard" className="active">
+                  <a href="/manage/dashboard" className="active">
                     {" "}
                     Home{" "}
                   </a>
@@ -67,7 +69,7 @@ export default function LeftMenu() {
               </ul>
             </li>
             <li className="nav-item">
-              <a href="/admin/profile">
+              <a href={`/manage/profile/${Cookies.get("accountId")}`}>
                 <span className="icon">
                   <i className="fa-solid fa-user-gear"></i>
                 </span>
@@ -91,10 +93,10 @@ export default function LeftMenu() {
               </a>
               <ul id="ddmenu_3" className="collapse dropdown-nav">
                 <li>
-                  <a href="/admin/signin"> Sign In </a>
+                  <a href="/manage/sign-in"> Sign In </a>
                 </li>
                 <li>
-                  <a href="/admin/signup"> Sign Up </a>
+                  <a href="/manage/sign-up"> Sign Up </a>
                 </li>
               </ul>
             </li>

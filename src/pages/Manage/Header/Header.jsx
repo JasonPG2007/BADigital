@@ -1,3 +1,5 @@
+import Cookies from "js-cookie";
+
 export default function Header() {
   return (
     <>
@@ -171,62 +173,70 @@ export default function Header() {
                 </div>
                 {/* message end */}
                 {/* profile start */}
-                <div className="profile-box ml-15">
-                  <button
-                    className="dropdown-toggle bg-transparent border-0"
-                    type="button"
-                    id="profile"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <div className="profile-info">
-                      <div className="info">
-                        <div className="image">
-                          <img src="/images/profile/profile-image.png" alt="" />
-                        </div>
-                        <div>
-                          <h6 className="fw-500">Adam Joe</h6>
-                          <p>Admin</p>
+                {Cookies.get("role") === "Admin" ||
+                Cookies.get("role") === "Staff" ? (
+                  <div className="profile-box ml-15">
+                    <button
+                      className="dropdown-toggle bg-transparent border-0"
+                      type="button"
+                      id="profile"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <div className="profile-info">
+                        <div className="info">
+                          <div className="image">
+                            <img
+                              src="/images/profile/profile-image.png"
+                              alt=""
+                            />
+                          </div>
+                          <div>
+                            <h6 className="fw-500">
+                              {Cookies.get("username")}
+                            </h6>
+                            <p>{Cookies.get("role")}</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </button>
-                  <ul
-                    className="dropdown-menu dropdown-menu-end"
-                    aria-labelledby="profile"
-                  >
-                    <li>
-                      <a href="/admin/profile">
-                        <i className="fa-solid fa-user"></i> View Profile
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <i className="fa-solid fa-bell"></i> Notifications
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#0">
-                        {" "}
-                        <i className="lni lni-inbox"></i> Messages{" "}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#0">
-                        {" "}
-                        <i className="fa-solid fa-gear"></i> Settings{" "}
-                      </a>
-                    </li>
-                    <li className="divider"></li>
-                    <li>
-                      <a href="#0">
-                        {" "}
-                        <i className="fa-solid fa-arrow-right-from-bracket"></i>{" "}
-                        Sign Out{" "}
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                    </button>
+                    <ul
+                      className="dropdown-menu dropdown-menu-end"
+                      aria-labelledby="profile"
+                    >
+                      <li>
+                        <a href={`/manage/profile/${Cookies.get("accountId")}`}>
+                          <i className="fa-solid fa-user"></i> View Profile
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <i className="fa-solid fa-bell"></i> Notifications
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#0">
+                          {" "}
+                          <i className="lni lni-inbox"></i> Messages{" "}
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#0">
+                          {" "}
+                          <i className="fa-solid fa-gear"></i> Settings{" "}
+                        </a>
+                      </li>
+                      <li className="divider"></li>
+                      <li>
+                        <a href="#0">
+                          {" "}
+                          <i className="fa-solid fa-arrow-right-from-bracket"></i>{" "}
+                          Sign Out{" "}
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                ) : null}
                 {/* profile end */}
               </div>
             </div>

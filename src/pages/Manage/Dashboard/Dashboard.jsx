@@ -1,8 +1,10 @@
+import Cookies from "js-cookie";
+
 export default function Dashboard() {
-  return (
+  return Cookies.get("role") === "Admin" || Cookies.get("role") === "Staff" ? (
     <>
       {/* main-wrapper start */}
-      <main className="">
+      <main>
         {/* header start */}
 
         {/* header end */}
@@ -200,7 +202,7 @@ export default function Dashboard() {
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                               >
-                                <i className="lni lni-more-alt"></i>
+                                <i className="fa-solid fa-ellipsis"></i>
                               </button>
                               <ul
                                 className="dropdown-menu dropdown-menu-end"
@@ -261,7 +263,7 @@ export default function Dashboard() {
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                               >
-                                <i className="lni lni-more-alt"></i>
+                                <i className="fa-solid fa-ellipsis"></i>
                               </button>
                               <ul
                                 className="dropdown-menu dropdown-menu-end"
@@ -322,7 +324,7 @@ export default function Dashboard() {
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                               >
-                                <i className="lni lni-more-alt"></i>
+                                <i className="fa-solid fa-ellipsis"></i>
                               </button>
                               <ul
                                 className="dropdown-menu dropdown-menu-end"
@@ -383,7 +385,7 @@ export default function Dashboard() {
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                               >
-                                <i className="lni lni-more-alt"></i>
+                                <i className="fa-solid fa-ellipsis"></i>
                               </button>
                               <ul
                                 className="dropdown-menu dropdown-menu-end"
@@ -496,7 +498,7 @@ export default function Dashboard() {
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                               >
-                                <i className="lni lni-more-alt"></i>
+                                <i className="fa-solid fa-ellipsis"></i>
                               </button>
                               <ul
                                 className="dropdown-menu dropdown-menu-end"
@@ -550,7 +552,7 @@ export default function Dashboard() {
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                               >
-                                <i className="lni lni-more-alt"></i>
+                                <i className="fa-solid fa-ellipsis"></i>
                               </button>
                               <ul
                                 className="dropdown-menu dropdown-menu-end"
@@ -604,7 +606,7 @@ export default function Dashboard() {
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                               >
-                                <i className="lni lni-more-alt"></i>
+                                <i className="fa-solid fa-ellipsis"></i>
                               </button>
                               <ul
                                 className="dropdown-menu dropdown-menu-end"
@@ -658,7 +660,7 @@ export default function Dashboard() {
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                               >
-                                <i className="lni lni-more-alt"></i>
+                                <i className="fa-solid fa-ellipsis"></i>
                               </button>
                               <ul
                                 className="dropdown-menu dropdown-menu-end"
@@ -692,5 +694,7 @@ export default function Dashboard() {
         {/* section end */}
       </main>
     </>
+  ) : (
+    (window.location.href = "/manage/sign-in")
   );
 }

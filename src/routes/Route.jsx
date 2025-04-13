@@ -12,10 +12,11 @@ import PrivacyPolicy from "../pages/PrivacyPolicy";
 import Terms from "../pages/Terms";
 import About from "../pages/About";
 import Cookies from "js-cookie";
-const Admin = lazy(() => import("../pages/Admin/Layout/Admin"));
+import SignIn from "../pages/SignIn";
+const Manage = lazy(() => import("../pages/Manage/Layout/Manage"));
 
 export default function routes() {
-  var isAdminRoute = location.pathname.includes("admin");
+  var isManageRoute = location.pathname.includes("manage");
   var isSignInRoute = location.pathname === "/sign-in";
   var isSignUpRoute = location.pathname === "/sign-up";
   var isSignOutRoute = location.pathname === "/sign-out";
@@ -32,7 +33,7 @@ export default function routes() {
   }
   return (
     <BrowserRouter>
-      {!isAdminRoute && !isSignInRoute && !isSignUpRoute && <Header />}
+      {!isManageRoute && !isSignInRoute && !isSignUpRoute && <Header />}
       <Routes>
         <Route path="*" element={<UnderConstruction></UnderConstruction>} />
         <Route path="/" element={<Home></Home>} />
@@ -49,9 +50,10 @@ export default function routes() {
         />
         <Route path="/terms" element={<Terms></Terms>} />
         <Route path="/about" element={<About></About>} />
-        <Route path="/admin/*" element={<Admin></Admin>} />
+        <Route path="/sign-in" element={<SignIn></SignIn>} />
+        <Route path="/manage/*" element={<Manage></Manage>} />
       </Routes>
-      {!isAdminRoute && !isSignInRoute && !isSignUpRoute && <Footer />}
+      {!isManageRoute && !isSignInRoute && !isSignUpRoute && <Footer />}
     </BrowserRouter>
   );
 }

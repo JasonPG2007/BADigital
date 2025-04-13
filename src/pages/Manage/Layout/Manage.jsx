@@ -18,11 +18,12 @@ import SignIn from "../Signin/SignIn.jsx";
 import SignUp from "../Signup/SignUp.jsx";
 import Profile from "../Profile/Profile.jsx";
 
-export default function Admin() {
-  const isDashboardRoute = location.pathname === "/admin/dashboard";
-  const isSignInRoute = location.pathname === "/admin/signin";
-  const isSignUpRoute = location.pathname === "/admin/signup";
-  const isProfileRoute = location.pathname === "/admin/profile";
+export default function Manage() {
+  const isDashboardRoute = location.pathname === "/manage/dashboard";
+  const isSignInRoute = location.pathname === "/manage/sign-in";
+  const isSignUpRoute = location.pathname === "/manage/sign-up";
+  const isProfileRoute = location.pathname.startsWith("/manage/profile");
+
   return (
     <div>
       {/* Sidebar Start  */}

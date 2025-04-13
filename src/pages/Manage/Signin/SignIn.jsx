@@ -1,4 +1,59 @@
+import { useState } from "react";
+import Cookies from "js-cookie";
+import axios from "axios";
+
 export default function SignIn() {
+  // Variables
+  let [email, setEmail] = useState("");
+  let [isSubmit, setIsSubmit] = useState("");
+  let [password, setPassword] = useState("");
+  let [msg, setMsg] = useState("");
+  let [error, setError] = useState("");
+  // End Variables
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmit(true);
+    try {
+      const response = await axios.post(
+        `https://localhost:44336/api/Account/${email}/${password}`,
+        { email, password },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          validateStatus: () => true,
+        }
+      );
+
+      if (response.status !== 200) {
+        setIsSubmit(false);
+        setMsg(response.data);
+        setError(response.data);
+        return;
+      }
+
+      // Handle successful response
+      setIsSubmit(false);
+      const data = response.data;
+      setMsg("Đăng nhập thành công");
+      setError("");
+      Cookies.set("username", data.username, { expires: 7 });
+      Cookies.set("role", data.role, { expires: 7 });
+      Cookies.set("accountId", data.accountId, { expires: 7 });
+
+      if (data.role === "Admin" || data.role === "Staff") {
+        window.location.href = "/manage/dashboard";
+      } else {
+        window.location.href = "/";
+      }
+    } catch (error) {
+      setIsSubmit(false);
+      setError("Network problem or server not working");
+      console.error("Axios error:", error.message);
+    }
+  };
+
   return (
     <>
       <section className="signin-section">
@@ -65,12 +120,28 @@ export default function SignIn() {
                     Start creating the best possible user experience for you
                     customers.
                   </p>
-                  <form action="#">
+                  {msg.length > 0 && error.length === 0 && (
+                    <label className="form-label p-2 w-100 text-center text-primary">
+                      {msg}
+                    </label>
+                  )}
+                  {error.length > 0 && (
+                    <label className="form-label p-2 w-100 text-center text-danger">
+                      {msg}
+                    </label>
+                  )}
+                  <form onSubmit={handleSubmit}>
                     <div className="row">
                       <div className="col-12">
                         <div className="input-style-1">
                           <label>Email</label>
-                          <input type="email" placeholder="Email" required />
+                          <input
+                            type="email"
+                            placeholder="Email"
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                            required
+                          />
                         </div>
                       </div>
                       {/* end col */}
@@ -80,6 +151,8 @@ export default function SignIn() {
                           <input
                             type="password"
                             placeholder="Password"
+                            onChange={(e) => setPassword(e.target.value)}
+                            value={password}
                             required
                           />
                         </div>
@@ -115,28 +188,31 @@ export default function SignIn() {
                       {/* end col */}
                       <div className="col-12">
                         <div className="button-group d-flex justify-content-center flex-wrap">
-                          <button className="main-btn primary-btn btn-hover w-100 text-center">
-                            Sign In
-                          </button>
+                          {!isSubmit ? (
+                            <button
+                              className="main-btn primary-btn btn-hover w-100 text-center"
+                              type="submit"
+                            >
+                              Sign In
+                            </button>
+                          ) : (
+                            <button
+                              className="main-btn primary-btn btn-hover w-100 text-center"
+                              type="submit"
+                              disabled
+                            >
+                              <i
+                                className="fas fa-spinner fa-spin"
+                                style={{ paddingLeft: "10px" }}
+                              ></i>
+                            </button>
+                          )}
                         </div>
                       </div>
                     </div>
                     {/* end row */}
                   </form>
                   <div className="singin-option pt-40">
-                    <p className="text-sm text-medium text-center text-gray">
-                      Easy Sign In With
-                    </p>
-                    <div className="button-group pt-40 pb-40 d-flex justify-content-center flex-wrap">
-                      <button className="main-btn primary-btn-outline m-2">
-                        <i className="fa-brands fa-facebook-f"></i>
-                        Facebook
-                      </button>
-                      <button className="main-btn danger-btn-outline m-2">
-                        <i className="fa-brands fa-google"></i>
-                        Google
-                      </button>
-                    </div>
                     <p className="text-sm text-medium text-dark text-center">
                       Don’t have any account yet?
                       <a href="/admin/signup">Create an account</a>

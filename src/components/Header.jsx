@@ -60,8 +60,8 @@ export default function Header() {
                 </a>
               </li>
               <li className="nav-item ">
-                <a className="nav-link" href="/about">
-                  {t("header.about")}
+                <a className="nav-link" href="/projects">
+                  Dự án
                 </a>
               </li>
               <li className="nav-item ">
@@ -92,13 +92,13 @@ export default function Header() {
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item " href="/blog">
-                      {t("header.blog")}
+                    <a className="dropdown-item " href="/about">
+                      Giới thiệu
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item " href="/faqs">
-                      {t("header.faqs")}
+                    <a className="dropdown-item " href="/blog">
+                      {t("header.blog")}
                     </a>
                   </li>
                   <li>
@@ -129,9 +129,9 @@ export default function Header() {
             <a href="/sign-in" className="btn btn-outline-primary">
               {t("header.login")}
             </a>
-            <a href="/sign-up" className="btn btn-primary ms-2 ms-lg-3">
+            {/* <a href="/sign-up" className="btn btn-primary ms-2 ms-lg-3">
               {t("header.sign-up")}
-            </a>
+            </a> */}
           </div>
         </div>
       </nav>
