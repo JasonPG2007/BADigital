@@ -171,6 +171,16 @@ export default function ServiceDetail() {
                   Gói dịch vụ - {item.packageName} gồm những gì
                 </h2>
                 <p>{item.describe}</p>
+                <a
+                  href={`/order/${item.packageId}`}
+                  className="btn btn-primary"
+                >
+                  Đặt ngay{" "}
+                  <span
+                    style={{ fontSize: "14px" }}
+                    className="ms-2 fas fa-arrow-right"
+                  ></span>
+                </a>
               </div>
             </div>
           </div>

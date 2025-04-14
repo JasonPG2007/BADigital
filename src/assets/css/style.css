@@ -10514,6 +10514,9 @@ textarea.form-control {
 }
 
 /* CSS FOR SCROLL TO TOP BUTTON */
+#scroll-top {
+  display: none;
+}
 .scroll-top a {
   position: fixed;
   z-index: 999;

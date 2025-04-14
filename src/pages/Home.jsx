@@ -172,11 +172,7 @@ function Home() {
                   className="col-lg-4 col-md-6 service-item"
                   key={itemPackage.packageId}
                 >
-                  <a
-                    className="text-black"
-                    href="javascript:void(0)"
-                    style={{ cursor: "default" }}
-                  >
+                  <a className="text-black" href="" title="Đặt gói này">
                     <div className="block">
                       <span className="colored-box text-center h3 mb-4">
                         0{digitOrder++}
