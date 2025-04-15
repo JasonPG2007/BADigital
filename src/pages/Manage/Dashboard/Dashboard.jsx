@@ -1,7 +1,6 @@
-import Cookies from "js-cookie";
-
 export default function Dashboard() {
-  return Cookies.get("role") === "Admin" || Cookies.get("role") === "Staff" ? (
+  return sessionStorage.getItem("role") === "Admin" ||
+    sessionStorage.getItem("role") === "Staff" ? (
     <>
       {/* main-wrapper start */}
       <main>
@@ -692,7 +691,7 @@ export default function Dashboard() {
     </>
   ) : (
     <div className="container-custom">
-      <h1 className="text-center">You are already logged in</h1>
+      <h1 className="text-center">You need to login</h1>
       {(window.location.href = "/manage/sign-in")}
     </div>
   );

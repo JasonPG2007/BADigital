@@ -1,5 +1,3 @@
-import Cookies from "js-cookie";
-
 export default function LeftMenu() {
   return (
     <>
@@ -93,7 +91,9 @@ export default function LeftMenu() {
               </ul>
             </li>
             <li className="nav-item">
-              <a href={`/manage/profile/${Cookies.get("accountId")}`}>
+              <a
+                href={`/manage/profile/${sessionStorage.getItem("accountId")}`}
+              >
                 <span className="icon">
                   <i className="fa-solid fa-user-gear"></i>
                 </span>

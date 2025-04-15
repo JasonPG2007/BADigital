@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Cookies from "js-cookie";
 import axios from "axios";
 
 export default function SignIn() {
@@ -47,9 +46,9 @@ export default function SignIn() {
       const data = response.data;
       setMsg("Đăng nhập thành công");
       setError("");
-      Cookies.set("username", data.username, { expires: 7 });
-      Cookies.set("role", data.role, { expires: 7 });
-      Cookies.set("accountId", data.accountId, { expires: 7 });
+      sessionStorage.setItem("username", data.username);
+      sessionStorage.setItem("role", data.role);
+      sessionStorage.setItem("accountId", data.accountId);
 
       if (data.role === "Admin" || data.role === "Staff") {
         window.location.href = "/manage/dashboard";
@@ -63,7 +62,7 @@ export default function SignIn() {
     }
   };
 
-  return Cookies.get("username") == null ? (
+  return sessionStorage.getItem("username") == null ? (
     <>
       <section className="bg-light py-3 py-md-5 container-custom">
         <div className="container">

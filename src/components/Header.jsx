@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "../i18n";
 import { useTranslation } from "react-i18next";
-import Cookies from "js-cookie";
 
 export default function Header() {
   const { t, i18n } = useTranslation();
@@ -126,7 +125,7 @@ export default function Header() {
                 <option value="ja">{t("header.ja")}</option>
               </select>
             </ul>
-            {Cookies.get("username") == null ? (
+            {sessionStorage.getItem("username") == null ? (
               <a href="/sign-in" className="btn btn-outline-primary">
                 {t("header.login")}
               </a>

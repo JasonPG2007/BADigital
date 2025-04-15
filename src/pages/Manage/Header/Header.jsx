@@ -193,8 +193,8 @@ export default function Header() {
                 </div>
                 {/* message end */}
                 {/* profile start */}
-                {Cookies.get("role") === "Admin" ||
-                Cookies.get("role") === "Staff" ? (
+                {sessionStorage.getItem("role") === "Admin" ||
+                sessionStorage.getItem("role") === "Staff" ? (
                   <div className="profile-box ml-15">
                     <button
                       className="dropdown-toggle bg-transparent border-0"
@@ -214,9 +214,9 @@ export default function Header() {
                           </div>
                           <div>
                             <h6 className="fw-500">
-                              {Cookies.get("username")}
+                              {sessionStorage.getItem("username")}
                             </h6>
-                            <p>{Cookies.get("role")}</p>
+                            <p>{sessionStorage.getItem("role")}</p>
                           </div>
                         </div>
                       </div>
@@ -226,7 +226,11 @@ export default function Header() {
                       aria-labelledby="profile"
                     >
                       <li>
-                        <a href={`/manage/profile/${Cookies.get("accountId")}`}>
+                        <a
+                          href={`/manage/profile/${sessionStorage.getItem(
+                            "accountId"
+                          )}`}
+                        >
                           <i className="fa-solid fa-user"></i> View Profile
                         </a>
                       </li>
