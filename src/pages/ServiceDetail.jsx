@@ -11,7 +11,27 @@ export default function ServiceDetail() {
   const [item, setItem] = useState([]);
   const id = window.location.pathname.split("/").pop();
   const API_URL = `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Package/${id}`;
+  const [errorPhone, setErrorPhone] = useState("");
+  let [isSubmit, setIsSubmit] = useState("");
+  let [isSent, setIsSent] = useState("");
+  let [fullName, setFullName] = useState("");
+  let [email, setEmail] = useState("");
+  let [age, setAge] = useState("");
+  let [phoneNumber, setPhoneNumber] = useState("");
+  let [note, setNote] = useState("");
+  let [msg, setMsg] = useState("");
+  let [error, setError] = useState("");
   // End Variables
+
+  useEffect(() => {
+    if (phoneNumber.length === 10) {
+      setErrorPhone();
+    } else if (phoneNumber.length > 0) {
+      setErrorPhone("SĐT không hợp lệ");
+    } else {
+      setErrorPhone(""); // No error display when there is no number
+    }
+  }, [phoneNumber]);
 
   useEffect(() => {
     axios
@@ -24,6 +44,67 @@ export default function ServiceDetail() {
         console.error(error);
       });
   }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmit(true);
+    try {
+      const responseOrder = await axios.post(
+        `https://localhost:44336/api/Order/`,
+        {
+          fullName: fullName,
+          email: email,
+          packageId: item.packageId,
+          orderName: fullName + `đã đặt gói ${item.packageName}`,
+          phoneNumber: phoneNumber,
+          note: note,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          validateStatus: () => true,
+        }
+      );
+
+      const responseCustomer = await axios.post(
+        `https://localhost:44336/api/Customer/`,
+        {
+          customerName: fullName,
+          email: email,
+          age: age,
+          phoneNumber: phoneNumber,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          validateStatus: () => true,
+        }
+      );
+
+      if (responseOrder.status !== 200) {
+        setIsSubmit(false);
+        setMsg(responseOrder.data);
+        setError(responseOrder.data);
+        return;
+      }
+      if (responseCustomer.status !== 200) {
+        setIsSubmit(false);
+        setMsg(responseCustomer.data);
+        setError(responseCustomer.data);
+        return;
+      }
+
+      // Handle successful response
+      setIsSubmit(false);
+      setIsSent(true);
+    } catch (error) {
+      setIsSubmit(false);
+      setError("Network problem or server not working");
+      console.error("Axios error:", error.message);
+    }
+  };
 
   return (
     <div>
@@ -171,21 +252,214 @@ export default function ServiceDetail() {
                   Gói dịch vụ - {item.packageName} gồm những gì
                 </h2>
                 <p>{item.describe}</p>
-                <a
-                  href={`/order/${item.packageId}`}
+                <button
                   className="btn btn-primary"
+                  onClick={() => {
+                    document
+                      .getElementById("popup-overlay-manicure")
+                      .classList.add("show");
+                    document.body.style.overflow = "hidden";
+                  }}
                 >
                   Đặt ngay{" "}
                   <span
                     style={{ fontSize: "14px" }}
                     className="ms-2 fas fa-arrow-right"
                   ></span>
-                </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Popup for Manicure */}
+      <div className="popup-overlay" id="popup-overlay-manicure">
+        <div className="popup-content">
+          <h2 className="title heading-service">Đặt hàng</h2>
+          {!isSent ? (
+            <div className="item-service">
+              {error.length > 0 && (
+                <label className="form-label p-2 w-100 text-center text-danger">
+                  {msg}
+                </label>
+              )}
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  padding: "20px 0 0",
+                }}
+                className="form-group"
+              >
+                <form onSubmit={handleSubmit} style={{ width: "100%" }}>
+                  <input
+                    type="text"
+                    name="package"
+                    placeholder="Gói dịch vụ *"
+                    className="form-control"
+                    readOnly
+                    required
+                    value={`Gói dịch vụ: ${item.packageName}`}
+                    style={{ marginBottom: "10px" }}
+                  />
+                  <input
+                    type="hidden"
+                    name="package"
+                    placeholder="Gói dịch vụ *"
+                    className="form-control"
+                    readOnly
+                    required
+                    value={item.packageId}
+                    style={{ marginBottom: "10px" }}
+                  />
+                  <div className="form-order">
+                    <input
+                      type="text"
+                      name="full_name"
+                      onChange={(e) => setFullName(e.target.value)}
+                      placeholder="Họ và tên *"
+                      className="form-control"
+                      required
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email *"
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="form-control"
+                      required
+                    />
+                    <input
+                      type="text"
+                      name="phone_number"
+                      placeholder="Số điện thoại"
+                      className="form-control"
+                      onChange={(e) => {
+                        // Delete all non-numeric characters
+                        e.target.value = e.target.value.replace(/\D/g, "");
+
+                        // The limit for the number of digits entered is 10.
+                        if (e.target.value.length > 10) {
+                          e.target.value = e.target.value.slice(0, 10);
+                        }
+                        setPhoneNumber(e.target.value);
+                      }}
+                    />
+                    <select
+                      name="age"
+                      className="form-control"
+                      onChange={(e) => setAge(e.target.value)}
+                      required
+                    >
+                      <option value="">-- Tuổi --</option>
+                      {Array.from({ length: 33 }, (_, i) => i + 18).map((i) => (
+                        <option key={i} value={i}>
+                          {i} tuổi
+                        </option>
+                      ))}
+                      <option value="50+">Trên 50 tuổi</option>
+                    </select>
+                  </div>
+                  {errorPhone != null && (
+                    <p className="error_phone">{errorPhone}</p>
+                  )}
+                  <textarea
+                    name="note"
+                    id="note"
+                    rows="4"
+                    placeholder="Ghi chú thêm (nếu có)"
+                    className="form-control"
+                    style={{ marginBottom: "10px" }}
+                  ></textarea>
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    {!isSubmit ? (
+                      <button
+                        className="btn btn-primary p-3 px-5 py-4 mr-md-2 title"
+                        style={{ marginRight: "10px" }}
+                      >
+                        Đặt
+                      </button>
+                    ) : (
+                      <button
+                        className="btn btn-primary p-3 px-5 py-4 mr-md-2 title"
+                        style={{ marginRight: "10px" }}
+                      >
+                        <i
+                          className="fas fa-spinner fa-spin"
+                          style={{ paddingLeft: "10px" }}
+                        ></i>
+                      </button>
+                    )}
+                    <button
+                      className="btn btn-outline-primary p-3 px-5 py-4 ml-md-2 title"
+                      onClick={() => {
+                        document
+                          .getElementById("popup-overlay-manicure")
+                          .classList.remove("show");
+                        document.body.style.overflow = "auto";
+                      }}
+                      type="button"
+                    >
+                      Hủy
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          ) : (
+            <div className="item-service">
+              <div
+                style={{
+                  display: "block",
+                  justifyContent: "space-between",
+                  padding: "20px 0 0",
+                }}
+                className="form-group"
+              >
+                <h1 className="success-h1">
+                  🎉 Chúc mừng bạn đã đăng ký thành công. Chúng tôi sẽ liên hệ
+                  với bạn qua email bạn cung cấp trong vòng 24 giờ tới!
+                </h1>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <a
+                    href="/services"
+                    className="btn btn-primary p-3 px-5 py-4 mr-md-2 title"
+                    style={{ marginRight: "10px" }}
+                  >
+                    Đặt thêm
+                  </a>
+                  <button
+                    className="btn btn-outline-primary p-3 px-5 py-4 ml-md-2 title"
+                    onClick={() => {
+                      document
+                        .getElementById("popup-overlay-manicure")
+                        .classList.remove("show");
+                      document.body.style.overflow = "auto";
+                    }}
+                    type="button"
+                  >
+                    Đóng
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+          <button
+            className="btn-close-popup"
+            onClick={() => {
+              document
+                .getElementById("popup-overlay-manicure")
+                .classList.remove("show");
+              document.body.style.overflow = "auto";
+            }}
+          >
+            <i className="fa-solid fa-xmark"></i>
+          </button>
+          <br />
+        </div>
+      </div>
+      {/* End Popup for Manicure */}
     </div>
   );
 }
