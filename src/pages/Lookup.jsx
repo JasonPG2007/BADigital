@@ -31,6 +31,7 @@ export default function Lookup() {
         setIsSubmit(false);
         setMsg(response.data);
         setError(response.data);
+        setOrder([]);
         return;
       }
 
@@ -224,7 +225,13 @@ export default function Lookup() {
                           <td>{order.packageName}</td>
                           <td>{order.fullName}</td>
                           <td>{order.email}</td>
-                          <td>{order.phoneNumber}</td>
+                          <td className="note-text collapsed">
+                            {order.phoneNumber != "" ? (
+                              order.phoneNumber
+                            ) : (
+                              <span>Không có</span>
+                            )}
+                          </td>
                           <td className="note-text collapsed">
                             {order.note != "" ? (
                               order.note
