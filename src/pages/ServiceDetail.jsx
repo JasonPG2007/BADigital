@@ -10,7 +10,7 @@ export default function ServiceDetail() {
   // Variables
   const [item, setItem] = useState([]);
   const id = window.location.pathname.split("/").pop();
-  const API_URL = `https://localhost:44336/api/Package/${id}`;
+  const API_URL = `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Package/${id}`;
   const [errorPhone, setErrorPhone] = useState("");
   let [isSubmit, setIsSubmit] = useState("");
   let [isSent, setIsSent] = useState("");
@@ -54,7 +54,7 @@ export default function ServiceDetail() {
 
     try {
       const responseOrder = await axios.post(
-        `https://localhost:44336/api/Order/`,
+        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Order/`,
         {
           orderId: newOrderId,
           fullName: fullName,
@@ -73,7 +73,7 @@ export default function ServiceDetail() {
       );
 
       const responseCustomer = await axios.post(
-        `https://localhost:44336/api/Customer/`,
+        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Customer/`,
         {
           customerName: fullName,
           email: email,

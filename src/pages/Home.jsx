@@ -21,8 +21,10 @@ function Home() {
   let [msg, setMsg] = useState("");
   let [error, setError] = useState("");
   let [orderId, setOrderId] = useState("");
-  const API_URL_Package = "https://localhost:44336/api/Package";
-  const API_URL_Category = "https://localhost:44336/api/ServiceCategory";
+  const API_URL_Package =
+    "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Package";
+  const API_URL_Category =
+    "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/ServiceCategory";
   const newOrderId = Math.floor(100000000 + Math.random() * 900000000);
   // End Variables
 
@@ -62,7 +64,7 @@ function Home() {
 
     try {
       const responseOrder = await axios.post(
-        `https://localhost:44336/api/Order/`,
+        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Order/`,
         {
           orderId: newOrderId,
           fullName: fullName,
@@ -81,7 +83,7 @@ function Home() {
       );
 
       const responseCustomer = await axios.post(
-        `https://localhost:44336/api/Customer/`,
+        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Customer/`,
         {
           customerName: fullName,
           email: email,

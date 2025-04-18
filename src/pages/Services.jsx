@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function Services() {
   // Variables
   const [listPackage, setListPackage] = useState([]);
-  const API_URL = `https://localhost:44336/api/Package/`;
+  const API_URL = `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Package/`;
   // End Variables
 
   useEffect(() => {
