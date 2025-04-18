@@ -55,7 +55,7 @@ export default function LeftMenu() {
                 <span className="icon">
                   <i className="fa-solid fa-box"></i>
                 </span>
-                <span className="text">Package</span>
+                <span className="text">Packages</span>
               </a>
               <ul id="ddmenu_2" className="collapse dropdown-nav">
                 <li>
@@ -79,7 +79,7 @@ export default function LeftMenu() {
                 <span className="icon">
                   <i className="fa-solid fa-layer-group"></i>
                 </span>
-                <span className="text">Category service</span>
+                <span className="text">Category services</span>
               </a>
               <ul id="ddmenu_3" className="collapse dropdown-nav">
                 <li>
@@ -87,6 +87,54 @@ export default function LeftMenu() {
                 </li>
                 <li>
                   <a href="/manage/service-categories/create">Create</a>
+                </li>
+              </ul>
+            </li>
+            <li className="nav-item nav-item-has-children">
+              <a
+                href="#0"
+                className="collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#ddmenu_4"
+                aria-controls="ddmenu_4"
+                aria-expanded="true"
+                aria-label="Toggle navigation"
+              >
+                <span className="icon">
+                  <i className="fa-solid fa-receipt"></i>
+                </span>
+                <span className="text">Orders</span>
+              </a>
+              <ul id="ddmenu_4" className="collapse dropdown-nav">
+                <li>
+                  <a href="/manage/orders">List</a>
+                </li>
+                <li>
+                  <a href="/manage/order/create">Create</a>
+                </li>
+              </ul>
+            </li>
+            <li className="nav-item nav-item-has-children">
+              <a
+                href="#0"
+                className="collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#ddmenu_5"
+                aria-controls="ddmenu_5"
+                aria-expanded="true"
+                aria-label="Toggle navigation"
+              >
+                <span className="icon">
+                  <i className="fa-solid fa-user"></i>
+                </span>
+                <span className="text">Customers</span>
+              </a>
+              <ul id="ddmenu_5" className="collapse dropdown-nav">
+                <li>
+                  <a href="/manage/customers">List</a>
+                </li>
+                <li>
+                  <a href="/manage/customer/create">Create</a>
                 </li>
               </ul>
             </li>

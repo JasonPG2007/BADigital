@@ -119,7 +119,7 @@ export default function Dashboard() {
                   <div className="title d-flex flex-wrap justify-content-between align-items-center">
                     <div className="left">
                       <h6 className="text-medium mb-30">
-                        Top Selling Products
+                        Top Selling Packages
                       </h6>
                     </div>
                     <div className="right">

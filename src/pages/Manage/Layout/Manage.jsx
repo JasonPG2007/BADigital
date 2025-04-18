@@ -17,12 +17,14 @@ import Dashboard from "../Dashboard/Dashboard";
 import SignIn from "../Signin/SignIn.jsx";
 import SignUp from "../Signup/SignUp.jsx";
 import Profile from "../Profile/Profile.jsx";
+import Order from "../Order/Order.jsx";
 
 export default function Manage() {
   const isDashboardRoute = location.pathname === "/manage/dashboard";
   const isSignInRoute = location.pathname === "/manage/sign-in";
   const isSignUpRoute = location.pathname === "/manage/sign-up";
   const isProfileRoute = location.pathname.startsWith("/manage/profile");
+  const isOrderRoute = location.pathname.startsWith("/manage/order");
 
   return (
     <div>
@@ -36,6 +38,7 @@ export default function Manage() {
         {isSignInRoute && <SignIn />}
         {isSignUpRoute && <SignUp />}
         {isProfileRoute && <Profile />}
+        {isOrderRoute && <Order />}
       </div>
     </div>
   );

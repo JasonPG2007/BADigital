@@ -18,7 +18,7 @@ export default function Lookup() {
 
     try {
       const response = await axios.get(
-        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Order/lookup/${orderId}`,
+        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Order/${orderId}`,
         {
           headers: {
             "Content-Type": "application/json",

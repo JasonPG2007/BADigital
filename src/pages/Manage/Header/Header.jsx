@@ -1,5 +1,3 @@
-import Cookies from "js-cookie";
-
 export default function Header() {
   return (
     <>
@@ -256,9 +254,9 @@ export default function Header() {
                         <a
                           href="javascript:void(0)"
                           onClick={() => {
-                            Cookies.remove("username");
-                            Cookies.remove("role");
-                            Cookies.remove("accountId");
+                            sessionStorage.removeItem("username");
+                            sessionStorage.removeItem("role");
+                            sessionStorage.removeItem("accountId");
                             window.location.href = "/";
                           }}
                         >
