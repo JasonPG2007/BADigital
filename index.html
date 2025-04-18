@@ -78,6 +78,17 @@
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  function toggleNote(button) {
+    const noteDiv = button.previousElementSibling;
+    noteDiv.classList.toggle("expanded");
+
+    if (noteDiv.classList.contains("expanded")) {
+      button.textContent = "Ẩn bớt";
+    } else {
+      button.textContent = "Xem thêm";
+    }
+  }
 </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 

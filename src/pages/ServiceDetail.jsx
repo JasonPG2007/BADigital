@@ -10,7 +10,7 @@ export default function ServiceDetail() {
   // Variables
   const [item, setItem] = useState([]);
   const id = window.location.pathname.split("/").pop();
-  const API_URL = `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Package/${id}`;
+  const API_URL = `https://localhost:44336/api/Package/${id}`;
   const [errorPhone, setErrorPhone] = useState("");
   let [isSubmit, setIsSubmit] = useState("");
   let [isSent, setIsSent] = useState("");
@@ -21,6 +21,8 @@ export default function ServiceDetail() {
   let [note, setNote] = useState("");
   let [msg, setMsg] = useState("");
   let [error, setError] = useState("");
+  let [orderId, setOrderId] = useState("");
+  const newOrderId = Math.floor(100000000 + Math.random() * 900000000);
   // End Variables
 
   useEffect(() => {
@@ -48,14 +50,17 @@ export default function ServiceDetail() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmit(true);
+    setOrderId(newOrderId);
+
     try {
       const responseOrder = await axios.post(
         `https://localhost:44336/api/Order/`,
         {
+          orderId: newOrderId,
           fullName: fullName,
           email: email,
           packageId: item.packageId,
-          orderName: fullName + `đã đặt gói ${item.packageName}`,
+          orderName: fullName + ` đã đặt gói ${item.packageName}`,
           phoneNumber: phoneNumber,
           note: note,
         },
@@ -112,7 +117,16 @@ export default function ServiceDetail() {
         <div className="container">
           <div className="row">
             <div className="col-8 mx-auto text-center">
-              <h2 className="mb-3 text-capitalize">{item.packageName}</h2>
+              <h2 className="mb-3 text-capitalize">
+                {item.packageName != null ? (
+                  <span>{item.packageName}</span>
+                ) : (
+                  <span>
+                    <i className="fa-solid fa-triangle-exclamation"></i> Tạm
+                    thời không thể lấy dữ liệu
+                  </span>
+                )}
+              </h2>
               <ul
                 className="list-inline breadcrumbs text-capitalize"
                 style={{ fontWeight: "500" }}
@@ -273,7 +287,7 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      {/* Popup for Manicure */}
+      {/* Popup for order */}
       <div className="popup-overlay" id="popup-overlay-manicure">
         <div className="popup-content">
           <h2 className="title heading-service">Đặt hàng</h2>
@@ -352,7 +366,7 @@ export default function ServiceDetail() {
                       onChange={(e) => setAge(e.target.value)}
                       required
                     >
-                      <option value="">-- Tuổi --</option>
+                      <option value="">-- Tuổi * --</option>
                       {Array.from({ length: 33 }, (_, i) => i + 18).map((i) => (
                         <option key={i} value={i}>
                           {i} tuổi
@@ -371,15 +385,29 @@ export default function ServiceDetail() {
                     placeholder="Ghi chú thêm (nếu có)"
                     className="form-control"
                     style={{ marginBottom: "10px" }}
+                    onChange={(e) => setNote(e.target.value)}
                   ></textarea>
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     {!isSubmit ? (
-                      <button
-                        className="btn btn-primary p-3 px-5 py-4 mr-md-2 title"
-                        style={{ marginRight: "10px" }}
-                      >
-                        Đặt
-                      </button>
+                      errorPhone ? (
+                        <button
+                          className="btn btn-primary p-3 px-5 py-4 mr-md-2 title"
+                          style={{
+                            marginRight: "10px",
+                            backgroundColor: "#ccc",
+                          }}
+                          disabled
+                        >
+                          Đặt
+                        </button>
+                      ) : (
+                        <button
+                          className="btn btn-primary p-3 px-5 py-4 mr-md-2 title"
+                          style={{ marginRight: "10px" }}
+                        >
+                          Đặt
+                        </button>
+                      )
                     ) : (
                       <button
                         className="btn btn-primary p-3 px-5 py-4 mr-md-2 title"
@@ -418,12 +446,19 @@ export default function ServiceDetail() {
                 className="form-group"
               >
                 <h1 className="success-h1">
-                  🎉 Chúc mừng bạn đã đăng ký thành công. Chúng tôi sẽ liên hệ
-                  với bạn qua email bạn cung cấp trong vòng 24 giờ tới!
+                  🎉 Thông tin của bạn đã được gửi thành công. Chúng tôi sẽ sớm
+                  liên hệ với bạn qua email mà bạn cung cấp trong vòng 24 giờ
+                  tới!
                 </h1>
+                <p className="note-order">
+                  <i>
+                    *Ghi chú: Bạn có thể tra cứu trạng thái của đơn đăng ký này
+                    bằng mã đơn đăng ký của bạn. (Mã đơn: {orderId})
+                  </i>
+                </p>
                 <div style={{ display: "flex", justifyContent: "center" }}>
                   <a
-                    href="/services"
+                    href="/"
                     className="btn btn-primary p-3 px-5 py-4 mr-md-2 title"
                     style={{ marginRight: "10px" }}
                   >
@@ -436,6 +471,10 @@ export default function ServiceDetail() {
                         .getElementById("popup-overlay-manicure")
                         .classList.remove("show");
                       document.body.style.overflow = "auto";
+                      {
+                        setIsSent(false);
+                        setErrorPhone("");
+                      }
                     }}
                     type="button"
                   >
@@ -452,6 +491,10 @@ export default function ServiceDetail() {
                 .getElementById("popup-overlay-manicure")
                 .classList.remove("show");
               document.body.style.overflow = "auto";
+              {
+                setIsSent(false);
+                setErrorPhone("");
+              }
             }}
           >
             <i className="fa-solid fa-xmark"></i>
@@ -459,7 +502,7 @@ export default function ServiceDetail() {
           <br />
         </div>
       </div>
-      {/* End Popup for Manicure */}
+      {/* End Popup for order */}
     </div>
   );
 }

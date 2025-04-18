@@ -5,10 +5,10 @@ import { useTranslation } from "react-i18next";
 export default function Header() {
   const { t, i18n } = useTranslation();
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-    localStorage.setItem("language", lng);
-  };
+  // const changeLanguage = (lng) => {
+  //   i18n.changeLanguage(lng);
+  //   localStorage.setItem("language", lng);
+  // };
 
   const [isSticky, setIsSticky] = useState(false);
   useEffect(() => {
@@ -112,7 +112,12 @@ export default function Header() {
                   </li>
                 </ul>
               </li>
-              <select
+              <li className="nav-item ">
+                <a className="nav-link" href="/lookup">
+                  Tra cứu
+                </a>
+              </li>
+              {/* <select
                 className="language-selector"
                 onClick={(e) => changeLanguage(e.target.value)}
               >
@@ -123,7 +128,7 @@ export default function Header() {
                 <option value="zh">{t("header.zh")}</option>
                 <option value="ko">{t("header.ko")}</option>
                 <option value="ja">{t("header.ja")}</option>
-              </select>
+              </select> */}
             </ul>
             {sessionStorage.getItem("username") == null ? (
               <a href="/sign-in" className="btn btn-outline-primary">
