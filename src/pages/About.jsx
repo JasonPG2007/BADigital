@@ -160,7 +160,13 @@ export default function About() {
                 chuyên nghiệp, giúp bạn xây dựng nền tảng số mạnh mẽ để phát
                 triển doanh nghiệp.
               </p>
-              <div className="content">
+              <div
+                className="content"
+                style={{
+                  fontFamily: "Segoe UI",
+                  letterSpacing: "0.1rem",
+                }}
+              >
                 Với đội ngũ kỹ sư phần mềm, nhà phát triển và chuyên gia công
                 nghệ giàu kinh nghiệm, chúng tôi cam kết mang đến giải pháp hiệu
                 quả, tối ưu và phù hợp với nhu cầu của bạn. Dù bạn cần một trang

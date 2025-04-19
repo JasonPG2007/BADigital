@@ -414,11 +414,9 @@ export default function HowItWork() {
                     <div className="accordion-body py-0 content">
                       Chúng tôi sử dụng các công nghệ tiên tiến và phổ biến để
                       đảm bảo chất lượng và hiệu suất cao: Frontend: React,
-                      Vite, HTML5, CSS, Bootstrap 5; Backend: Node.js, PHP,
-                      Spring Boot, .NET Core Database: SQL Server, MySQL,
-                      MongoDB; CMS: WordPress; Ứng dụng di động: Flutter; Các
-                      công nghệ này giúp đảm bảo sản phẩm của bạn hoạt động ổn
-                      định và dễ dàng bảo trì.
+                      Vite, HTML5, CSS, Javascript, Bootstrap 5; Backend:
+                      Node.js, PHP, Spring Boot, .NET Core Web API; Database:
+                      SQL Server, MySQL, MongoDB.
                     </div>
                   </div>
                 </div>
