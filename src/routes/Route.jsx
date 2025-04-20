@@ -15,6 +15,7 @@ import Cookies from "js-cookie";
 import SignIn from "../pages/SignIn";
 import Lookup from "../pages/Lookup";
 import Projects from "../pages/Projects";
+import ProjectDetail from "../pages/ProjectDetail";
 const Manage = lazy(() => import("../pages/Manage/Layout/Manage"));
 
 export default function routes() {
@@ -53,6 +54,7 @@ export default function routes() {
         <Route path="/lookup" element={<Lookup></Lookup>} />
         <Route path="/manage/*" element={<Manage></Manage>} />
         <Route path="/projects" element={<Projects></Projects>} />
+        <Route path="/project/*" element={<ProjectDetail></ProjectDetail>} />
       </Routes>
       {!isManageRoute && !isSignInRoute && !isSignUpRoute && <Footer />}
     </BrowserRouter>

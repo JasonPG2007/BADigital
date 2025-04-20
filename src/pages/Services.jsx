@@ -152,7 +152,6 @@ export default function Services() {
                     )}
                   </div>
                   <h3 className="mb-3">{item.packageName}</h3>
-                  <p className="mb-4">Website</p>
                   <a
                     className="btn btn-sm btn-outline-primary"
                     href={`/service/${item.packageId}`}

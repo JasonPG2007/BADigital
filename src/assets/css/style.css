@@ -10766,8 +10766,61 @@ select {
 .td-admin {
   padding: 0 20px !important;
 }
+.img-projects {
+  width: 100%;
+  height: 214px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
 .img-projects img {
   width: 100%;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  margin-bottom: 20px;
+  transition: all 0.2s ease-in-out;
+}
+a.link-website {
+  color: #040404;
+}
+a.link-website:hover {
+  text-decoration: underline !important;
+}
+.card-project:hover img {
+  transform: scale(1.1);
+}
+.info-project {
+  padding-bottom: 20px;
+}
+.loading-back {
+  position: relative;
+  margin-top: 100px;
+}
+.loading {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #fff;
+  border-top: 5px solid #20ab47;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+.follow-loading {
+  position: absolute;
+  top: 150%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.btn-show-projects {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 @media screen and (max-width: 992px) {
   .input-lookup {
@@ -10781,5 +10834,8 @@ select {
   }
   .form-order {
     grid-template-columns: auto;
+  }
+  .follow-loading {
+    font-size: 12px;
   }
 }

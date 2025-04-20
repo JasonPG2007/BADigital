@@ -9,13 +9,13 @@ function Home() {
   const [packageName, setPackageName] = useState([]);
   const [packageId, setPackageId] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [projects, setProjects] = useState([]);
   let digitOrder = 1;
   const [errorPhone, setErrorPhone] = useState("");
   let [isSubmit, setIsSubmit] = useState("");
   let [isSent, setIsSent] = useState("");
   let [fullName, setFullName] = useState("");
   let [email, setEmail] = useState("");
-  let [age, setAge] = useState("");
   let [phoneNumber, setPhoneNumber] = useState("");
   let [note, setNote] = useState("");
   let [msg, setMsg] = useState("");
@@ -25,10 +25,13 @@ function Home() {
     "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Package";
   const API_URL_Category =
     "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/ServiceCategory";
+  const API_URL_Project =
+    "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Product";
   const newOrderId = Math.floor(100000000 + Math.random() * 900000000);
   // End Variables
 
   useEffect(() => {
+    // Fetch Category packages
     axios
       .get(API_URL_Package)
       .then((response) => {
@@ -37,10 +40,22 @@ function Home() {
       .catch((error) => {
         console.error("There was an error fetching the data:", error);
       });
+
+    // Fetch Category services
     axios
       .get(API_URL_Category)
       .then((response) => {
         setCategories(response.data);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the data:", error);
+      });
+
+    // Fetch projects
+    axios
+      .get(API_URL_Project)
+      .then((response) => {
+        setProjects(response.data);
       })
       .catch((error) => {
         console.error("There was an error fetching the data:", error);
@@ -82,32 +97,11 @@ function Home() {
         }
       );
 
-      const responseCustomer = await axios.post(
-        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Customer/`,
-        {
-          customerName: fullName,
-          email: email,
-          age: age,
-          phoneNumber: phoneNumber,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          validateStatus: () => true,
-        }
-      );
-
       if (responseOrder.status !== 200) {
         setIsSubmit(false);
         setMsg(responseOrder.data);
         setError(responseOrder.data);
-        return;
-      }
-      if (responseCustomer.status !== 200) {
-        setIsSubmit(false);
-        setMsg(responseCustomer.data);
-        setError(responseCustomer.data);
+        console.log(responseOrder.data);
         return;
       }
 
@@ -239,151 +233,147 @@ function Home() {
         </div>
       </section>
 
-      {/* Fetch data */}
-      {categories.map((category) => (
-        <section className="section" key={category.serviceCategoryId}>
-          <div className="container">
-            <div className="row-custom-2">
-              <div className="col-lg-4 col-md-6">
-                <div
-                  className="section-title pt-4"
-                  style={{ paddingLeft: "15px" }}
-                >
-                  <p className="text-primary text-uppercase fw-bold mb-3">
-                    {t("body.our-service-packages")}
-                  </p>
-
-                  <h1>{category.cateServiceName}</h1>
-
-                  <p>{category.description}</p>
-                </div>
-              </div>
-              {packages.map((itemPackage) => (
-                <div
-                  className="col-lg-4 col-md-6 service-item"
-                  key={itemPackage.packageId}
-                >
-                  <a
-                    className="text-black"
-                    href="javascript:void(0)"
-                    title="Đặt gói này"
-                    onClick={() => {
-                      document
-                        .getElementById("popup-overlay-manicure")
-                        .classList.add("show");
-                      document.body.style.overflow = "hidden";
-                      {
-                        setPackageName(itemPackage.packageName),
-                          setPackageId(itemPackage.packageId);
-                      }
-                    }}
+      {categories.length > 0 ? (
+        // Fetch data
+        categories.map((category) => (
+          <section className="section" key={category.serviceCategoryId}>
+            <div className="container">
+              <div className="row-custom-2">
+                <div className="col-lg-4 col-md-6">
+                  <div
+                    className="section-title pt-4"
+                    style={{ paddingLeft: "15px" }}
                   >
-                    <div className="block">
-                      <span className="colored-box text-center h3 mb-4">
-                        0{digitOrder++}
-                      </span>
-                      <h3 className="mb-3 service-title">
-                        {itemPackage.packageName}
-                      </h3>
-                      <p className="mb-0 service-description">
-                        {itemPackage.describe}
-                      </p>
-                    </div>
-                  </a>
+                    <p className="text-primary text-uppercase fw-bold mb-3">
+                      {t("body.our-service-packages")}
+                    </p>
+
+                    <h1>{category.cateServiceName}</h1>
+
+                    <p>{category.description}</p>
+                  </div>
                 </div>
-              ))}
+                {packages.map((itemPackage) => (
+                  <div
+                    className="col-lg-4 col-md-6 service-item"
+                    key={itemPackage.packageId}
+                  >
+                    <a
+                      className="text-black"
+                      href="javascript:void(0)"
+                      title="Đặt gói này"
+                      onClick={() => {
+                        document
+                          .getElementById("popup-overlay-manicure")
+                          .classList.add("show");
+                        document.body.style.overflow = "hidden";
+                        {
+                          setPackageName(itemPackage.packageName),
+                            setPackageId(itemPackage.packageId);
+                        }
+                      }}
+                    >
+                      <div className="block">
+                        <span className="colored-box text-center h3 mb-4">
+                          0{digitOrder++}
+                        </span>
+                        <h3 className="mb-3 service-title">
+                          {itemPackage.packageName}
+                        </h3>
+                        <p className="mb-0 service-description">
+                          {itemPackage.describe}
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        ))
+      ) : (
+        // End fetch data
+        <div className="loading-back">
+          <div className="loading"></div>
+          <p className="follow-loading">Đang kết nối đến máy chủ...</p>
+        </div>
+      )}
+
+      {projects.length > 0 ? (
+        // SHOW PROJECTS
+        <section className="position-relative">
+          <div className="section container">
+            <div className="row justify-content-center">
+              <div className="mb-4">
+                <div className="section-title text-center">
+                  <p className="text-primary text-uppercase fw-bold mb-3">
+                    Đã Hoàn Thành
+                  </p>
+                  <h1>Các Dự Án</h1>
+                </div>
+                <div className="row justify-content-center">
+                  {projects.map((project) => (
+                    <div
+                      className="text-center col-lg-3 col-md-6 mb-4"
+                      key={project.projectId}
+                    >
+                      <div className="rounded shadow">
+                        <div className="card-project">
+                          <div className="img-projects">
+                            <a href={`/project/${project.productId}`}>
+                              <img
+                                src="/images/projects/Mockup_website_parisian_nail_salon.png"
+                                alt="project picture"
+                              />
+                            </a>
+                          </div>
+                          <div className="info-project">
+                            <a
+                              href={`/project/${project.productId}`}
+                              title="Xem thêm"
+                            >
+                              <h3 style={{ color: project.primaryColor }}>
+                                {project.customerName}
+                              </h3>
+                            </a>
+                            <a
+                              href={project.productLink}
+                              target="_blank"
+                              className="link-website"
+                              title={`Mở website của ${project.customerName}`}
+                            >
+                              Website{" "}
+                              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                {projects.length > 12 && (
+                  <a
+                    className="btn btn-primary btn-show-projects"
+                    href="/projects"
+                  >
+                    Xem tất cả{" "}
+                    <span
+                      style={{ fontSize: "14px" }}
+                      className="ms-2 fas fa-arrow-right"
+                    ></span>
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         </section>
-      ))}
-      {/* End fetch data */}
-
-      {/* SHOW PROJECTS */}
-      <section className="position-relative">
-        <div className="section container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8 mb-4">
-              <div className="section-title text-center">
-                <p className="text-primary text-uppercase fw-bold mb-3">
-                  Đã Hoàn Thành
-                </p>
-                <h1>Các Dự Án</h1>
-              </div>
-              <div className="row justify-content-center">
-                <div className="icon-box-item text-center col-lg-4 col-md-6 mb-4">
-                  <div className="rounded shadow">
-                    <div className="">
-                      <a href="/project/" title="Xem thêm">
-                        <img
-                          src="/images/projects/Mockup_website.png"
-                          alt="project picture"
-                        />
-                      </a>
-                    </div>
-                    <h3 className="mb-3">Parisian Nail Salon</h3>
-                    <a href="/" target="_blank">
-                      Website{" "}
-                      <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                  </div>
-                </div>
-                <div className="icon-box-item text-center col-lg-4 col-md-6 mb-4">
-                  <div className="rounded shadow">
-                    <div className="">
-                      <a href="/project/" title="Xem thêm">
-                        <img
-                          src="/images/projects/Mockup_website.png"
-                          alt="project picture"
-                        />
-                      </a>
-                    </div>
-                    <h3 className="mb-3">Parisian Nail Salon</h3>
-                    <a href="/" target="_blank">
-                      Website{" "}
-                      <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                  </div>
-                </div>
-                <div className="icon-box-item text-center col-lg-4 col-md-6 mb-4">
-                  <div className="rounded shadow">
-                    <div className="">
-                      <a href="/project/" title="Xem thêm">
-                        <img
-                          src="/images/projects/Mockup_website.png"
-                          alt="project picture"
-                        />
-                      </a>
-                    </div>
-                    <h3 className="mb-3">Parisian Nail Salon</h3>
-                    <a href="/" target="_blank">
-                      Website{" "}
-                      <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                  </div>
-                </div>
-                <div className="icon-box-item text-center col-lg-4 col-md-6 mb-4">
-                  <div className="rounded shadow">
-                    <div className="">
-                      <a href="/project/" title="Xem thêm">
-                        <img
-                          src="/images/projects/Mockup_website.png"
-                          alt="project picture"
-                        />
-                      </a>
-                    </div>
-                    <h3 className="mb-3">Parisian Nail Salon</h3>
-                    <a href="/" target="_blank">
-                      Website{" "}
-                      <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      ) : (
+        // END SHOW PROJECTS
+        <div className="loading-back">
+          <div className="loading"></div>
+          <p className="follow-loading">Đang kết nối đến máy chủ...</p>
         </div>
-      </section>
-      {/* END SHOW PROJECTS */}
+      )}
 
       <section className="homepage_tab position-relative">
         <div className="section container">
@@ -1041,40 +1031,26 @@ function Home() {
                       className="form-control"
                       required
                     />
-                    <input
-                      type="text"
-                      name="phone_number"
-                      placeholder="Số điện thoại"
-                      className="form-control"
-                      onChange={(e) => {
-                        // Delete all non-numeric characters
-                        e.target.value = e.target.value.replace(/\D/g, "");
-
-                        // The limit for the number of digits entered is 10.
-                        if (e.target.value.length > 10) {
-                          e.target.value = e.target.value.slice(0, 10);
-                        }
-                        setPhoneNumber(e.target.value);
-                      }}
-                    />
-                    <select
-                      name="age"
-                      className="form-control"
-                      onChange={(e) => setAge(e.target.value)}
-                      required
-                    >
-                      <option value="">-- Tuổi *--</option>
-                      {Array.from({ length: 33 }, (_, i) => i + 18).map((i) => (
-                        <option key={i} value={i}>
-                          {i} tuổi
-                        </option>
-                      ))}
-                      <option value="50+">Trên 50 tuổi</option>
-                    </select>
                   </div>
-                  {errorPhone != null && (
-                    <p className="error_phone">{errorPhone}</p>
-                  )}
+                  <input
+                    type="text"
+                    name="phone_number"
+                    placeholder="Số điện thoại"
+                    className="form-control"
+                    onChange={(e) => {
+                      // Delete all non-numeric characters
+                      e.target.value = e.target.value.replace(/\D/g, "");
+
+                      // The limit for the number of digits entered is 10.
+                      if (e.target.value.length > 10) {
+                        e.target.value = e.target.value.slice(0, 10);
+                      }
+                      setPhoneNumber(e.target.value);
+                    }}
+                  />
+                  <p className="error_phone">
+                    {errorPhone != null && <span>{errorPhone}</span>}
+                  </p>
                   <textarea
                     name="note"
                     id="note"

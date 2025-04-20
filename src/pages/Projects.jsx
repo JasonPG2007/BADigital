@@ -1,4 +1,25 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 export default function Projects() {
+  // Variables
+  const [projects, setProjects] = useState([]);
+  const API_URL_Project =
+    "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Product";
+  // End Variables
+
+  useEffect(() => {
+    // Fetch projects
+    axios
+      .get(API_URL_Project)
+      .then((response) => {
+        setProjects(response.data);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the data:", error);
+      });
+  }, []);
+
   return (
     <>
       <section className="page-header bg-tertiary">
@@ -105,25 +126,53 @@ export default function Projects() {
 
       <section className="section">
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="icon-box-item text-center col-lg-4 col-md-6 mb-4">
-              <div className="rounded shadow">
-                <div className="">
-                  <a href="/project/" title="Xem thêm">
-                    <img
-                      src="/images/projects/Mockup_website.png"
-                      alt="project picture"
-                    />
-                  </a>
+          {projects.length > 0 ? (
+            <div className="row justify-content-center">
+              {projects.map((project) => (
+                <div
+                  className="icon-box-item text-center col-lg-3 col-md-6 mb-4"
+                  key={project.projectId}
+                >
+                  <div className="rounded shadow">
+                    <div className="card-project">
+                      <div className="img-projects">
+                        <a href={`/project/${project.productId}`}>
+                          <img
+                            src="/images/projects/Mockup_website_parisian_nail_salon.png"
+                            alt="project picture"
+                          />
+                        </a>
+                      </div>
+                      <div className="info-project">
+                        <a
+                          href={`/project/${project.productId}`}
+                          title="Xem thêm"
+                        >
+                          <h3 style={{ color: project.primaryColor }}>
+                            {project.customerName}
+                          </h3>
+                        </a>
+                        <a
+                          href={project.productLink}
+                          target="_blank"
+                          className="link-website"
+                          title={`Mở website của ${project.customerName}`}
+                        >
+                          Website{" "}
+                          <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="mb-3">Parisian Nail Salon</h3>
-                <a href="/" target="_blank">
-                  Website{" "}
-                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-              </div>
+              ))}
             </div>
-          </div>
+          ) : (
+            <div className="loading-back">
+              <div className="loading"></div>
+              <p className="follow-loading">Đang kết nối đến máy chủ...</p>
+            </div>
+          )}
         </div>
       </section>
     </>

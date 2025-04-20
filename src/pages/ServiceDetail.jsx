@@ -275,7 +275,7 @@ export default function ServiceDetail() {
                     document.body.style.overflow = "hidden";
                   }}
                 >
-                  Đặt ngay{" "}
+                  Đăng ký{" "}
                   <span
                     style={{ fontSize: "14px" }}
                     className="ms-2 fas fa-arrow-right"
