@@ -16,7 +16,6 @@ export default function ServiceDetail() {
   let [isSent, setIsSent] = useState("");
   let [fullName, setFullName] = useState("");
   let [email, setEmail] = useState("");
-  let [age, setAge] = useState("");
   let [phoneNumber, setPhoneNumber] = useState("");
   let [note, setNote] = useState("");
   let [msg, setMsg] = useState("");
@@ -72,32 +71,10 @@ export default function ServiceDetail() {
         }
       );
 
-      const responseCustomer = await axios.post(
-        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Customer/`,
-        {
-          customerName: fullName,
-          email: email,
-          age: age,
-          phoneNumber: phoneNumber,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          validateStatus: () => true,
-        }
-      );
-
       if (responseOrder.status !== 200) {
         setIsSubmit(false);
         setMsg(responseOrder.data);
         setError(responseOrder.data);
-        return;
-      }
-      if (responseCustomer.status !== 200) {
-        setIsSubmit(false);
-        setMsg(responseCustomer.data);
-        setError(responseCustomer.data);
         return;
       }
 
@@ -115,34 +92,43 @@ export default function ServiceDetail() {
     <div>
       <section className="page-header bg-tertiary">
         <div className="container">
-          <div className="row">
-            <div className="col-8 mx-auto text-center">
-              <h2 className="mb-3 text-capitalize">
-                {item.packageName != null ? (
-                  <span>{item.packageName}</span>
-                ) : (
-                  <span>
-                    <i className="fa-solid fa-triangle-exclamation"></i> Tạm
-                    thời không thể lấy dữ liệu
-                  </span>
-                )}
-              </h2>
-              <ul
-                className="list-inline breadcrumbs text-capitalize"
-                style={{ fontWeight: "500" }}
-              >
-                <li className="list-inline-item">
-                  <a href="/">Trang chủ</a>
-                </li>
-                <li className="list-inline-item">
-                  / &nbsp; <a href="services.html">Dịch vụ</a>
-                </li>
-                <li className="list-inline-item">
-                  / &nbsp; <a href="service-details.html">{item.packageName}</a>
-                </li>
-              </ul>
+          {item.packageId != null ? (
+            <div className="row">
+              <div className="col-8 mx-auto text-center">
+                <h2 className="mb-3 text-capitalize">
+                  {error != null ? (
+                    <span>{item.packageName}</span>
+                  ) : (
+                    <span>
+                      <i className="fa-solid fa-triangle-exclamation"></i> Tạm
+                      thời không thể lấy dữ liệu
+                    </span>
+                  )}
+                </h2>
+
+                <ul
+                  className="list-inline breadcrumbs text-capitalize"
+                  style={{ fontWeight: "500" }}
+                >
+                  <li className="list-inline-item">
+                    <a href="/">Trang chủ</a>
+                  </li>
+                  <li className="list-inline-item">
+                    / &nbsp; <a href="services.html">Dịch vụ</a>
+                  </li>
+                  <li className="list-inline-item">
+                    / &nbsp;{" "}
+                    <a href="service-details.html">{item.packageName}</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="loading-back">
+              <div className="loading"></div>
+              <p className="follow-loading">Đang kết nối đến máy chủ...</p>
+            </div>
+          )}
         </div>
         <div className="has-shapes">
           <svg
@@ -235,53 +221,74 @@ export default function ServiceDetail() {
                 className="bg-white shadow rounded-lg p-4 sticky-top"
                 style={{ top: "30px" }}
               >
-                <h4 className="has-line-end">{item.packageName}</h4>
-                <nav id="TableOfContents">
-                  <ul>
-                    <li>
-                      <a
-                        href="javascript:void(0)"
-                        style={{ cursor: "default" }}
-                      >
-                        Thông tin về dịch vụ
-                      </a>
+                {item.packageId != null ? (
+                  <div>
+                    <h4 className="has-line-end">{item.packageName}</h4>
+                    <nav id="TableOfContents">
                       <ul>
                         <li>
                           <a
                             href="javascript:void(0)"
                             style={{ cursor: "default" }}
                           >
-                            Mô tả
+                            Thông tin về dịch vụ
                           </a>
+                          <ul>
+                            <li>
+                              <a
+                                href="javascript:void(0)"
+                                style={{ cursor: "default" }}
+                              >
+                                Mô tả
+                              </a>
+                            </li>
+                          </ul>
                         </li>
                       </ul>
-                    </li>
-                  </ul>
-                </nav>
+                    </nav>
+                  </div>
+                ) : (
+                  <div
+                    className="loading-back"
+                    style={{ marginBottom: "100px" }}
+                  >
+                    <div className="loading"></div>
+                    <p className="follow-loading">
+                      Đang kết nối đến máy chủ...
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
             <div className="col-lg-8">
-              <div className="content">
-                <h2 id="what-services-we-render">
-                  Gói dịch vụ - {item.packageName} gồm những gì
-                </h2>
-                <p>{item.describe}</p>
-                <button
-                  className="btn btn-primary"
-                  onClick={() => {
-                    document
-                      .getElementById("popup-overlay-manicure")
-                      .classList.add("show");
-                    document.body.style.overflow = "hidden";
-                  }}
-                >
-                  Đăng ký{" "}
-                  <span
-                    style={{ fontSize: "14px" }}
-                    className="ms-2 fas fa-arrow-right"
-                  ></span>
-                </button>
-              </div>
+              {item.packageId != null ? (
+                <div className="content">
+                  <h2 id="what-services-we-render">
+                    Gói dịch vụ - {item.packageName} gồm những gì
+                  </h2>
+                  <p>{item.describe}</p>
+                  <button
+                    className="btn btn-primary"
+                    onClick={() => {
+                      document
+                        .getElementById("popup-overlay-manicure")
+                        .classList.add("show");
+                      document.body.style.overflow = "hidden";
+                    }}
+                  >
+                    Đăng ký{" "}
+                    <span
+                      style={{ fontSize: "14px" }}
+                      className="ms-2 fas fa-arrow-right"
+                    ></span>
+                  </button>
+                </div>
+              ) : (
+                <div className="loading-back">
+                  <div className="loading"></div>
+                  <p className="follow-loading">Đang kết nối đến máy chủ...</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -344,40 +351,26 @@ export default function ServiceDetail() {
                       className="form-control"
                       required
                     />
-                    <input
-                      type="text"
-                      name="phone_number"
-                      placeholder="Số điện thoại"
-                      className="form-control"
-                      onChange={(e) => {
-                        // Delete all non-numeric characters
-                        e.target.value = e.target.value.replace(/\D/g, "");
-
-                        // The limit for the number of digits entered is 10.
-                        if (e.target.value.length > 10) {
-                          e.target.value = e.target.value.slice(0, 10);
-                        }
-                        setPhoneNumber(e.target.value);
-                      }}
-                    />
-                    <select
-                      name="age"
-                      className="form-control"
-                      onChange={(e) => setAge(e.target.value)}
-                      required
-                    >
-                      <option value="">-- Tuổi * --</option>
-                      {Array.from({ length: 33 }, (_, i) => i + 18).map((i) => (
-                        <option key={i} value={i}>
-                          {i} tuổi
-                        </option>
-                      ))}
-                      <option value="50+">Trên 50 tuổi</option>
-                    </select>
                   </div>
-                  {errorPhone != null && (
-                    <p className="error_phone">{errorPhone}</p>
-                  )}
+                  <input
+                    type="text"
+                    name="phone_number"
+                    placeholder="Số điện thoại"
+                    className="form-control"
+                    onChange={(e) => {
+                      // Delete all non-numeric characters
+                      e.target.value = e.target.value.replace(/\D/g, "");
+
+                      // The limit for the number of digits entered is 10.
+                      if (e.target.value.length > 10) {
+                        e.target.value = e.target.value.slice(0, 10);
+                      }
+                      setPhoneNumber(e.target.value);
+                    }}
+                  />
+                  <p className="error_phone">
+                    {errorPhone != null && <span>{errorPhone}</span>}
+                  </p>
                   <textarea
                     name="note"
                     id="note"

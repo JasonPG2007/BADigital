@@ -138,13 +138,13 @@ function Home() {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="ps-lg-5 text-center">
+              <div className="ps-lg-5 text-center image-wrapper">
                 <img
                   loading="lazy"
                   decoding="async"
-                  src="images/banner/banner.png"
-                  alt="banner image"
-                  className="w-100"
+                  src="/images/banner/banner.png"
+                  alt="ảnh banner"
+                  className="w-100 image-pop"
                 />
               </div>
             </div>

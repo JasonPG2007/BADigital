@@ -127,45 +127,52 @@ export default function Services() {
 
       <section className="section">
         <div className="container">
-          <div className="row justify-content-center">
-            {listPackage.map((item) => (
-              <div
-                className="icon-box-item text-center col-lg-4 col-md-6 mb-4"
-                key={item.packageId}
-              >
-                <div className="rounded shadow py-5 px-4">
-                  <div className="icon">
-                    {item.packageName === "Cơ bản" && (
-                      <i className="fas fa-home"></i>
-                    )}
-                    {item.packageName === "Tiêu chuẩn" && (
-                      <i className="fas fa-gear"></i>
-                    )}
-                    {item.packageName === "Cao cấp" && (
-                      <i className="fas fa-crown"></i>
-                    )}
-                    {item.packageName === "Nâng cao" && (
-                      <i className="fas fa-key"></i>
-                    )}
-                    {item.packageName === "Chuyên nghiệp" && (
-                      <i className="fas fa-trophy"></i>
-                    )}
+          {listPackage.length > 0 ? (
+            <div className="row justify-content-center">
+              {listPackage.map((item) => (
+                <div
+                  className="icon-box-item text-center col-lg-4 col-md-6 mb-4"
+                  key={item.packageId}
+                >
+                  <div className="rounded shadow py-5 px-4">
+                    <div className="icon">
+                      {item.packageName === "Cơ bản" && (
+                        <i className="fas fa-home"></i>
+                      )}
+                      {item.packageName === "Tiêu chuẩn" && (
+                        <i className="fas fa-gear"></i>
+                      )}
+                      {item.packageName === "Cao cấp" && (
+                        <i className="fas fa-crown"></i>
+                      )}
+                      {item.packageName === "Nâng cao" && (
+                        <i className="fas fa-key"></i>
+                      )}
+                      {item.packageName === "Chuyên nghiệp" && (
+                        <i className="fas fa-trophy"></i>
+                      )}
+                    </div>
+                    <h3 className="mb-3">{item.packageName}</h3>
+                    <a
+                      className="btn btn-sm btn-outline-primary"
+                      href={`/service/${item.packageId}`}
+                    >
+                      Xem chi tiết{" "}
+                      <span
+                        style={{ fontSize: "14px" }}
+                        className="ms-2 fas fa-arrow-right"
+                      ></span>
+                    </a>
                   </div>
-                  <h3 className="mb-3">{item.packageName}</h3>
-                  <a
-                    className="btn btn-sm btn-outline-primary"
-                    href={`/service/${item.packageId}`}
-                  >
-                    Xem chi tiết{" "}
-                    <span
-                      style={{ fontSize: "14px" }}
-                      className="ms-2 fas fa-arrow-right"
-                    ></span>
-                  </a>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="loading-back">
+              <div className="loading"></div>
+              <p className="follow-loading">Đang kết nối đến máy chủ...</p>
+            </div>
+          )}
         </div>
       </section>
     </>
