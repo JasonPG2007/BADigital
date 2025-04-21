@@ -140,7 +140,6 @@ export default function Dashboard() {
                     <table className="table top-selling-table">
                       <thead>
                         <tr>
-                          <th></th>
                           <th>
                             <h6 className="text-sm text-medium">Products</h6>
                           </th>
@@ -156,29 +155,12 @@ export default function Dashboard() {
                           <th className="min-width">
                             <h6 className="text-sm text-medium">Profit</h6>
                           </th>
-                          <th></th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td>
-                            <div className="check-input-primary">
-                              <input
-                                className="form-check-input"
-                                type="checkbox"
-                                id="checkbox-1"
-                              />
-                            </div>
-                          </td>
-                          <td>
                             <div className="product">
-                              <div className="image">
-                                <img
-                                  loading="lazy"
-                                  src="/images/products/product-mini-1.jpg"
-                                  alt=""
-                                />
-                              </div>
                               <p className="text-sm">Arm Chair</p>
                             </div>
                           </td>
@@ -224,23 +206,7 @@ export default function Dashboard() {
                         </tr>
                         <tr>
                           <td>
-                            <div className="check-input-primary">
-                              <input
-                                className="form-check-input"
-                                type="checkbox"
-                                id="checkbox-1"
-                              />
-                            </div>
-                          </td>
-                          <td>
                             <div className="product">
-                              <div className="image">
-                                <img
-                                  loading="lazy"
-                                  src="/images/products/product-mini-2.jpg"
-                                  alt=""
-                                />
-                              </div>
                               <p className="text-sm">SOfa</p>
                             </div>
                           </td>
@@ -286,23 +252,7 @@ export default function Dashboard() {
                         </tr>
                         <tr>
                           <td>
-                            <div className="check-input-primary">
-                              <input
-                                className="form-check-input"
-                                type="checkbox"
-                                id="checkbox-1"
-                              />
-                            </div>
-                          </td>
-                          <td>
                             <div className="product">
-                              <div className="image">
-                                <img
-                                  src="/images/products/product-mini-3.jpg"
-                                  loading="lazy"
-                                  alt=""
-                                />
-                              </div>
                               <p className="text-sm">Dining Table</p>
                             </div>
                           </td>
@@ -348,23 +298,7 @@ export default function Dashboard() {
                         </tr>
                         <tr>
                           <td>
-                            <div className="check-input-primary">
-                              <input
-                                className="form-check-input"
-                                type="checkbox"
-                                id="checkbox-1"
-                              />
-                            </div>
-                          </td>
-                          <td>
                             <div className="product">
-                              <div className="image">
-                                <img
-                                  src="/images/products/product-mini-4.jpg"
-                                  loading="lazy"
-                                  alt=""
-                                />
-                              </div>
                               <p className="text-sm">Office Chair</p>
                             </div>
                           </td>
@@ -470,13 +404,6 @@ export default function Dashboard() {
                         <tr>
                           <td>
                             <div className="product">
-                              <div className="image">
-                                <img
-                                  src="/images/products/product-mini-1.jpg"
-                                  loading="lazy"
-                                  alt=""
-                                />
-                              </div>
                               <p className="text-sm">Bedroom</p>
                             </div>
                           </td>
@@ -522,13 +449,6 @@ export default function Dashboard() {
                         <tr>
                           <td>
                             <div className="product">
-                              <div className="image">
-                                <img
-                                  src="/images/products/product-mini-2.jpg"
-                                  loading="lazy"
-                                  alt=""
-                                />
-                              </div>
                               <p className="text-sm">Arm Chair</p>
                             </div>
                           </td>
@@ -574,13 +494,6 @@ export default function Dashboard() {
                         <tr>
                           <td>
                             <div className="product">
-                              <div className="image">
-                                <img
-                                  src="/images/products/product-mini-3.jpg"
-                                  loading="lazy"
-                                  alt=""
-                                />
-                              </div>
                               <p className="text-sm">Sofa</p>
                             </div>
                           </td>
@@ -626,13 +539,6 @@ export default function Dashboard() {
                         <tr>
                           <td>
                             <div className="product">
-                              <div className="image">
-                                <img
-                                  src="/images/products/product-mini-4.jpg"
-                                  loading="lazy"
-                                  alt=""
-                                />
-                              </div>
                               <p className="text-sm">Kitchen</p>
                             </div>
                           </td>

@@ -1,11 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-export default function Order() {
+export default function Projects() {
   // Variables
   let [isSubmit, setIsSubmit] = useState("");
-  let [orderId, setOrderId] = useState("");
-  let [listOrder, setListOrder] = useState([]);
+  let [listProject, setListProject] = useState([]);
   let [error, setError] = useState("");
   let [msg, setMsg] = useState("");
   let [isSent, setIsSent] = useState("");
@@ -17,7 +16,7 @@ export default function Order() {
     const fetchOrder = async () => {
       try {
         const response = await axios.get(
-          `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Order/`,
+          `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Product/`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -35,7 +34,7 @@ export default function Order() {
 
         // Handle successful response
         setIsSubmit(false);
-        setListOrder(response.data);
+        setListProject(response.data);
       } catch (error) {
         setIsSubmit(false);
         setError("Network problem or server not working");
@@ -88,7 +87,7 @@ export default function Order() {
             <div className="row align-items-center">
               <div className="col-md-6">
                 <div className="title">
-                  <h2>Orders</h2>
+                  <h2>Projects</h2>
                 </div>
               </div>
               {/* end col */}
@@ -103,7 +102,7 @@ export default function Order() {
                         className="breadcrumb-item active"
                         aria-current="page"
                       >
-                        Orders
+                        Projects
                       </li>
                     </ol>
                   </nav>
@@ -113,62 +112,73 @@ export default function Order() {
             </div>
             {/* end row */}
           </div>
-
-          {/* Fetch data */}
-          {listOrder.length > 0 ? (
+          {listProject.length > 0 ? (
             <div className="row text-center">
               <div className="table-responsive custom-table-responsive">
                 <table className="table custom-table">
                   <thead>
                     <tr>
-                      <th scope="col">Order ID</th>
-                      <th scope="col">Order Name</th>
-                      <th scope="col">Package</th>
+                      <th scope="col">Project ID</th>
                       <th scope="col">Customer Name</th>
-                      <th scope="col">Customer Email</th>
-                      <th scope="col">Customer Phone</th>
-                      <th scope="col">Note</th>
-                      <th scope="col">Status</th>
+                      <th scope="col">Category</th>
+                      <th scope="col">Project Name</th>
+                      <th scope="col">Description</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Image</th>
+                      <th scope="col">Link</th>
+                      <th scope="col">Primary Color</th>
                       <th scope="col">Created At</th>
                       <th scope="col">Updated At</th>
                       <th scope="col">Action</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {listOrder.map((item) => (
-                      <React.Fragment key={item.orderId}>
+                    {listProject.map((project) => (
+                      <React.Fragment key={project.productId}>
                         <tr
                           scope="row"
                           className="hover-active"
                           style={{ backgroundColor: "black" }}
                         >
-                          <td className="td-admin">{item.orderId}</td>
-                          <td className="td-admin">{item.orderName}</td>
-                          <td className="td-admin">{item.packageName}</td>
-                          <td className="td-admin">{item.fullName}</td>
-                          <td className="td-admin">{item.email}</td>
+                          <td className="td-admin">{project.productId}</td>
+                          <td className="td-admin">{project.customerName}</td>
                           <td className="td-admin">
-                            {item.phoneNumber != "" ? (
-                              <span>{item.phoneNumber}</span>
-                            ) : (
-                              <span>Không có</span>
+                            <a
+                              href={`/manage/project-category/${project.productCategoryId}`}
+                            >
+                              {project.categoryName}
+                            </a>
+                          </td>
+                          <td className="td-admin">{project.productName}</td>
+                          <td className="td-admin">{project.description}</td>
+                          <td className="td-admin">${project.productPrice}</td>
+                          <td className="td-admin">
+                            <img
+                              src={`/images/projects/${project.productImage}`}
+                              alt="project image"
+                              width={"70"}
+                            />
+                          </td>
+                          <td className="td-admin">
+                            <a
+                              href={project.productLink}
+                              target="_blank"
+                              title={project.productLink}
+                            >
+                              Website{" "}
+                              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                          </td>
+                          <td className="td-admin">{project.primaryColor}</td>
+                          <td className="td-admin">
+                            {new Date(project.createdAt).toLocaleDateString(
+                              "vn"
                             )}
                           </td>
                           <td className="td-admin">
-                            {item.note != "" ? (
-                              <span>{item.note}</span>
-                            ) : (
-                              <span>Không có</span>
-                            )}
-                          </td>
-                          <td className="td-admin">{item.status}</td>
-                          <td className="td-admin">
-                            {new Date(item.createdAt).toLocaleDateString("vn")}
-                          </td>
-                          <td className="td-admin">
-                            {item.updatedAt != null ? (
+                            {project.updatedAt != null ? (
                               <span>
-                                {new Date(item.updatedAt).toLocaleDateString(
+                                {new Date(project.updatedAt).toLocaleDateString(
                                   "vn"
                                 )}
                               </span>
@@ -177,7 +187,6 @@ export default function Order() {
                             )}
                           </td>
                           <td className="td-admin">
-                            {/* Button edit */}
                             <button
                               className="btn btn-success me-2"
                               onClick={() => {
@@ -191,8 +200,6 @@ export default function Order() {
                             >
                               <i className="fa-solid fa-pen-to-square"></i>
                             </button>
-
-                            {/* Button delete */}
                             <button
                               className="btn btn-danger"
                               onClick={() => {
@@ -225,6 +232,7 @@ export default function Order() {
           )}
         </div>
       </section>
+
       {/* Popup for update or delete */}
       <div className="popup-overlay" id="update-delete">
         <div className="popup-content">

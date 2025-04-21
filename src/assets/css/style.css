@@ -55,6 +55,10 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+[class^="fa-"],
+.fa {
+  font-family: "Font Awesome 6 Free" !important;
+}
 p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 0.1rem;
@@ -10764,7 +10768,12 @@ select {
   opacity: 0.4;
 }
 .td-admin {
-  padding: 0 20px !important;
+  padding: 20px 16px !important;
+  white-space: nowrap;
+  min-width: 120px;
+}
+th {
+  white-space: nowrap;
 }
 .img-projects {
   width: 100%;
@@ -10810,10 +10819,43 @@ a.link-website:hover {
   right: 50%;
   transform: translate(50%, -50%);
 }
+.not-found-back {
+  position: relative;
+  margin-top: 25%;
+}
+.not-found {
+  position: absolute;
+  top: 150%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  font-size: 40px;
+}
 .btn-show-projects {
   margin-left: 50%;
   transform: translateX(-50%);
 }
+/* .image-wrapper {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: visible;
+  background: #f5f5f5;
+  position: relative;
+  margin: auto;
+}
+
+.image-pop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%) scale(1.2);
+  width: 110%;
+  transition: transform 0.3s ease;
+}
+
+.image-pop:hover {
+  transform: translate(-50%, -60%) scale(1.4);
+} */
 @keyframes spin {
   0% {
     transform: rotate(0deg);

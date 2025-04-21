@@ -240,19 +240,12 @@ export default function Header() {
                       <li>
                         <a href="#0">
                           {" "}
-                          <i className="lni lni-inbox"></i> Messages{" "}
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#0">
-                          {" "}
                           <i className="fa-solid fa-gear"></i> Settings{" "}
                         </a>
                       </li>
                       <li className="divider"></li>
                       <li>
                         <a
-                          href="javascript:void(0)"
                           onClick={() => {
                             sessionStorage.removeItem("username");
                             sessionStorage.removeItem("role");

@@ -1,11 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-export default function Order() {
+export default function Package() {
   // Variables
   let [isSubmit, setIsSubmit] = useState("");
-  let [orderId, setOrderId] = useState("");
-  let [listOrder, setListOrder] = useState([]);
+  let [listPackage, setListPackage] = useState([]);
   let [error, setError] = useState("");
   let [msg, setMsg] = useState("");
   let [isSent, setIsSent] = useState("");
@@ -17,7 +16,7 @@ export default function Order() {
     const fetchOrder = async () => {
       try {
         const response = await axios.get(
-          `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Order/`,
+          `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Package/`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -35,7 +34,7 @@ export default function Order() {
 
         // Handle successful response
         setIsSubmit(false);
-        setListOrder(response.data);
+        setListPackage(response.data);
       } catch (error) {
         setIsSubmit(false);
         setError("Network problem or server not working");
@@ -88,7 +87,7 @@ export default function Order() {
             <div className="row align-items-center">
               <div className="col-md-6">
                 <div className="title">
-                  <h2>Orders</h2>
+                  <h2>Packages</h2>
                 </div>
               </div>
               {/* end col */}
@@ -103,7 +102,7 @@ export default function Order() {
                         className="breadcrumb-item active"
                         aria-current="page"
                       >
-                        Orders
+                        Packages
                       </li>
                     </ol>
                   </nav>
@@ -115,53 +114,35 @@ export default function Order() {
           </div>
 
           {/* Fetch data */}
-          {listOrder.length > 0 ? (
+          {listPackage.length > 0 ? (
             <div className="row text-center">
               <div className="table-responsive custom-table-responsive">
                 <table className="table custom-table">
                   <thead>
                     <tr>
-                      <th scope="col">Order ID</th>
-                      <th scope="col">Order Name</th>
+                      <th scope="col">Package ID</th>
+                      <th scope="col">Service Category</th>
                       <th scope="col">Package</th>
-                      <th scope="col">Customer Name</th>
-                      <th scope="col">Customer Email</th>
-                      <th scope="col">Customer Phone</th>
-                      <th scope="col">Note</th>
-                      <th scope="col">Status</th>
+                      <th scope="col">Description</th>
                       <th scope="col">Created At</th>
                       <th scope="col">Updated At</th>
                       <th scope="col">Action</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {listOrder.map((item) => (
+                    {listPackage.map((item) => (
                       <React.Fragment key={item.orderId}>
                         <tr
                           scope="row"
                           className="hover-active"
                           style={{ backgroundColor: "black" }}
                         >
-                          <td className="td-admin">{item.orderId}</td>
-                          <td className="td-admin">{item.orderName}</td>
+                          <td className="td-admin">{item.packageId}</td>
+                          <td className="td-admin">
+                            {item.serviceCategoryName}
+                          </td>
                           <td className="td-admin">{item.packageName}</td>
-                          <td className="td-admin">{item.fullName}</td>
-                          <td className="td-admin">{item.email}</td>
-                          <td className="td-admin">
-                            {item.phoneNumber != "" ? (
-                              <span>{item.phoneNumber}</span>
-                            ) : (
-                              <span>Không có</span>
-                            )}
-                          </td>
-                          <td className="td-admin">
-                            {item.note != "" ? (
-                              <span>{item.note}</span>
-                            ) : (
-                              <span>Không có</span>
-                            )}
-                          </td>
-                          <td className="td-admin">{item.status}</td>
+                          <td className="td-admin">{item.describe}</td>
                           <td className="td-admin">
                             {new Date(item.createdAt).toLocaleDateString("vn")}
                           </td>
