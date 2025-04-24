@@ -21,6 +21,7 @@ function Home() {
   let [msg, setMsg] = useState("");
   let [error, setError] = useState("");
   let [orderId, setOrderId] = useState("");
+  let [isTimeOut, setIsTimeOut] = useState("");
   const API_URL_Package =
     "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Package";
   const API_URL_Category =
@@ -236,7 +237,10 @@ function Home() {
       {categories.length > 0 ? (
         // Fetch data
         categories.map((category) => (
-          <section className="section" key={category.serviceCategoryId}>
+          <section
+            className="section show-data"
+            key={category.serviceCategoryId}
+          >
             <div className="container">
               <div className="row-custom-2">
                 <div className="col-lg-4 col-md-6">
@@ -295,13 +299,22 @@ function Home() {
         // End fetch data
         <div className="loading-back">
           <div className="loading"></div>
-          <p className="follow-loading">Đang kết nối đến máy chủ...</p>
+          <p className="follow-loading">
+            {!isTimeOut
+              ? "Đang kết nối đến máy chủ..."
+              : "Không thể kết nối đến máy chủ. Vui lòng kiểm tra lại kết nối mạng..."}
+          </p>
+          <span style={{ display: "none" }}>
+            {setTimeout(() => {
+              setIsTimeOut(true);
+            }, 60000)}
+          </span>
         </div>
       )}
 
       {projects.length > 0 ? (
         // SHOW PROJECTS
-        <section className="position-relative">
+        <section className="position-relative show-data">
           <div className="section container">
             <div className="row justify-content-center">
               <div className="mb-4">
@@ -369,9 +382,22 @@ function Home() {
         </section>
       ) : (
         // END SHOW PROJECTS
-        <div className="loading-back">
-          <div className="loading"></div>
-          <p className="follow-loading">Đang kết nối đến máy chủ...</p>
+        <div className="section container">
+          <div className="row justify-content-center">
+            <div className="loading-back">
+              <div className="loading"></div>
+              <p className="follow-loading">
+                {!isTimeOut
+                  ? "Đang kết nối đến máy chủ..."
+                  : "Không thể kết nối đến máy chủ. Vui lòng kiểm tra lại kết nối mạng..."}
+              </p>
+              <span style={{ display: "none" }}>
+                {setTimeout(() => {
+                  setIsTimeOut(true);
+                }, 60000)}
+              </span>
+            </div>
+          </div>
         </div>
       )}
 

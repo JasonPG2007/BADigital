@@ -1,4 +1,5 @@
 export default function InsUp() {
+  const handleSubmit = function () {};
   return (
     <>
       <section className="">
@@ -8,7 +9,7 @@ export default function InsUp() {
             <div className="row align-items-center">
               <div className="col-md-6">
                 <div className="title">
-                  <h2>Orders</h2>
+                  <h2>Add project</h2>
                 </div>
               </div>
               {/* end col */}
@@ -23,7 +24,7 @@ export default function InsUp() {
                         className="breadcrumb-item active"
                         aria-current="page"
                       >
-                        Orders
+                        Create
                       </li>
                     </ol>
                   </nav>
@@ -32,6 +33,16 @@ export default function InsUp() {
               {/* end col */}
             </div>
             {/* end row */}
+          </div>
+
+          <div className="row">
+            <form onSubmit={{ handleSubmit }}>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Order ID"
+              />
+            </form>
           </div>
         </div>
       </section>

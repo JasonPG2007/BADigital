@@ -8,6 +8,7 @@ export default function SignIn() {
   let [isSubmit, setIsSubmit] = useState("");
   let [msg, setMsg] = useState("");
   let [error, setError] = useState("");
+  let [isHaveWifi, setIsHaveWifi] = useState("");
   // End Variables
 
   useEffect(() => {
@@ -34,6 +35,7 @@ export default function SignIn() {
         }
       );
 
+      // Error
       if (response.status !== 200) {
         setIsSubmit(false);
         setMsg(response.data);
@@ -59,6 +61,9 @@ export default function SignIn() {
       setIsSubmit(false);
       setError("Network problem or server not working");
       console.error("Axios error:", error.message);
+      if (error.message === "Network Error") {
+        setMsg("Không có kết nối mạng");
+      }
     }
   };
 
@@ -81,11 +86,15 @@ export default function SignIn() {
                       />
                     </a>
                   </div>
+
+                  {/* Successfully */}
                   {msg.length > 0 && error.length == 0 && (
                     <label className="form-label p-2 w-100 text-center text-primary">
                       {msg}
                     </label>
                   )}
+
+                  {/* Failed */}
                   {error.length > 0 && (
                     <label className="form-label p-2 w-100 text-center text-danger">
                       {msg}

@@ -21,6 +21,7 @@ export default function ServiceDetail() {
   let [msg, setMsg] = useState("");
   let [error, setError] = useState("");
   let [orderId, setOrderId] = useState("");
+  let [isTimeOut, setIsTimeOut] = useState("");
   const newOrderId = Math.floor(100000000 + Math.random() * 900000000);
   // End Variables
 
@@ -90,7 +91,7 @@ export default function ServiceDetail() {
 
   return (
     <div>
-      <section className="page-header bg-tertiary">
+      <section className="page-header bg-tertiary show-data">
         <div className="container">
           {item.packageId != null ? (
             <div className="row">
@@ -126,7 +127,16 @@ export default function ServiceDetail() {
           ) : (
             <div className="loading-back">
               <div className="loading"></div>
-              <p className="follow-loading">Đang kết nối đến máy chủ...</p>
+              <p className="follow-loading">
+                {!isTimeOut
+                  ? "Đang kết nối đến máy chủ..."
+                  : "Không thể kết nối đến máy chủ. Vui lòng kiểm tra lại kết nối mạng..."}
+              </p>
+              <span style={{ display: "none" }}>
+                {setTimeout(() => {
+                  setIsTimeOut(true);
+                }, 60000)}
+              </span>
             </div>
           )}
         </div>
@@ -213,7 +223,7 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      <section className="section-sm">
+      <section className="section-sm show-data">
         <div className="container">
           <div className="row g-5">
             <div className="col-lg-4 mb-5 mb-lg-0">
@@ -254,8 +264,15 @@ export default function ServiceDetail() {
                   >
                     <div className="loading"></div>
                     <p className="follow-loading">
-                      Đang kết nối đến máy chủ...
+                      {!isTimeOut
+                        ? "Đang kết nối đến máy chủ..."
+                        : "Không thể kết nối đến máy chủ. Vui lòng kiểm tra lại kết nối mạng..."}
                     </p>
+                    <span style={{ display: "none" }}>
+                      {setTimeout(() => {
+                        setIsTimeOut(true);
+                      }, 60000)}
+                    </span>
                   </div>
                 )}
               </div>
@@ -286,7 +303,16 @@ export default function ServiceDetail() {
               ) : (
                 <div className="loading-back">
                   <div className="loading"></div>
-                  <p className="follow-loading">Đang kết nối đến máy chủ...</p>
+                  <p className="follow-loading">
+                    {!isTimeOut
+                      ? "Đang kết nối đến máy chủ..."
+                      : "Không thể kết nối đến máy chủ. Vui lòng kiểm tra lại kết nối mạng..."}
+                  </p>
+                  <span style={{ display: "none" }}>
+                    {setTimeout(() => {
+                      setIsTimeOut(true);
+                    }, 60000)}
+                  </span>
                 </div>
               )}
             </div>

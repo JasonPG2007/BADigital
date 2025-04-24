@@ -10834,6 +10834,21 @@ a.link-website:hover {
   margin-left: 50%;
   transform: translateX(-50%);
 }
+.name {
+  font-size: 22px;
+}
+.show-data {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* .image-wrapper {
   width: 300px;
   height: 300px;

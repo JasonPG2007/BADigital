@@ -136,7 +136,7 @@ export default function About() {
                 loading="lazy"
                 decoding="async"
                 src="/images/about/about-11.jpg"
-                alt="Business Loans &lt;br&gt; For Daily Expenses"
+                alt="picture"
                 className="rounded w-100"
               />
             </div>
@@ -156,9 +156,9 @@ export default function About() {
                 <h2>Chúng Tôi Là Ai?</h2>
               </div>
               <p className="lead">
-                Chúng tôi cung cấp dịch vụ thiết kế & phát triển Web & App
-                chuyên nghiệp, giúp bạn xây dựng nền tảng số mạnh mẽ để phát
-                triển doanh nghiệp.
+                Chúng tôi cung cấp dịch vụ thiết kế & phát triển Web chuyên
+                nghiệp, giúp bạn xây dựng nền tảng số mạnh mẽ để phát triển
+                doanh nghiệp.
               </p>
               <div
                 className="content"
@@ -170,9 +170,9 @@ export default function About() {
                 Với đội ngũ kỹ sư phần mềm, nhà phát triển và chuyên gia công
                 nghệ giàu kinh nghiệm, chúng tôi cam kết mang đến giải pháp hiệu
                 quả, tối ưu và phù hợp với nhu cầu của bạn. Dù bạn cần một trang
-                web bán hàng, một ứng dụng di động hay hệ thống quản lý doanh
-                nghiệp, chúng tôi đều sẵn sàng đồng hành cùng bạn để biến ý
-                tưởng thành hiện thực.
+                web bán hàng hoặc một trang web chỉ giới thiệu các dịch vụ của
+                bạn hay kể cả một website quản lý doanh nghiệp, chúng tôi đều
+                sẵn sàng đồng hành cùng bạn để biến ý tưởng thành hiện thực.
               </div>
             </div>
             <div className="col-lg-5">
@@ -181,8 +181,8 @@ export default function About() {
                 <h2>Dịch Vụ Chúng Tôi Cung Cấp?</h2>
               </div>
               <p className="lead">
-                Chúng tôi cung cấp dịch vụ thiết kế & phát triển Web & App với
-                quy trình chuyên nghiệp, nhanh chóng và tối ưu chi phí.
+                Chúng tôi cung cấp dịch vụ thiết kế & phát triển Web với quy
+                trình chuyên nghiệp, nhanh chóng và tối ưu chi phí.
               </p>
               <div className="content">
                 <ul>
@@ -191,12 +191,8 @@ export default function About() {
                     lý nội dung, bán hàng trực tuyến.
                   </li>
                   <li>
-                    Phát triển Ứng dụng: App di động & desktop theo yêu cầu, tối
-                    ưu hiệu suất, dễ dàng mở rộng.
-                  </li>
-                  <li>
                     Tùy chỉnh & Bảo trì: Hỗ trợ nâng cấp, bảo trì theo từng dịch
-                    vụ, đảm bảo hiệu suất lâu dài.
+                    vụ cụ thể, đảm bảo hiệu suất lâu dài.
                   </li>
                 </ul>
               </div>
@@ -594,7 +590,7 @@ export default function About() {
                   </ul>
                 </div>
                 <div className="card-body">
-                  <h3>Nguyễn Quốc Bảo An</h3>
+                  <h3 className="name">Nguyễn Quốc Bảo An</h3>
                   <p>Người sáng lập</p>
                 </div>
               </div>
@@ -633,7 +629,7 @@ export default function About() {
                   </ul>
                 </div>
                 <div className="card-body">
-                  <h3>Nguyễn Quốc Bảo An</h3>
+                  <h3 className="name">Nguyễn Quốc Bảo An</h3>
                   <p>Người hướng dẫn</p>
                 </div>
               </div>
@@ -672,7 +668,7 @@ export default function About() {
                   </ul>
                 </div>
                 <div className="card-body">
-                  <h3>Nguyễn Quốc Bảo An</h3>
+                  <h3 className="name">Nguyễn Quốc Bảo An</h3>
                   <p>Kỹ sư phần mềm</p>
                 </div>
               </div>
@@ -711,7 +707,7 @@ export default function About() {
                   </ul>
                 </div>
                 <div className="card-body">
-                  <h3>Nguyễn Quốc Bảo An</h3>
+                  <h3 className="name">Nguyễn Quốc Bảo An</h3>
                   <p>Nhà phát triển</p>
                 </div>
               </div>

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 export default function Projects() {
   // Variables
   const [projects, setProjects] = useState([]);
+  let [isTimeOut, setIsTimeOut] = useState("");
   const API_URL_Project =
     "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Product";
   // End Variables
@@ -124,7 +125,7 @@ export default function Projects() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section show-data">
         <div className="container">
           {projects.length > 0 ? (
             <div className="row justify-content-center">
@@ -170,7 +171,16 @@ export default function Projects() {
           ) : (
             <div className="loading-back">
               <div className="loading"></div>
-              <p className="follow-loading">Đang kết nối đến máy chủ...</p>
+              <p className="follow-loading">
+                {!isTimeOut
+                  ? "Đang kết nối đến máy chủ..."
+                  : "Không thể kết nối đến máy chủ. Vui lòng kiểm tra lại kết nối mạng..."}
+              </p>
+              <span style={{ display: "none" }}>
+                {setTimeout(() => {
+                  setIsTimeOut(true);
+                }, 60000)}
+              </span>
             </div>
           )}
         </div>

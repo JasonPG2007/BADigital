@@ -42,6 +42,9 @@ export default function Lookup() {
       setIsSubmit(false);
       setError("Network problem or server not working");
       console.error("Axios error:", error.message);
+      if (error.message === "Network Error") {
+        setMsg("Không có kết nối mạng!");
+      }
     }
   };
 
@@ -253,8 +256,12 @@ export default function Lookup() {
               ) : (
                 isLookup && (
                   <h4>
-                    <i className="fa-regular fa-face-frown"></i> Không tìm thấy
-                    đơn đăng ký này.
+                    <i className="fa-regular fa-face-frown"></i>{" "}
+                    {msg.length > 0 ? (
+                      <span>{msg}</span>
+                    ) : (
+                      "Không tìm thấy đơn đăng ký này."
+                    )}
                   </h4>
                 )
               )}
