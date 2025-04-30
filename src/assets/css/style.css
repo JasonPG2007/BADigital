@@ -10784,6 +10784,8 @@ th {
 }
 .img-projects img {
   width: 100%;
+  height: 214px;
+  object-fit: cover;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
   margin-bottom: 20px;

@@ -335,7 +335,7 @@ function Home() {
                           <div className="img-projects">
                             <a href={`/project/${project.productId}`}>
                               <img
-                                src="/images/projects/Mockup_website_parisian_nail_salon.png"
+                                src={`/images/projects/${project.productImage}`}
                                 alt="project picture"
                               />
                             </a>
