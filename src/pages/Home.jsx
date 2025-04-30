@@ -1028,7 +1028,10 @@ function Home() {
                     readOnly
                     required
                     value={`Gói dịch vụ: ${packageName}`}
-                    style={{ marginBottom: "10px" }}
+                    style={{
+                      marginBottom: "10px",
+                      backgroundColor: "#f5f5f5",
+                    }}
                   />
                   <input
                     type="hidden"

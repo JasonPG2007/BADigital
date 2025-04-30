@@ -296,7 +296,7 @@ export default function ServiceDetail() {
                     Đăng ký{" "}
                     <span
                       style={{ fontSize: "14px" }}
-                      className="ms-2 fas fa-arrow-right"
+                      className="ms-2 fas fa-arrow-right-long"
                     ></span>
                   </button>
                 </div>
@@ -348,7 +348,7 @@ export default function ServiceDetail() {
                     readOnly
                     required
                     value={`Gói dịch vụ: ${item.packageName}`}
-                    style={{ marginBottom: "10px" }}
+                    style={{ marginBottom: "10px", backgroundColor: "#f5f5f5" }}
                   />
                   <input
                     type="hidden"
