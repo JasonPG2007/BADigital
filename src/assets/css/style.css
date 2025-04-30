@@ -10561,6 +10561,7 @@ textarea.form-control {
   animation: updown 2s infinite ease-in-out;
 }
 .message-btn i {
+  font-family: "Font Awesome 6 Brands" !important;
   font-size: 50px;
 }
 @keyframes updown {

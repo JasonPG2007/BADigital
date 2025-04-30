@@ -19,7 +19,7 @@ export default function Contact() {
         (result) => {
           console.log("Email sent:", result.text);
           alert(
-            "🎉 Chúc mừng bạn đã đăng ký thành công! 😊\n BA Digital sẽ liên hệ với bạn trong vòng 24h. Bạn hãy để ý tin nhắn qua email nhé!"
+            "🎉 Chúc mừng bạn đã đăng ký thành công! 😊\n BA Digital sẽ liên hệ với bạn trong vòng 24h. Bạn nhớ chú ý email của bạn nhé!"
           );
           setIsSendEmail(false);
           form.current.reset();
@@ -159,7 +159,7 @@ export default function Contact() {
                   </div>
                   <div className="col-lg-6">
                     <div className="contact-form">
-                      <form onSubmit={sendEmail}>
+                      <form onSubmit={sendEmail} ref={form}>
                         <div className="form-group mb-4 pb-2">
                           <label htmlFor="contact_name" className="form-label">
                             Họ và tên *
@@ -218,8 +218,8 @@ export default function Contact() {
                         <h4 className="h5">Vẫn còn câu hỏi?</h4>
                         <div className="content">
                           Chúng tôi sẵn sàng hỗ trợ bất kỳ lúc nào thông qua
-                          <br /> <a href="tel:+14703949585">
-                            +1 470 394 9585
+                          <br /> <a href="tel:6783163182">
+                            +1 678 316 3182
                           </a>{" "}
                           hoặc <br />
                           <a
