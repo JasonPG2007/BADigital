@@ -125,7 +125,7 @@ export default function SignIn() {
                             required
                           />
                           <label htmlFor="email" className="form-label">
-                            Email
+                            Email <span style={{ color: "red" }}>*</span>
                           </label>
                         </div>
                       </div>
@@ -142,7 +142,7 @@ export default function SignIn() {
                             required
                           />
                           <label htmlFor="password" className="form-label">
-                            Password
+                            Password <span style={{ color: "red" }}>*</span>
                           </label>
                           <button
                             type="button"
