@@ -16,6 +16,7 @@ import SignIn from "../pages/SignIn";
 import Lookup from "../pages/Lookup";
 import Projects from "../pages/Projects";
 import ProjectDetail from "../pages/ProjectDetail";
+import ForgotPassword from "../pages/ForgotPassword";
 const Manage = lazy(() => import("../pages/Manage/Layout/Manage"));
 
 export default function routes() {
@@ -55,6 +56,10 @@ export default function routes() {
         <Route path="/manage/*" element={<Manage></Manage>} />
         <Route path="/projects" element={<Projects></Projects>} />
         <Route path="/project/*" element={<ProjectDetail></ProjectDetail>} />
+        <Route
+          path="/forgot-password"
+          element={<ForgotPassword></ForgotPassword>}
+        />
       </Routes>
       {!isManageRoute && !isSignInRoute && !isSignUpRoute && <Footer />}
     </BrowserRouter>

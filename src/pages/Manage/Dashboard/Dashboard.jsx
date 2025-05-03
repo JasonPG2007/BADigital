@@ -1,6 +1,10 @@
+import Cookies from "js-cookie";
+
 export default function Dashboard() {
   return sessionStorage.getItem("role") === "Admin" ||
-    sessionStorage.getItem("role") === "Staff" ? (
+    sessionStorage.getItem("role") === "Staff" ||
+    Cookies.get("role") === "Admin" ||
+    Cookies.get("role") === "Staff" ? (
     <>
       {/* main-wrapper start */}
       <main>

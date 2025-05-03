@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Cookies from "js-cookie";
 
 export default function SignIn() {
   // Variables
@@ -8,7 +9,12 @@ export default function SignIn() {
   let [isSubmit, setIsSubmit] = useState("");
   let [msg, setMsg] = useState("");
   let [error, setError] = useState("");
-  let [isHaveWifi, setIsHaveWifi] = useState("");
+  const [showPassword, setShowPassword] = useState("");
+  const [isSaveSession, setIsSaveSession] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
   // End Variables
 
   useEffect(() => {
@@ -48,9 +54,13 @@ export default function SignIn() {
       const data = response.data;
       setMsg("Đăng nhập thành công");
       setError("");
-      sessionStorage.setItem("username", data.username);
-      sessionStorage.setItem("role", data.role);
-      sessionStorage.setItem("accountId", data.accountId);
+      isSaveSession
+        ? (Cookies.set("username", data.username, { expires: 14 }),
+          Cookies.set("role", data.role, { expires: 14 }),
+          Cookies.set("accountId", data.accountId, { expires: 14 }))
+        : (sessionStorage.setItem("username", data.username),
+          sessionStorage.setItem("role", data.role),
+          sessionStorage.setItem("accountId", data.accountId));
 
       if (data.role === "Admin" || data.role === "Staff") {
         window.location.href = "/manage/dashboard";
@@ -122,7 +132,7 @@ export default function SignIn() {
                       <div className="col-12">
                         <div className="form-floating mb-3">
                           <input
-                            type="password"
+                            type={showPassword ? "text" : "password"}
                             className="form-control"
                             name="password"
                             id="password"
@@ -134,6 +144,25 @@ export default function SignIn() {
                           <label htmlFor="password" className="form-label">
                             Password
                           </label>
+                          <button
+                            type="button"
+                            onClick={togglePasswordVisibility}
+                            style={{
+                              position: "absolute",
+                              right: "10px",
+                              top: "50%",
+                              transform: "translateY(-50%)",
+                              border: "none",
+                              background: "transparent",
+                              cursor: "pointer",
+                            }}
+                          >
+                            {showPassword ? (
+                              <i className="fa-solid fa-eye"></i>
+                            ) : (
+                              <i className="fa-solid fa-eye-slash"></i>
+                            )}
+                          </button>
                         </div>
                       </div>
                       <div className="col-12">
@@ -145,6 +174,9 @@ export default function SignIn() {
                               value=""
                               name="rememberMe"
                               id="rememberMe"
+                              onChange={(e) => {
+                                setIsSaveSession(e.target.checked);
+                              }}
                             />
                             <label
                               className="form-check-label text-secondary"
@@ -155,7 +187,7 @@ export default function SignIn() {
                           </div>
                           <a
                             href="/forgot-password"
-                            className="link-primary text-decoration-none"
+                            className="text-decoration-none"
                           >
                             Quên mật khẩu?
                           </a>

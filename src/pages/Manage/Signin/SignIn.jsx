@@ -137,7 +137,9 @@ export default function SignIn() {
                     <div className="row">
                       <div className="col-12">
                         <div className="input-style-1">
-                          <label>Email</label>
+                          <label>
+                            Email <span className="text-danger">*</span>
+                          </label>
                           <input
                             type="email"
                             placeholder="Email"
@@ -150,7 +152,9 @@ export default function SignIn() {
                       {/* end col */}
                       <div className="col-12">
                         <div className="input-style-1">
-                          <label>Password</label>
+                          <label>
+                            Password <span className="text-danger">*</span>
+                          </label>
                           <input
                             type="password"
                             placeholder="Password"

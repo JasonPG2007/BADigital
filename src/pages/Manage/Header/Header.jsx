@@ -1,3 +1,5 @@
+import Cookies from "js-cookie";
+
 export default function Header() {
   return (
     <>
@@ -192,6 +194,8 @@ export default function Header() {
                 {/* message end */}
                 {/* profile start */}
                 {sessionStorage.getItem("role") === "Admin" ||
+                Cookies.get("role") === "Admin" ||
+                Cookies.get("role") === "Staff" ||
                 sessionStorage.getItem("role") === "Staff" ? (
                   <div className="profile-box ml-15">
                     <button
@@ -250,6 +254,9 @@ export default function Header() {
                             sessionStorage.removeItem("username");
                             sessionStorage.removeItem("role");
                             sessionStorage.removeItem("accountId");
+                            Cookies.remove("username");
+                            Cookies.remove("role");
+                            Cookies.remove("accountId");
                             window.location.href = "/";
                           }}
                         >
