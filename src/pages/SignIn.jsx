@@ -31,7 +31,7 @@ export default function SignIn() {
     setIsSubmit(true);
     try {
       const response = await axios.post(
-        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Account/${email}/${password}`,
+        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Account/signin`,
         { email, password },
         {
           headers: {
