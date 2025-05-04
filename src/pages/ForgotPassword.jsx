@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom";
 
 export default function ForgotPassword() {
   // Variables

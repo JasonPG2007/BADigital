@@ -17,6 +17,7 @@ import Lookup from "../pages/Lookup";
 import Projects from "../pages/Projects";
 import ProjectDetail from "../pages/ProjectDetail";
 import ForgotPassword from "../pages/ForgotPassword";
+import SignUp from "../pages/SignUp";
 const Manage = lazy(() => import("../pages/Manage/Layout/Manage"));
 
 export default function routes() {
@@ -51,6 +52,7 @@ export default function routes() {
         />
         <Route path="/terms" element={<Terms></Terms>} />
         <Route path="/about" element={<About></About>} />
+        <Route path="/sign-up" element={<SignUp></SignUp>} />
         <Route path="/sign-in" element={<SignIn></SignIn>} />
         <Route path="/lookup" element={<Lookup></Lookup>} />
         <Route path="/manage/*" element={<Manage></Manage>} />
