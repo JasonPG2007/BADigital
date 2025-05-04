@@ -108,7 +108,7 @@ function Home() {
 
       // Handle successful response
       const sendEmail = await axios.post(
-        `https://localhost:44336/api/Account/send-email`,
+        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Account/send-email`,
         {
           email: email,
           customerName: fullName,
