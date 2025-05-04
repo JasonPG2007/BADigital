@@ -339,7 +339,7 @@ export default function ForgotPassword() {
                                   style={{ paddingLeft: "10px" }}
                                 ></i>
                               ) : (
-                                "Đặt lại mật khẩu"
+                                "Gửi mã xác minh"
                               )}
                             </button>
                           </div>

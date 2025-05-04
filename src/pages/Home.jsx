@@ -266,6 +266,7 @@ function Home() {
                       className="text-black"
                       href="javascript:void(0)"
                       title="Đặt gói này"
+                      id="step-one"
                       onClick={() => {
                         document
                           .getElementById("popup-overlay-manicure")
@@ -317,7 +318,7 @@ function Home() {
         <section className="position-relative show-data">
           <div className="section container">
             <div className="row justify-content-center">
-              <div className="mb-4">
+              <div className="mb-4" id="step-two">
                 <div className="section-title text-center">
                   <p className="text-primary text-uppercase fw-bold mb-3">
                     Đã Hoàn Thành

@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./src/assets/css/style.css">
 
   <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet" />
+  <link href="https://unpkg.com/intro.js/introjs.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <title>Thiết Kế Website Chuẩn SEO - BA Digital</title>
 </head>
@@ -50,6 +51,7 @@
   <a href="https://m.me/603681139484860" id="message" class="message-btn" target="_blank">
     <i class="fa-brands fa-facebook-messenger" style="color: #0967FF;"></i>
   </a>
+  <button id="step-three"><i class="fa-solid fa-question"></i></button>
   <script>
     if (window.location.pathname.startsWith("/manage/")) {
       document.getElementById("zalo").style.display = "none";
@@ -62,6 +64,7 @@
     }
   </script>
 </body>
+<script src="https://unpkg.com/intro.js/intro.js"></script>
 <script>
   window.addEventListener('scroll', () => {
     const scrollTopButton = document.querySelector('#scroll-top');
@@ -89,7 +92,47 @@
       button.textContent = "Xem thêm";
     }
   }
+
+  document.getElementById("step-three").style.display = "none";
+  if (window.location.pathname == "/") {
+    document.getElementById("step-three").style.display = "block";
+  }
+  document.getElementById("step-three").addEventListener("click", function () {
+    intro.start();
+    localStorage.removeItem('intro_shown');
+  })
+
+  const intro = introJs();
+  intro.setOptions({
+    steps: [
+      {
+        intro: 'Hướng dẫn đăng ký tư vấn gói dịch vụ của chúng tôi.',
+      },
+      {
+        element: '#step-one',
+        intro: 'Đăng ký nhanh chóng: Chỉ cần nhấn vào ô dịch vụ bạn muốn như thế này, và một form đăng ký sẽ xuất hiện ngay để bạn điền thông tin.',
+      },
+      {
+        element: '#step-two',
+        intro: 'Bạn có thể xem các dự án của các khách hàng khác mà chúng tôi đã hoàn thành.',
+      },
+      {
+        element: '#step-three',
+        intro: 'Bạn có thể bấm vào biểu tượng này để xem lại hướng dẫn.',
+      }
+    ]
+  });
+  if (!localStorage.getItem('intro_shown')) {
+    if (window.location.pathname == "/") {
+      setTimeout(() => {
+        intro.start();
+        localStorage.setItem('intro_shown', 'true');
+      }, 1500);
+    }
+  }
+
 </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 </html>

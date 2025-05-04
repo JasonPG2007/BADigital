@@ -1235,7 +1235,7 @@ progress {
   }
   .col-md-6 {
     flex: 0 0 auto;
-    width: 50%;
+    width: 40%;
   }
   .col-md-7 {
     flex: 0 0 auto;
@@ -10853,7 +10853,9 @@ a.link-website:hover {
   }
 }
 .product-image {
-  max-height: 400px;
+  width: 60%;
+  height: 100%;
+  /* max-height: 400px; */
   object-fit: cover;
   position: relative;
   overflow: hidden;
@@ -10875,7 +10877,7 @@ a.link-website:hover {
   display: block;
   top: 0;
   left: 13px;
-  width: 96%;
+  width: 97%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -10917,6 +10919,23 @@ a.link-website:hover {
 }
 .description:hover {
   height: max-content;
+}
+#step-three {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: red;
+  z-index: 1000;
+  background-color: #20ab47;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+}
+
+#step-three i {
+  font-size: 20px;
+  color: #fff;
 }
 /* .image-wrapper {
   width: 300px;
