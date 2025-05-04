@@ -98,8 +98,9 @@
     document.getElementById("step-three").style.display = "block";
   }
   document.getElementById("step-three").addEventListener("click", function () {
-    intro.start();
     localStorage.removeItem('intro_shown');
+    intro.start();
+    localStorage.setItem('intro_shown', 'true');
   })
 
   const intro = introJs();

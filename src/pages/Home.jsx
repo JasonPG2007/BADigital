@@ -107,6 +107,20 @@ function Home() {
       }
 
       // Handle successful response
+      const sendEmail = await axios.post(
+        `https://localhost:44336/api/Account/send-email`,
+        {
+          email: email,
+          customerName: fullName,
+          categoryPackage: packageName,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          validateStatus: () => true,
+        }
+      );
       setIsSubmit(false);
       setIsSent(true);
     } catch (error) {
