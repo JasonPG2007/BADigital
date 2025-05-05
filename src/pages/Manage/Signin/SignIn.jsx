@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import Cookies from "js-cookie";
 
 export default function SignIn() {
   // Variables
@@ -8,14 +9,20 @@ export default function SignIn() {
   let [password, setPassword] = useState("");
   let [msg, setMsg] = useState("");
   let [error, setError] = useState("");
+  const [isSaveSession, setIsSaveSession] = useState(false);
+  const [showPassword, setShowPassword] = useState("");
   // End Variables
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmit(true);
     try {
       const response = await axios.post(
-        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Account/${email}/${password}`,
+        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Account/signin`,
         { email, password },
         {
           headers: {
@@ -37,9 +44,13 @@ export default function SignIn() {
       const data = response.data;
       setMsg("Đăng nhập thành công");
       setError("");
-      sessionStorage.setItem("username", data.username);
-      sessionStorage.setItem("role", data.role);
-      sessionStorage.setItem("accountId", data.accountId);
+      isSaveSession
+        ? (Cookies.set("username", data.username, { expires: 14 }),
+          Cookies.set("role", data.role, { expires: 14 }),
+          Cookies.set("accountId", data.accountId, { expires: 14 }))
+        : (sessionStorage.setItem("username", data.username),
+          sessionStorage.setItem("role", data.role),
+          sessionStorage.setItem("accountId", data.accountId));
 
       if (data.role === "Admin" || data.role === "Staff") {
         window.location.href = "/manage/dashboard";
@@ -156,12 +167,31 @@ export default function SignIn() {
                             Password <span className="text-danger">*</span>
                           </label>
                           <input
-                            type="password"
+                            type={showPassword ? "text" : "password"}
                             placeholder="Password"
                             onChange={(e) => setPassword(e.target.value)}
                             value={password}
                             required
                           />
+                          <button
+                            type="button"
+                            onClick={togglePasswordVisibility}
+                            style={{
+                              position: "absolute",
+                              right: "10px",
+                              top: "68%",
+                              transform: "translateY(-50%)",
+                              border: "none",
+                              background: "transparent",
+                              cursor: "pointer",
+                            }}
+                          >
+                            {showPassword ? (
+                              <i className="fa-solid fa-eye"></i>
+                            ) : (
+                              <i className="fa-solid fa-eye-slash"></i>
+                            )}
+                          </button>
                         </div>
                       </div>
                       {/* end col */}
@@ -172,6 +202,9 @@ export default function SignIn() {
                             type="checkbox"
                             value=""
                             id="checkbox-remember"
+                            onChange={(e) => {
+                              setIsSaveSession(e.target.checked);
+                            }}
                           />
                           <label
                             className="form-check-label"
@@ -185,8 +218,8 @@ export default function SignIn() {
                       <div className="col-xxl-6 col-lg-12 col-md-6">
                         <div className="text-start text-md-end text-lg-start text-xxl-end mb-30">
                           <a
-                            href="reset-password.html"
-                            className="hover-underline"
+                            href="/forgot-password"
+                            className="hover-underline text-primary"
                           >
                             Forgot Password?
                           </a>
@@ -221,8 +254,10 @@ export default function SignIn() {
                   </form>
                   <div className="singin-option pt-40">
                     <p className="text-sm text-medium text-dark text-center">
-                      Don’t have any account yet?
-                      <a href="/admin/signup">Create an account</a>
+                      Don’t have any account yet?{" "}
+                      <a href="/manage/sign-up" className="text-primary">
+                        Sign up
+                      </a>
                     </p>
                   </div>
                 </div>

@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Cookies from "js-cookie";
 
 export default function Projects() {
   // Variables
@@ -78,7 +79,10 @@ export default function Projects() {
     }
   };
 
-  return (
+  return sessionStorage.getItem("role") === "Admin" ||
+    sessionStorage.getItem("role") === "Staff" ||
+    Cookies.get("role") === "Admin" ||
+    Cookies.get("role") === "Staff" ? (
     <>
       <section className="">
         <div className="container-fluid">
@@ -359,5 +363,10 @@ export default function Projects() {
       </div>
       {/* End Popup for order */}
     </>
+  ) : (
+    <div className="container-custom">
+      <h1 className="text-center">You need to login</h1>
+      {(window.location.href = "/manage/sign-in")}
+    </div>
   );
 }

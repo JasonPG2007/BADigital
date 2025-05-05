@@ -12,10 +12,11 @@ export default function SignIn() {
   const [showPassword, setShowPassword] = useState("");
   const [isSaveSession, setIsSaveSession] = useState(false);
 
+  // End Variables
+
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
-  // End Variables
 
   useEffect(() => {
     if (msg.length > 0) {

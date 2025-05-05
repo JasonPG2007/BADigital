@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Cookies from "js-cookie";
 
 export default function Profile() {
   // Variables
@@ -34,7 +35,10 @@ export default function Profile() {
     fetchUsers();
   }, []);
 
-  return (
+  return sessionStorage.getItem("role") === "Admin" ||
+    sessionStorage.getItem("role") === "Staff" ||
+    Cookies.get("role") === "Admin" ||
+    Cookies.get("role") === "Staff" ? (
     <>
       {err.length == 0 ? (
         <section className="">
@@ -246,5 +250,10 @@ export default function Profile() {
         </section>
       )}
     </>
+  ) : (
+    <div className="container-custom">
+      <h1 className="text-center">You need to login</h1>
+      {(window.location.href = "/manage/sign-in")}
+    </div>
   );
 }

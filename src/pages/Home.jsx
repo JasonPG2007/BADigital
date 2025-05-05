@@ -113,6 +113,7 @@ function Home() {
           email: email,
           customerName: fullName,
           categoryPackage: packageName,
+          packageId: packageId,
         },
         {
           headers: {
