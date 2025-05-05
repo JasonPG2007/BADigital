@@ -97,8 +97,8 @@ export default function Header() {
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item " href="/blog">
-                      {t("header.blog")}
+                    <a className="dropdown-item " href="/events">
+                      Sự kiện & tin tức
                     </a>
                   </li>
                   <li>

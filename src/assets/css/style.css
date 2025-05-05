@@ -9271,7 +9271,6 @@ a.text-black:hover {
 .content * {
   word-break: break-word;
   overflow-wrap: break-word;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 0.1rem;
 }
 .content img {
