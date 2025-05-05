@@ -333,7 +333,7 @@ function Home() {
         <section className="position-relative show-data">
           <div className="section container">
             <div className="row justify-content-center">
-              <div className="mb-4" id="step-two">
+              <div className="mb-4">
                 <div className="section-title text-center">
                   <p className="text-primary text-uppercase fw-bold mb-3">
                     Đã Hoàn Thành
@@ -345,6 +345,7 @@ function Home() {
                     <div
                       className="text-center col-lg-3 col-md-6 mb-4"
                       key={project.projectId}
+                      id="step-two"
                     >
                       <div className="rounded shadow">
                         <div className="card-project">
