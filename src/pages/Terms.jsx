@@ -5,7 +5,9 @@ export default function Terms() {
         <div className="container">
           <div className="row">
             <div className="col-8 mx-auto text-center">
-              <h2 className="mb-3 text-capitalize">Điều Khoản & điều kiện</h2>
+              <h2 className="mb-3 text-capitalize">
+                Điều khoản &amp; Điều kiện
+              </h2>
               <ul
                 className="list-inline breadcrumbs text-capitalize"
                 style={{ fontWeight: "500" }}
@@ -14,7 +16,8 @@ export default function Terms() {
                   <a href="/">Trang chủ</a>
                 </li>
                 <li className="list-inline-item">
-                  / &nbsp; <a href="contact">Điều khoản & điều kiện</a>
+                  / &nbsp;{" "}
+                  <a href="privacy-policy.html">Điều khoản & Điều kiện</a>
                 </li>
               </ul>
             </div>
@@ -103,111 +106,75 @@ export default function Terms() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section-sm">
         <div className="container">
-          <div className="row justify-content-center align-items-center">
-            <div className="col-lg-6">
-              <div className="section-title text-center">
-                <p className="text-primary text-uppercase fw-bold mb-3">
-                  Liên hệ với chúng tôi
-                </p>
-                <h1>Bạn quan tâm về điều gì?</h1>
+          <div className="row-custom">
+            <div className="col-lg-10 mx-auto">
+              <div className="content">
+                <h3 id="application-processing">
+                  Chính sách giảm giá cho khách hàng thân thiết
+                </h3>
                 <p>
-                  Chúng tôi luôn sẵn sàng hỗ trợ bạn trong việc phát triển
-                  website và ứng dụng. Liên hệ ngay để nhận tư vấn và giải đáp
-                  thắc mắc
+                  Nhằm tri ân những khách hàng thường xuyên ủng hộ, chúng tôi áp
+                  dụng chính sách giảm giá như sau:
                 </p>
-              </div>
-            </div>
-            <div className="col-lg-10">
-              <div className="shadow rounded p-5 bg-white">
-                <div className="row-custom">
-                  <div className="col-12 mb-4">
-                    <h4>Để Lại Lời Nhắn</h4>
-                  </div>
-                  <div className="col-lg-6">
-                    <div className="contact-form">
-                      <form action="">
-                        <div className="form-group mb-4 pb-2">
-                          <label htmlFor="contact_name" className="form-label">
-                            Tên đầy đủ
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control shadow-none"
-                            id="contact_name"
-                            required
-                          />
-                        </div>
-                        <div className="form-group mb-4 pb-2">
-                          <label htmlFor="contact_email" className="form-label">
-                            Địa chỉ Email
-                          </label>
-                          <input
-                            type="email"
-                            className="form-control shadow-none"
-                            id="contact_email"
-                            required
-                          />
-                        </div>
-                        <div className="form-group mb-4 pb-2">
-                          <label
-                            htmlFor="contact_message"
-                            className="form-label"
-                          >
-                            Tin nhắn
-                          </label>
-                          <textarea
-                            className="form-control shadow-none"
-                            id="contact_message"
-                            rows="3"
-                            required
-                          ></textarea>
-                        </div>
-                        <button className="btn btn-primary w-100">
-                          Gửi tin nhắn
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mt-5 mt-lg-0">
-                    <div className="contact-info">
-                      <div className="block mt-0">
-                        <h4 className="h5">Vẫn câu hỏi?</h4>
-                        <div className="content">
-                          Chúng tôi sẵn sàn hỗ trợ bất kỳ lúc nào
-                          <br /> <a href="tel:+3301563965">+3301563965</a>
-                          <br />
-                          Thứ 2 - Chủ Nhật
-                          <br />
-                          7AM - 11:30PM Giờ khu vực Georgia tại US
-                        </div>
-                      </div>
-                      <div className="block">
-                        <ul className="list-unstyled list-inline my-4 social-icons">
-                          <li className="list-inline-item me-3">
-                            <a
-                              title="Explorer Facebook Profile"
-                              className="text-black"
-                              href="https://www.facebook.com/profile.php?id=61572892182086"
-                            >
-                              <i className="fab fa-facebook-f"></i>
-                            </a>
-                          </li>
-                          <li className="list-inline-item me-3">
-                            <a
-                              title="Explorer Instagram Profile"
-                              className="text-black"
-                              href="https://www.instagram.com/ba_digital_07/"
-                            >
-                              <i className="fab fa-instagram"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <ul>
+                  <li>
+                    <p>
+                      Khách hàng đã mua tổng cộng từ 5 lần trở lên tại hệ thống
+                      của chúng tôi (được tính qua lịch sử đăng ký và thanh toán
+                      thành công).
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Khách hàng mới nhưng đã đăng ký từ 5 sản phẩm trở lên
+                      (không phân biệt số lượng sản phẩm mỗi đơn).
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Mức giảm cụ thể sẽ được áp dụng tự động và/hoặc được thông
+                      báo trước khi khách hàng tiến hành đặt hàng tiếp theo.
+                    </p>
+                  </li>
+                </ul>
+                <h3 id="intellectual-property-rights">Điều kiện áp dụng</h3>
+                <ul>
+                  <li>
+                    <p>
+                      Áp dụng cho các khách hàng có tài khoản được ghi nhận
+                      trong hệ thống của chúng tôi.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Không áp dụng đồng thời với các chương trình khuyến mãi
+                      hoặc mã giảm giá khác, trừ khi có quy định cụ thể.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Chỉ áp dụng cho các đơn hợp lệ tính từ lúc đăng ký đến
+                      thanh toán thành công, không bị hủy hoặc không thanh toán.
+                    </p>
+                  </li>
+                </ul>
+                <h3 id="the-use-of-the-information">Thay đổi và điều chỉnh</h3>
+                <ul>
+                  <li>
+                    <p>
+                      Chúng tôi có quyền điều chỉnh điều kiện và mức giảm giá
+                      của chương trình mà không cần báo trước.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Mọi thay đổi sẽ được cập nhật tại mục “Điều khoản & Điều
+                      kiện” trên website.
+                    </p>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

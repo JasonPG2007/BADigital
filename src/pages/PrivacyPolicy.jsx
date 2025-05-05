@@ -13,7 +13,7 @@ export default function PrivacyPolicy() {
                 style={{ fontWeight: "500" }}
               >
                 <li className="list-inline-item">
-                  <a href="index.html">Trang chủ</a>
+                  <a href="/">Trang chủ</a>
                 </li>
                 <li className="list-inline-item">
                   / &nbsp; <a href="privacy-policy.html">Chính sách bảo mật</a>
@@ -113,15 +113,13 @@ export default function PrivacyPolicy() {
                 <h3 id="application-processing">
                   Xử lý yêu cầu dịch vụ & triển khai dự án
                 </h3>
+                <p>
+                  Chúng tôi cam kết cung cấp dịch vụ thiết kế và phát triển
+                  website/app chuyên nghiệp, đáp ứng nhu cầu cụ thể của từng
+                  khách hàng. Quy trình xử lý yêu cầu và triển khai dự án được
+                  thực hiện theo các bước sau:
+                </p>
                 <ul>
-                  <li>
-                    <p>
-                      Chúng tôi cam kết cung cấp dịch vụ thiết kế và phát triển
-                      website/app chuyên nghiệp, đáp ứng nhu cầu cụ thể của từng
-                      khách hàng. Quy trình xử lý yêu cầu và triển khai dự án
-                      được thực hiện theo các bước sau:
-                    </p>
-                  </li>
                   <li>
                     <p>
                       Tiếp nhận yêu cầu – Khách hàng gửi yêu cầu về website/app
@@ -166,13 +164,12 @@ export default function PrivacyPolicy() {
                 <h3 id="intellectual-property-rights">
                   Thu thập thông tin khách hàng
                 </h3>
+                <p>
+                  Chúng tôi có thể thu thập các loại thông tin sau từ khách
+                  hàng:
+                </p>
                 <ul>
-                  <li>
-                    <h5>
-                      Chúng tôi có thể thu thập các loại thông tin sau từ khách
-                      hàng:
-                    </h5>
-                  </li>
+                  <li></li>
                   <li>
                     <p>
                       Thông tin cá nhân: Họ tên, số điện thoại, email, địa chỉ,
