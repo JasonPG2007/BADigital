@@ -111,7 +111,7 @@ export default function Terms() {
           <div className="row-custom">
             <div className="col-lg-10 mx-auto">
               <div className="content">
-                <h3 id="application-processing">
+                <h3 id="discount-policy">
                   Chính sách giảm giá cho khách hàng thân thiết
                 </h3>
                 <p>
@@ -122,24 +122,25 @@ export default function Terms() {
                   <li>
                     <p>
                       Khách hàng đã mua tổng cộng từ 5 lần trở lên tại hệ thống
-                      của chúng tôi (được tính qua lịch sử đăng ký và thanh toán
-                      thành công).
+                      của chúng tôi (được tính qua lịch sử đăng ký cùng một
+                      email và thanh toán thành công).
                     </p>
                   </li>
                   <li>
                     <p>
-                      Khách hàng mới nhưng đã đăng ký từ 5 sản phẩm trở lên
-                      (không phân biệt số lượng sản phẩm mỗi đơn).
+                      Khách hàng mới nhưng đã đăng ký trên cùng một email từ 5
+                      sản phẩm trở lên (không phân biệt số lượng sản phẩm mỗi
+                      đơn).
                     </p>
                   </li>
                   <li>
                     <p>
                       Mức giảm cụ thể sẽ được áp dụng tự động và/hoặc được thông
-                      báo trước khi khách hàng tiến hành đặt hàng tiếp theo.
+                      báo trước khi khách hàng tiến hành đăng ký đơn tiếp theo.
                     </p>
                   </li>
                 </ul>
-                <h3 id="intellectual-property-rights">Điều kiện áp dụng</h3>
+                <h3 id="conditions">Điều kiện áp dụng</h3>
                 <ul>
                   <li>
                     <p>
@@ -160,7 +161,7 @@ export default function Terms() {
                     </p>
                   </li>
                 </ul>
-                <h3 id="the-use-of-the-information">Thay đổi và điều chỉnh</h3>
+                <h3 id="change-and-edit">Thay đổi và điều chỉnh</h3>
                 <ul>
                   <li>
                     <p>

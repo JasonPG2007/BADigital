@@ -80,6 +80,21 @@ export default function ServiceDetail() {
       }
 
       // Handle successful response
+      const sendEmail = await axios.post(
+        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Account/send-email`,
+        {
+          email: email,
+          customerName: fullName,
+          categoryPackage: item.packageName,
+          packageId: id,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          validateStatus: () => true,
+        }
+      );
       setIsSubmit(false);
       setIsSent(true);
     } catch (error) {
@@ -323,7 +338,7 @@ export default function ServiceDetail() {
       {/* Popup for order */}
       <div className="popup-overlay" id="popup-overlay-manicure">
         <div className="popup-content">
-          <h2 className="title heading-service">Đặt hàng</h2>
+          <h2 className="title heading-service">Đăng ký</h2>
           {!isSent ? (
             <div className="item-service">
               {error.length > 0 && (
@@ -417,14 +432,14 @@ export default function ServiceDetail() {
                           }}
                           disabled
                         >
-                          Đặt
+                          Gửi
                         </button>
                       ) : (
                         <button
                           className="btn btn-primary p-3 px-5 py-4 mr-md-2 title"
                           style={{ marginRight: "10px" }}
                         >
-                          Đặt
+                          Gửi
                         </button>
                       )
                     ) : (

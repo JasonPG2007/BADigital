@@ -122,36 +122,54 @@ export default function PrivacyPolicy() {
                 <ul>
                   <li>
                     <p>
-                      Tiếp nhận yêu cầu – Khách hàng gửi yêu cầu về website/app
-                      mong muốn, bao gồm chức năng, giao diện và các yêu cầu đặc
-                      biệt.
+                      Thu thập thông tin – Tiếp nhận yêu cầu từ khách hàng qua
+                      email, Facebook, điện thoại hoặc trực tiếp. Thu thập đầy
+                      đủ thông tin về nhu cầu, mong muốn và yêu cầu cụ thể của
+                      khách hàng. Phân tích và đề xuất giải pháp phù hợp.
                     </p>
                   </li>
                   <li>
                     <p>
-                      Phân tích & tư vấn – Đội ngũ chuyên gia sẽ đánh giá nhu
-                      cầu, tư vấn giải pháp tối ưu và đề xuất lộ trình triển
-                      khai phù hợp.
+                      Gặp mặt khách hàng – Tổ chức cuộc họp online để trao đổi
+                      chi tiết về dự án tầm 30 phút. Làm rõ các yêu cầu kỹ
+                      thuật, thời gian triển khai và phạm vi công việc.
                     </p>
                   </li>
                   <li>
                     <p>
-                      Lên kế hoạch – Sau khi thống nhất yêu cầu, chúng tôi sẽ
-                      xây dựng kế hoạch chi tiết.
+                      Báo giá – Xây dựng bảng báo giá dựa trên yêu cầu của khách
+                      hàng. Gửi báo giá chi tiết kèm theo phạm vi công việc và
+                      thời gian thực hiện.
                     </p>
                   </li>
                   <li>
                     <p>
-                      Thiết kế & phát triển – Website/app sẽ được thiết kế
-                      UI/UX, lập trình và kiểm thử để đảm bảo chất lượng tốt
-                      nhất.
+                      Thanh toán 50% giá trị dự án – Sau khi thống nhất báo giá,
+                      khách hàng thanh toán 50% giá trị dự án. Xác nhận thanh
+                      toán mới có thể tiến hành các bước tiếp theo.
                     </p>
                   </li>
                   <li>
                     <p>
-                      Bàn giao & vận hành – Sau khi hoàn thiện, sản phẩm sẽ được
-                      bàn giao kèm theo hướng dẫn sử dụng, hỗ trợ kỹ thuật và
-                      bảo trì theo từng dịch vụ.
+                      Triển khai dự án – Lập kế hoạch và phân công công việc cho
+                      đội ngũ thực hiện. Tiến hành thiết kế, lập trình và phát
+                      triển theo yêu cầu đã thu thập. Cập nhật tiến độ thường
+                      xuyên cho khách hàng 2 - 3 lần/tuần.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Test sản phẩm – Gửi bản demo sản phẩm để khách hàng kiểm
+                      tra. Thu thập phản hồi và điều chỉnh theo yêu cầu của
+                      khách hàng. Kiểm tra lần 2 để đảm bảo sản phẩm đáp ứng
+                      đúng mong muốn.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Bàn giao – Hoàn thiện sản phẩm và bàn giao mã nguồn cho
+                      khách hàng. Hướng dẫn sử dụng và hỗ trợ kỹ thuật nếu cần.
+                      Khách hàng thanh toán nốt 50% còn lại để hoàn tất dự án.
                     </p>
                   </li>
                 </ul>
