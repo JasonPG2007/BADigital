@@ -10967,6 +10967,9 @@ a.link-website:hover {
   }
 }
 @media screen and (max-width: 992px) {
+  .product-image {
+    width: 100%;
+  }
   .input-lookup {
     width: 85%;
   }
