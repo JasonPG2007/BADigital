@@ -56,20 +56,14 @@ export default function ProjectDetail() {
                 Khách hàng: {data.customerName} <br />
                 Thể loại: {data.categoryName}
               </p>
-              <div className="mb-3">
-                <span className="h4 me-2">${data.productPrice}</span>
-                {/* <span className="text-muted">
-                <s>$399.99</s>
-              </span> */}
-              </div>
-              <div className="mb-3">
+              {/* <div className="mb-3">
                 <i className="fa-solid fa-star text-warning"></i>
                 <i className="fa-solid fa-star text-warning"></i>
                 <i className="fa-solid fa-star text-warning"></i>
                 <i className="fa-solid fa-star text-warning"></i>
                 <i className="fa-solid fa-star-half text-warning"></i>
                 <span className="ms-2">4.5 (120 reviews)</span>
-              </div>
+              </div> */}
               <h5>Mô tả:</h5>
               <div className="mb-4 description-wrapper active">
                 <p className="description">
@@ -97,7 +91,7 @@ export default function ProjectDetail() {
                   </label>
                 </div>
               </div>
-              <div className="mt-4">
+              {/* <div className="mt-4">
                 <h5>Key Features:</h5>
                 <ul>
                   <li>Industry-leading noise cancellation</li>
@@ -105,14 +99,13 @@ export default function ProjectDetail() {
                   <li>Touch sensor controls</li>
                   <li>Speak-to-chat technology</li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
           <br />
-          <div className="mt-5 mb-5 text-center">
+          {/* <div className="mt-5 mb-5 text-center">
             <h2>Các sản phầm cùng thể loại:</h2>
             <div className="row mt-5">
-              {/* Card project */}
               <div className="text-center col-lg-3 col-md-6 mb-4">
                 <div className="rounded shadow">
                   <div className="card-project">
@@ -142,7 +135,7 @@ export default function ProjectDetail() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       ) : (
         <section className="page-header bg-tertiary">
