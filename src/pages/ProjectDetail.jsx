@@ -73,7 +73,7 @@ export default function ProjectDetail() {
                 </p>
               </div>
               <div className="mb-4">
-                <h5>Primary Color:</h5>
+                <h5>Màu chính:</h5>
                 <div
                   className="btn-group"
                   role="group"
