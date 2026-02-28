@@ -1,36 +1,4 @@
-import { useState, useRef } from "react";
-import emailjs from "emailjs-com";
-
 export default function Contact() {
-  const form = useRef();
-  const [isSendEmail, setIsSendEmail] = useState("");
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    setIsSendEmail(true);
-    emailjs
-      .sendForm(
-        "service_jrgaq57",
-        "template_j6snca8",
-        form.current,
-        "36B1PoPlACVPxMI_K"
-      )
-      .then(
-        (result) => {
-          console.log("Email sent:", result.text);
-          alert(
-            "🎉 Chúc mừng bạn đã đăng ký thành công! 😊\n BA Digital sẽ liên hệ với bạn trong vòng 24h. Bạn nhớ chú ý email của bạn nhé!"
-          );
-          setIsSendEmail(false);
-          form.current.reset();
-        },
-        (error) => {
-          console.log("Error:", error.text);
-          alert("❌ Đăng ký thất bại! 😢. Vui lòng thử lại sau! ");
-        }
-      );
-  };
-
   return (
     <>
       <section className="page-header bg-tertiary">
@@ -146,123 +114,21 @@ export default function Contact() {
                 <h1>Bạn quan tâm về điều gì?</h1>
                 <p>
                   Chúng tôi luôn sẵn sàng hỗ trợ bạn trong việc phát triển
-                  website và ứng dụng. Liên hệ ngay để nhận tư vấn và giải đáp
-                  thắc mắc
+                  website. Liên hệ ngay để nhận tư vấn và giải đáp thắc mắc
                 </p>
               </div>
             </div>
             <div className="col-lg-10">
-              <div className="shadow rounded p-5 bg-white">
-                <div className="row-custom">
-                  <div className="col-12 mb-4">
-                    <h4>Để Lại Lời Nhắn</h4>
-                  </div>
-                  <div className="col-lg-6">
-                    <div className="contact-form">
-                      <form onSubmit={sendEmail} ref={form}>
-                        <div className="form-group mb-4 pb-2">
-                          <label htmlFor="contact_name" className="form-label">
-                            Họ và tên *
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control shadow-none"
-                            id="contact_name"
-                            name="full_name"
-                            required
-                          />
-                        </div>
-                        <div className="form-group mb-4 pb-2">
-                          <label htmlFor="contact_email" className="form-label">
-                            Email *
-                          </label>
-                          <input
-                            type="email"
-                            className="form-control shadow-none"
-                            id="contact_email"
-                            name="email"
-                            required
-                          />
-                        </div>
-                        <div className="form-group mb-4 pb-2">
-                          <label
-                            htmlFor="contact_message"
-                            className="form-label"
-                          >
-                            Tin nhắn *
-                          </label>
-                          <textarea
-                            className="form-control shadow-none"
-                            id="contact_message"
-                            name="message"
-                            rows="3"
-                            required
-                          ></textarea>
-                        </div>
-                        {!isSendEmail && (
-                          <button className="btn btn-primary w-100">
-                            Gửi tin nhắn
-                          </button>
-                        )}
-                        {isSendEmail && (
-                          <button className="btn btn-primary w-100" disabled>
-                            <i className="fas fa-spinner fa-spin"></i>
-                          </button>
-                        )}
-                      </form>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mt-5 mt-lg-0">
-                    <div className="contact-info">
-                      <div className="block mt-0">
-                        <h4 className="h5">Vẫn còn câu hỏi?</h4>
-                        <div className="content">
-                          Chúng tôi sẵn sàng hỗ trợ bất kỳ lúc nào thông qua
-                          <br /> <a href="tel:6783163182">
-                            +1 678 316 3182
-                          </a>{" "}
-                          hoặc <br />
-                          <a
-                            href="https://www.facebook.com/badigitalwebapp/"
-                            target="_blank"
-                          >
-                            Fanpage
-                          </a>{" "}
-                          của chúng tôi
-                          <br />
-                          Ngày làm việc: Thứ 2 - Thứ 6
-                          <br />
-                          Giờ làm việc: 7AM - 11:30PM Giờ khu vực Georgia tại Mỹ
-                        </div>
-                      </div>
-                      <div className="block">
-                        <ul className="list-unstyled list-inline my-4 social-icons">
-                          <li className="list-inline-item me-3">
-                            <a
-                              title="Explorer Facebook Profile"
-                              className="text-black"
-                              href="https://www.facebook.com/badigitalwebapp/"
-                              target="_blank"
-                            >
-                              <i className="fab fa-facebook-f"></i>
-                            </a>
-                          </li>
-                          <li className="list-inline-item me-3">
-                            <a
-                              title="Explorer Instagram Profile"
-                              className="text-black"
-                              href="https://www.instagram.com/badigitalwebapp/"
-                              target="_blank"
-                            >
-                              <i className="fab fa-instagram"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeRGSniuFrGiResWoDz2wvKdWvF17Ps8KFavZoK4R5J4tOXVQ/viewform?embedded=true"
+                width="100%"
+                height="3225"
+                frameBorder="0"
+                marginHeight="0"
+                marginWidth="0"
+              >
+                Loading…
+              </iframe>
             </div>
           </div>
         </div>

@@ -131,7 +131,10 @@ export default function Header() {
                 <option value="ja">{t("header.ja")}</option>
               </select> */}
             </ul>
-            {sessionStorage.getItem("username") === null &&
+            <a href="/contact" className="btn btn-outline-primary">
+              Đăng Ký
+            </a>
+            {/* {sessionStorage.getItem("username") === null &&
             Cookies.get("username") == null ? (
               <a href="/sign-in" className="btn btn-outline-primary">
                 {t("header.login")}
@@ -140,7 +143,7 @@ export default function Header() {
               <a href="/manage/dashboard" className="btn btn-outline-primary">
                 Quản lý
               </a>
-            )}
+            )} */}
             {/* <a href="/sign-up" className="btn btn-primary ms-2 ms-lg-3">
               {t("header.sign-up")}
             </a> */}

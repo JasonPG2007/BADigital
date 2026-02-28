@@ -1,135 +1,135 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+// import axios from "axios";
+// import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 function Home() {
   // Variables
   const { t } = useTranslation();
-  const [packages, setPackage] = useState([]);
-  const [packageName, setPackageName] = useState([]);
-  const [packageId, setPackageId] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [projects, setProjects] = useState([]);
-  let digitOrder = 1;
-  const [errorPhone, setErrorPhone] = useState("");
-  let [isSubmit, setIsSubmit] = useState("");
-  let [isSent, setIsSent] = useState("");
-  let [fullName, setFullName] = useState("");
-  let [email, setEmail] = useState("");
-  let [phoneNumber, setPhoneNumber] = useState("");
-  let [note, setNote] = useState("");
-  let [msg, setMsg] = useState("");
-  let [error, setError] = useState("");
-  let [orderId, setOrderId] = useState("");
-  let [isTimeOut, setIsTimeOut] = useState("");
-  const API_URL_Package =
-    "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Package";
-  const API_URL_Category =
-    "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/ServiceCategory";
-  const API_URL_Project =
-    "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Product";
-  const newOrderId = Math.floor(100000000 + Math.random() * 900000000);
-  // End Variables
+  // const [packages, setPackage] = useState([]);
+  // const [packageName, setPackageName] = useState([]);
+  // const [packageId, setPackageId] = useState([]);
+  // const [categories, setCategories] = useState([]);
+  // const [projects, setProjects] = useState([]);
+  // let digitOrder = 1;
+  // const [errorPhone, setErrorPhone] = useState("");
+  // let [isSubmit, setIsSubmit] = useState("");
+  // let [isSent, setIsSent] = useState("");
+  // let [fullName, setFullName] = useState("");
+  // let [email, setEmail] = useState("");
+  // let [phoneNumber, setPhoneNumber] = useState("");
+  // let [note, setNote] = useState("");
+  // let [msg, setMsg] = useState("");
+  // let [error, setError] = useState("");
+  // let [orderId, setOrderId] = useState("");
+  // let [isTimeOut, setIsTimeOut] = useState("");
+  // const API_URL_Package =
+  //   "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Package";
+  // const API_URL_Category =
+  //   "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/ServiceCategory";
+  // const API_URL_Project =
+  //   "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Product";
+  // const newOrderId = Math.floor(100000000 + Math.random() * 900000000);
+  // // End Variables
 
-  useEffect(() => {
-    // Fetch Category packages
-    axios
-      .get(API_URL_Package)
-      .then((response) => {
-        setPackage(response.data);
-      })
-      .catch((error) => {
-        console.error("There was an error fetching the data:", error);
-      });
+  // useEffect(() => {
+  //   // Fetch Category packages
+  //   axios
+  //     .get(API_URL_Package)
+  //     .then((response) => {
+  //       setPackage(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("There was an error fetching the data:", error);
+  //     });
 
-    // Fetch Category services
-    axios
-      .get(API_URL_Category)
-      .then((response) => {
-        setCategories(response.data);
-      })
-      .catch((error) => {
-        console.error("There was an error fetching the data:", error);
-      });
+  //   // Fetch Category services
+  //   axios
+  //     .get(API_URL_Category)
+  //     .then((response) => {
+  //       setCategories(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("There was an error fetching the data:", error);
+  //     });
 
-    // Fetch projects
-    axios
-      .get(API_URL_Project)
-      .then((response) => {
-        setProjects(response.data);
-      })
-      .catch((error) => {
-        console.error("There was an error fetching the data:", error);
-      });
-  }, []);
+  //   // Fetch projects
+  //   axios
+  //     .get(API_URL_Project)
+  //     .then((response) => {
+  //       setProjects(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("There was an error fetching the data:", error);
+  //     });
+  // }, []);
 
-  useEffect(() => {
-    if (phoneNumber.length === 10) {
-      setErrorPhone();
-    } else if (phoneNumber.length > 0) {
-      setErrorPhone("SĐT không hợp lệ");
-    } else {
-      setErrorPhone(""); // No error display when there is no number
-    }
-  }, [phoneNumber]);
+  // useEffect(() => {
+  //   if (phoneNumber.length === 10) {
+  //     setErrorPhone();
+  //   } else if (phoneNumber.length > 0) {
+  //     setErrorPhone("SĐT không hợp lệ");
+  //   } else {
+  //     setErrorPhone(""); // No error display when there is no number
+  //   }
+  // }, [phoneNumber]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmit(true);
-    setOrderId(newOrderId);
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setIsSubmit(true);
+  //   setOrderId(newOrderId);
 
-    try {
-      const responseOrder = await axios.post(
-        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Order/`,
-        {
-          orderId: newOrderId,
-          fullName: fullName,
-          email: email,
-          packageId: packageId,
-          orderName: fullName + ` đã đặt gói ${packageName}`,
-          phoneNumber: phoneNumber,
-          note: note,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          validateStatus: () => true,
-        }
-      );
+  //   try {
+  //     const responseOrder = await axios.post(
+  //       `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Order/`,
+  //       {
+  //         orderId: newOrderId,
+  //         fullName: fullName,
+  //         email: email,
+  //         packageId: packageId,
+  //         orderName: fullName + ` đã đặt gói ${packageName}`,
+  //         phoneNumber: phoneNumber,
+  //         note: note,
+  //       },
+  //       {
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         validateStatus: () => true,
+  //       },
+  //     );
 
-      if (responseOrder.status !== 200) {
-        setIsSubmit(false);
-        setMsg(responseOrder.data);
-        setError(responseOrder.data);
-        console.log(responseOrder.data);
-        return;
-      }
+  //     if (responseOrder.status !== 200) {
+  //       setIsSubmit(false);
+  //       setMsg(responseOrder.data);
+  //       setError(responseOrder.data);
+  //       console.log(responseOrder.data);
+  //       return;
+  //     }
 
-      // Handle successful response
-      const sendEmail = await axios.post(
-        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Account/send-email`,
-        {
-          email: email,
-          customerName: fullName,
-          categoryPackage: packageName,
-          packageId: packageId,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          validateStatus: () => true,
-        }
-      );
-      setIsSubmit(false);
-      setIsSent(true);
-    } catch (error) {
-      setIsSubmit(false);
-      setError("Network problem or server not working");
-      console.error("Axios error:", error.message);
-    }
-  };
+  //     // Handle successful response
+  //     const sendEmail = await axios.post(
+  //       `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Account/send-email`,
+  //       {
+  //         email: email,
+  //         customerName: fullName,
+  //         categoryPackage: packageName,
+  //         packageId: packageId,
+  //       },
+  //       {
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         validateStatus: () => true,
+  //       },
+  //     );
+  //     setIsSubmit(false);
+  //     setIsSent(true);
+  //   } catch (error) {
+  //     setIsSubmit(false);
+  //     setError("Network problem or server not working");
+  //     console.error("Axios error:", error.message);
+  //   }
+  // };
 
   return (
     <div>
@@ -144,7 +144,7 @@ function Home() {
                     dangerouslySetInnerHTML={{ __html: t("body.subIntro") }}
                   ></span>
                 </p>
-                <a className="btn btn-primary" href="/services">
+                <a className="btn btn-primary" href="/contact">
                   {t("body.buttonExplore")}{" "}
                   <span
                     style={{ fontSize: "14px" }}
@@ -158,9 +158,12 @@ function Home() {
                 <img
                   loading="lazy"
                   decoding="async"
-                  src="/images/banner/banner.png"
+                  src="/images/Banner_Youtube.png"
                   alt="ảnh banner"
                   className="w-100 image-pop"
+                  style={{
+                    mixBlendMode: "multiply",
+                  }}
                 />
               </div>
             </div>
@@ -249,7 +252,7 @@ function Home() {
         </div>
       </section>
 
-      {categories.length > 0 ? (
+      {/* {categories.length > 0 ? (
         // Fetch data
         categories.map((category) => (
           <section
@@ -288,8 +291,8 @@ function Home() {
                           .classList.add("show");
                         document.body.style.overflow = "hidden";
                         {
-                          setPackageName(itemPackage.packageName),
-                            setPackageId(itemPackage.packageId);
+                          (setPackageName(itemPackage.packageName),
+                            setPackageId(itemPackage.packageId));
                         }
                       }}
                     >
@@ -416,7 +419,7 @@ function Home() {
             </div>
           </div>
         </div>
-      )}
+      )} */}
 
       <section className="homepage_tab position-relative">
         <div className="section container">
@@ -446,7 +449,7 @@ function Home() {
                     aria-controls="pills-how-much-can-i-recive"
                     aria-selected="true"
                   >
-                    Tôi có thể nhận được gì?
+                    Bạn có thể nhận được gì?
                   </a>
                 </li>
                 <li className="nav-item m-2" role="presentation">
@@ -491,7 +494,7 @@ function Home() {
                   <div className="row align-items-center">
                     <div className="col-md-6 order-1 order-md-0">
                       <div className="content-block">
-                        <h3 className="mb-4">Tôi Có Thể Nhận Được Gì?</h3>
+                        <h3 className="mb-4">Bạn Có Thể Nhận Được Gì?</h3>
                         <div className="content">
                           <p>
                             Khi sử dụng dịch vụ của chúng tôi, bạn sẽ nhận được
@@ -1018,7 +1021,7 @@ function Home() {
       </section> */}
 
       {/* Popup for order */}
-      <div className="popup-overlay" id="popup-overlay-manicure">
+      {/* <div className="popup-overlay" id="popup-overlay-manicure">
         <div className="popup-content">
           <h2 className="title heading-service">Đăng ký</h2>
           {!isSent ? (
@@ -1218,7 +1221,7 @@ function Home() {
           </button>
           <br />
         </div>
-      </div>
+      </div> */}
       {/* End Popup for order */}
     </div>
   );

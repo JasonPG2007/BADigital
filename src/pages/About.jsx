@@ -555,85 +555,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="row position-relative">
-            <div className="col-xl-3 col-lg-4 col-md-6 mt-4">
-              <div className="card bg-transparent border-0 text-center">
-                <div className="card-img">
-                  <img
-                    loading="lazy"
-                    decoding="async"
-                    src="/images/avatar_USA.jpg"
-                    alt="Nguyễn Quốc Bảo An"
-                    className="rounded w-100"
-                    width="300"
-                    height="332"
-                  />
-                  <ul className="card-social list-inline">
-                    <li className="list-inline-item">
-                      <a
-                        className="facebook"
-                        href="https://www.facebook.com/badigitalwebapp/"
-                        target="_blank"
-                      >
-                        <i className="fab fa-facebook"></i>
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a
-                        className="instagram"
-                        href="https://www.instagram.com/badigitalwebapp/"
-                        target="_blank"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="card-body">
-                  <h3 className="name">Nguyễn Quốc Bảo An</h3>
-                  <p>Người sáng lập</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-3 col-lg-4 col-md-6 mt-4">
-              <div className="card bg-transparent border-0 text-center">
-                <div className="card-img">
-                  <img
-                    loading="lazy"
-                    decoding="async"
-                    src="/images/avatar_dua_xe_oto.jpg"
-                    alt="Nguyễn Quốc Bảo An"
-                    className="rounded w-100"
-                    width="300"
-                    height="333"
-                  />
-                  <ul className="card-social list-inline">
-                    <li className="list-inline-item">
-                      <a
-                        className="facebook"
-                        href="https://www.facebook.com/badigitalwebapp/"
-                        target="_blank"
-                      >
-                        <i className="fab fa-facebook"></i>
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a
-                        className="instagram"
-                        href="https://www.instagram.com/badigitalwebapp/"
-                        target="_blank"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="card-body">
-                  <h3 className="name">Nguyễn Quốc Bảo An</h3>
-                  <p>Người hướng dẫn</p>
-                </div>
-              </div>
-            </div>
+          <div className="row justify-content-center position-relative">
             <div className="col-xl-3 col-lg-4 col-md-6 mt-4">
               <div className="card bg-transparent border-0 text-center">
                 <div className="card-img">
@@ -669,46 +591,7 @@ export default function About() {
                 </div>
                 <div className="card-body">
                   <h3 className="name">Nguyễn Quốc Bảo An</h3>
-                  <p>Kỹ sư phần mềm</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-3 col-lg-4 col-md-6 mt-4">
-              <div className="card bg-transparent border-0 text-center">
-                <div className="card-img">
-                  <img
-                    loading="lazy"
-                    decoding="async"
-                    src="/images/avatar_vuot_toc.jpg"
-                    alt="Nguyễn Quốc Bảo An"
-                    className="rounded w-100"
-                    width="300"
-                    height="332"
-                  />
-                  <ul className="card-social list-inline">
-                    <li className="list-inline-item">
-                      <a
-                        className="facebook"
-                        href="https://www.facebook.com/badigitalwebapp/"
-                        target="_blank"
-                      >
-                        <i className="fab fa-facebook"></i>
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a
-                        className="instagram"
-                        href="https://www.instagram.com/badigitalwebapp/"
-                        target="_blank"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="card-body">
-                  <h3 className="name">Nguyễn Quốc Bảo An</h3>
-                  <p>Nhà phát triển</p>
+                  <p>Người sáng lập / Nhà phát triển phần mềm</p>
                 </div>
               </div>
             </div>
