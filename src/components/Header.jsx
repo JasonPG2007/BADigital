@@ -126,6 +126,10 @@ export default function Header() {
                 <option value="ja">{t("header.ja")}</option>
               </select> */}
             </ul>
+            <div
+              id="google_translate_element"
+              className="btn btn-primary me-2 me-lg-3"
+            ></div>
             <a href="/contact" className="btn btn-outline-primary">
               <i className="fas fa-paper-plane"></i> Đặt ngay
             </a>

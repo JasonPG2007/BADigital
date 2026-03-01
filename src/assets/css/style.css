@@ -10976,6 +10976,16 @@ a.link-website:hover {
 /* .description:hover {
   height: max-content;
 } */
+
+#google_translate_element {
+  /* position: fixed; */
+  z-index: 10000;
+  /* margin-bottom: 20px; */
+  height: 50px;
+  background-color: #51b56d;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
 #step-three {
   position: fixed;
   bottom: 20px;
