@@ -10,17 +10,12 @@ export default function ProjectDetail() {
 
   useEffect(() => {
     const fetch = async () => {
-      const response = await axios.get(
-        `https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Product/${id}`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          validateStatus: () => true,
-        }
+      const response = await axios.get("/data/projects.json");
+      const project = response.data.find(
+        (item) => item.productId === Number(id),
       );
       setIsConnected(response.status);
-      setData(response.data);
+      setData(project);
     };
 
     fetch();
@@ -31,7 +26,15 @@ export default function ProjectDetail() {
       {data.productId ? (
         <div className="container mt-5">
           <div className="row">
-            <div className="col-md-6 mb-4 product-image">
+            <div
+              className="col-md-6 mb-4 product-image"
+              onClick={() => {
+                window.open(data.productLink, "_blank");
+              }}
+              style={{
+                cursor: "pointer",
+              }}
+            >
               <img
                 src={`/images/projects/${data.productImage}`}
                 alt={`Dự án của ${data.customerName}`}
@@ -52,10 +55,8 @@ export default function ProjectDetail() {
               <h2 className="mb-3" style={{ color: data.primaryColor }}>
                 {data.productName}
               </h2>
-              <p className="text-muted mb-4">
-                Khách hàng: {data.customerName} <br />
-                Thể loại: {data.categoryName}
-              </p>
+              <h5>Khách hàng:</h5>
+              <p className="text-muted mb-4">{data.customerName}</p>
               {/* <div className="mb-3">
                 <i className="fa-solid fa-star text-warning"></i>
                 <i className="fa-solid fa-star text-warning"></i>
@@ -67,8 +68,12 @@ export default function ProjectDetail() {
               <h5>Mô tả:</h5>
               <div className="mb-4 description-wrapper active">
                 <p className="description">
-                  {data.description !== null
-                    ? data.description
+                  {data.description.length > 0
+                    ? data.description.map((item, index) => (
+                        <ul key={index}>
+                          <li>{item}</li>
+                        </ul>
+                      ))
                     : "Không có mô tả"}
                 </p>
               </div>

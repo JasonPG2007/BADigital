@@ -15,13 +15,13 @@ export default function Footer() {
         "service_jrgaq57",
         "template_j6snca8",
         form.current,
-        "36B1PoPlACVPxMI_K"
+        "36B1PoPlACVPxMI_K",
       )
       .then(
         (result) => {
           console.log("Email sent:", result.text);
           alert(
-            "🎉 Chúc mừng bạn đã đăng ký thành công! 😊\n BA Digital sẽ liên hệ với bạn trong vòng 24h. Bạn hãy để ý tin nhắn qua email nhé!"
+            "🎉 Chúc mừng bạn đã đăng ký thành công! 😊\n BA Digital sẽ liên hệ với bạn trong vòng 24h. Bạn hãy để ý tin nhắn qua email nhé!",
           );
           setIsSendEmail(false);
           form.current.reset();
@@ -29,7 +29,7 @@ export default function Footer() {
         (error) => {
           console.log("Error:", error.text);
           alert("❌ Đăng ký thất bại! 😢. Vui lòng thử lại sau! ");
-        }
+        },
       );
   };
 
@@ -43,9 +43,9 @@ export default function Footer() {
                 {t("footer.page")}
               </h5>
               <ul className="list-unstyled">
-                <li className="mb-2">
+                {/* <li className="mb-2">
                   <a href="/services">{t("footer.service")}</a>
-                </li>
+                </li> */}
                 <li className="mb-2">
                   <a href="/projects">Dự án</a>
                 </li>
@@ -56,7 +56,7 @@ export default function Footer() {
                   <a href="/about">{t("footer.about")}</a>
                 </li>
                 <li className="mb-2">
-                  <a href="/how-to-work">{t("footer.how-it-works")}</a>
+                  <a href="/how-it-works">{t("footer.how-it-works")}</a>
                 </li>
               </ul>
             </div>
@@ -67,15 +67,6 @@ export default function Footer() {
                 {t("footer.about")}
               </h5>
               <ul className="list-unstyled">
-                <li className="mb-2">
-                  <a href="/#pills-how-much-can-i-recive-tab">
-                    {" "}
-                    {t("footer.benefit")}
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a href="/about/#major"> {t("footer.majoring")}</a>
-                </li>
                 <li className="mb-2">
                   <a href="/about/#team"> {t("footer.team")}</a>
                 </li>

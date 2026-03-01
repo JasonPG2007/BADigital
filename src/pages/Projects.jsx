@@ -5,8 +5,7 @@ export default function Projects() {
   // Variables
   const [projects, setProjects] = useState([]);
   let [isTimeOut, setIsTimeOut] = useState("");
-  const API_URL_Project =
-    "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Product";
+  const API_URL_Project = "data/projects.json";
   // End Variables
 
   useEffect(() => {

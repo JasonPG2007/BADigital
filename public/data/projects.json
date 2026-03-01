@@ -1,0 +1,30 @@
+[
+  {
+    "productId": 15093078,
+    "primaryColor": "#D9BF77",
+    "customerName": "Parisian Nail Salon",
+    "productLink": "https://www.nailsalonparisian.com/",
+    "productName": "Website giới thiệu dịch vụ làm đẹp",
+    "description": [
+      "Giao diện sang trọng, phù hợp với khách hàng làm đẹp",
+      "Hiển thị rõ dịch vụ, bảng giá và hình ảnh thực tế",
+      "Tối ưu trải nghiệm trên điện thoại – nơi khách hàng truy cập nhiều nhất",
+      "Tích hợp form liên hệ giúp khách đặt lịch nhanh chóng"
+    ],
+    "productImage": "Mockup_website_parisian_nail_salon.png"
+  },
+  {
+    "productId": 335050780,
+    "primaryColor": "#F60B6A",
+    "customerName": "Amazing Education",
+    "productLink": "https://amazingeducation.onrender.com/",
+    "productName": "Website giới thiệu dịch vụ giáo dục",
+    "description": [
+      "Trình bày chương trình học, dịch vụ và thông tin trung tâm",
+      "Giao diện thân thiện, dễ đọc cho phụ huynh và học viên",
+      "Chuẩn SEO giúp cải thiện khả năng tìm kiếm trên Google",
+      "Form đăng ký tư vấn giúp trung tâm nhận yêu cầu nhanh chóng"
+    ],
+    "productImage": "Mockup_website_amazing_education.png"
+  }
+]

@@ -69,11 +69,11 @@ export default function Header() {
                   {t("header.how-it-works")}
                 </a>
               </li>
-              <li className="nav-item ">
+              {/* <li className="nav-item ">
                 <a className="nav-link" href="/services">
                   {t("header.service")}
                 </a>
-              </li>
+              </li> */}
               <li className="nav-item ">
                 <a className="nav-link" href="/contact">
                   {t("header.contact")}
@@ -97,11 +97,6 @@ export default function Header() {
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item " href="/events">
-                      Sự kiện & tin tức
-                    </a>
-                  </li>
-                  <li>
                     <a className="dropdown-item " href="/terms">
                       {t("header.terms")}
                     </a>
@@ -113,11 +108,11 @@ export default function Header() {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item ">
+              {/* <li className="nav-item ">
                 <a className="nav-link" href="/lookup">
                   Tra cứu
                 </a>
-              </li>
+              </li> */}
               {/* <select
                 className="language-selector"
                 onClick={(e) => changeLanguage(e.target.value)}
@@ -132,7 +127,7 @@ export default function Header() {
               </select> */}
             </ul>
             <a href="/contact" className="btn btn-outline-primary">
-              Đăng Ký
+              <i className="fas fa-paper-plane"></i> Đặt ngay
             </a>
             {/* {sessionStorage.getItem("username") === null &&
             Cookies.get("username") == null ? (

@@ -1,5 +1,5 @@
-// import axios from "axios";
-// import { useEffect, useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 function Home() {
@@ -9,7 +9,7 @@ function Home() {
   // const [packageName, setPackageName] = useState([]);
   // const [packageId, setPackageId] = useState([]);
   // const [categories, setCategories] = useState([]);
-  // const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState([]);
   // let digitOrder = 1;
   // const [errorPhone, setErrorPhone] = useState("");
   // let [isSubmit, setIsSubmit] = useState("");
@@ -21,47 +21,46 @@ function Home() {
   // let [msg, setMsg] = useState("");
   // let [error, setError] = useState("");
   // let [orderId, setOrderId] = useState("");
-  // let [isTimeOut, setIsTimeOut] = useState("");
+  let [isTimeOut, setIsTimeOut] = useState("");
   // const API_URL_Package =
   //   "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Package";
   // const API_URL_Category =
   //   "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/ServiceCategory";
-  // const API_URL_Project =
-  //   "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/Product";
+  const API_URL_Project = "data/projects.json";
   // const newOrderId = Math.floor(100000000 + Math.random() * 900000000);
   // // End Variables
 
-  // useEffect(() => {
-  //   // Fetch Category packages
-  //   axios
-  //     .get(API_URL_Package)
-  //     .then((response) => {
-  //       setPackage(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("There was an error fetching the data:", error);
-  //     });
+  useEffect(() => {
+    //   // Fetch Category packages
+    //   axios
+    //     .get(API_URL_Package)
+    //     .then((response) => {
+    //       setPackage(response.data);
+    //     })
+    //     .catch((error) => {
+    //       console.error("There was an error fetching the data:", error);
+    //     });
 
-  //   // Fetch Category services
-  //   axios
-  //     .get(API_URL_Category)
-  //     .then((response) => {
-  //       setCategories(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("There was an error fetching the data:", error);
-  //     });
+    //   // Fetch Category services
+    //   axios
+    //     .get(API_URL_Category)
+    //     .then((response) => {
+    //       setCategories(response.data);
+    //     })
+    //     .catch((error) => {
+    //       console.error("There was an error fetching the data:", error);
+    //     });
 
-  //   // Fetch projects
-  //   axios
-  //     .get(API_URL_Project)
-  //     .then((response) => {
-  //       setProjects(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("There was an error fetching the data:", error);
-  //     });
-  // }, []);
+    // Fetch projects
+    axios
+      .get(API_URL_Project)
+      .then((response) => {
+        setProjects(response.data);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the data:", error);
+      });
+  }, []);
 
   // useEffect(() => {
   //   if (phoneNumber.length === 10) {
@@ -144,8 +143,9 @@ function Home() {
                     dangerouslySetInnerHTML={{ __html: t("body.subIntro") }}
                   ></span>
                 </p>
-                <a className="btn btn-primary" href="/contact">
-                  {t("body.buttonExplore")}{" "}
+                <a className="btn btn-primary" href="#payment-info">
+                  {/* {t("body.buttonExplore")}{" "} */}
+                  Tìm hiểu thêm
                   <span
                     style={{ fontSize: "14px" }}
                     className="ms-2 fas fa-arrow-right"
@@ -163,6 +163,8 @@ function Home() {
                   className="w-100 image-pop"
                   style={{
                     mixBlendMode: "multiply",
+                    // borderRadius: "50%",
+                    marginTop: "",
                   }}
                 />
               </div>
@@ -330,6 +332,7 @@ function Home() {
           </span>
         </div>
       )}
+*/}
 
       {projects.length > 0 ? (
         // SHOW PROJECTS
@@ -347,7 +350,7 @@ function Home() {
                   {projects.map((project) => (
                     <div
                       className="text-center col-lg-3 col-md-6 mb-4"
-                      key={project.projectId}
+                      key={project.productId}
                       id="step-two"
                     >
                       <div className="rounded shadow">
@@ -357,6 +360,7 @@ function Home() {
                               <img
                                 src={`/images/projects/${project.productImage}`}
                                 alt="project picture"
+                                loading="lazy"
                               />
                             </a>
                           </div>
@@ -419,9 +423,9 @@ function Home() {
             </div>
           </div>
         </div>
-      )} */}
+      )}
 
-      <section className="homepage_tab position-relative">
+      <section className="homepage_tab position-relative" id="payment-info">
         <div className="section container">
           <div className="row justify-content-center">
             <div className="col-lg-8 mb-4">
@@ -1223,6 +1227,37 @@ function Home() {
         </div>
       </div> */}
       {/* End Popup for order */}
+
+      <section className="section">
+        <div className="container">
+          <div className="row justify-content-center align-items-center">
+            <div className="col-lg-6">
+              <div className="section-title text-center">
+                <p className="text-primary text-uppercase fw-bold mb-3">
+                  Liên hệ với chúng tôi
+                </p>
+                <h1>Bạn quan tâm về điều gì?</h1>
+                <p>
+                  Chúng tôi luôn sẵn sàng hỗ trợ bạn trong việc phát triển
+                  website. Liên hệ ngay để nhận tư vấn và giải đáp thắc mắc
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-10">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeRGSniuFrGiResWoDz2wvKdWvF17Ps8KFavZoK4R5J4tOXVQ/viewform?embedded=true"
+                width="100%"
+                height="4200"
+                frameBorder="0"
+                marginHeight="0"
+                marginWidth="0"
+              >
+                Loading…
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

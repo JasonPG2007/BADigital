@@ -134,7 +134,7 @@ export default function HowItWork() {
                   alt="video thumb"
                   className="rounded-lg w-100"
                 />
-                <button
+                {/* <button
                   type="button"
                   className="video-play-btn border-0 bg-transparent"
                   data-bs-toggle="modal"
@@ -165,7 +165,7 @@ export default function HowItWork() {
                       fill="white"
                     />
                   </svg>
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
