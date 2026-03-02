@@ -136,9 +136,6 @@ export default function Contact() {
             <div className="col-lg-10">
               <div className="shadow rounded p-5 bg-white">
                 <div className="row-custom">
-                  <div className="col-12 mb-4">
-                    <h4>Để Lại Lời Nhắn</h4>
-                  </div>
                   <div className="col-lg-6 mt-5 mt-lg-0">
                     <div className="contact-info">
                       <div className="block mt-0">
