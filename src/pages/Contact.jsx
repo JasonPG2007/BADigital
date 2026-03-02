@@ -1,4 +1,33 @@
 export default function Contact() {
+  const form = useRef();
+  const [isSendEmail, setIsSendEmail] = useState("");
+  
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSendEmail(true);
+    emailjs
+      .sendForm(
+        "service_jrgaq57",
+        "template_j6snca8",
+        form.current,
+        "36B1PoPlACVPxMI_K"
+      )
+      .then(
+        (result) => {
+          console.log("Email sent:", result.text);
+          alert(
+            "🎉 Chúc mừng bạn đã đăng ký thành công! 😊\n BA Digital sẽ liên hệ với bạn trong vòng 24h. Bạn nhớ chú ý email của bạn nhé!"
+          );
+          setIsSendEmail(false);
+          form.current.reset();
+        },
+        (error) => {
+          console.log("Error:", error.text);
+          alert("❌ Đăng ký thất bại! 😢. Vui lòng thử lại sau! ");
+        }
+      );
+  };
+  
   return (
     <>
       <section className="page-header bg-tertiary">
