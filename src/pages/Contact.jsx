@@ -1,36 +1,6 @@
 import React, { useRef, useState } from "react";
-import emailjs from "emailjs-com";
 
 export default function Contact() {
-  const form = useRef();
-  const [isSendEmail, setIsSendEmail] = useState("");
-  
-  const sendEmail = (e) => {
-    e.preventDefault();
-    setIsSendEmail(true);
-    emailjs
-      .sendForm(
-        "service_jrgaq57",
-        "template_j6snca8",
-        form.current,
-        "36B1PoPlACVPxMI_K"
-      )
-      .then(
-        (result) => {
-          console.log("Email sent:", result.text);
-          alert(
-            "🎉 Chúc mừng bạn đã đăng ký thành công! 😊\n BA Digital sẽ liên hệ với bạn trong vòng 24h. Bạn nhớ chú ý email của bạn nhé!"
-          );
-          setIsSendEmail(false);
-          form.current.reset();
-        },
-        (error) => {
-          console.log("Error:", error.text);
-          alert("❌ Đăng ký thất bại! 😢. Vui lòng thử lại sau! ");
-        }
-      );
-  };
-  
   return (
     <>
       <section className="page-header bg-tertiary">
@@ -168,61 +138,6 @@ export default function Contact() {
                 <div className="row-custom">
                   <div className="col-12 mb-4">
                     <h4>Để Lại Lời Nhắn</h4>
-                  </div>
-                  <div className="col-lg-6">
-                    <div className="contact-form">
-                      <form onSubmit={sendEmail} ref={form}>
-                        <div className="form-group mb-4 pb-2">
-                          <label htmlFor="contact_name" className="form-label">
-                            Họ và tên *
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control shadow-none"
-                            id="contact_name"
-                            name="full_name"
-                            required
-                          />
-                        </div>
-                        <div className="form-group mb-4 pb-2">
-                          <label htmlFor="contact_email" className="form-label">
-                            Email *
-                          </label>
-                          <input
-                            type="email"
-                            className="form-control shadow-none"
-                            id="contact_email"
-                            name="email"
-                            required
-                          />
-                        </div>
-                        <div className="form-group mb-4 pb-2">
-                          <label
-                            htmlFor="contact_message"
-                            className="form-label"
-                          >
-                            Tin nhắn *
-                          </label>
-                          <textarea
-                            className="form-control shadow-none"
-                            id="contact_message"
-                            name="message"
-                            rows="3"
-                            required
-                          ></textarea>
-                        </div>
-                        {!isSendEmail && (
-                          <button className="btn btn-primary w-100">
-                            Gửi tin nhắn
-                          </button>
-                        )}
-                        {isSendEmail && (
-                          <button className="btn btn-primary w-100" disabled>
-                            <i className="fas fa-spinner fa-spin"></i>
-                          </button>
-                        )}
-                      </form>
-                    </div>
                   </div>
                   <div className="col-lg-6 mt-5 mt-lg-0">
                     <div className="contact-info">
