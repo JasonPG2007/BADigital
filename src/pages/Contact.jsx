@@ -130,6 +130,118 @@ export default function Contact() {
                 Loading…
               </iframe>
             </div>
+            <div className="col-lg-10">
+              <div className="shadow rounded p-5 bg-white">
+                <div className="row-custom">
+                  <div className="col-12 mb-4">
+                    <h4>Để Lại Lời Nhắn</h4>
+                  </div>
+                  <div className="col-lg-6">
+                    <div className="contact-form">
+                      <form onSubmit={sendEmail} ref={form}>
+                        <div className="form-group mb-4 pb-2">
+                          <label htmlFor="contact_name" className="form-label">
+                            Họ và tên *
+                          </label>
+                          <input
+                            type="text"
+                            className="form-control shadow-none"
+                            id="contact_name"
+                            name="full_name"
+                            required
+                          />
+                        </div>
+                        <div className="form-group mb-4 pb-2">
+                          <label htmlFor="contact_email" className="form-label">
+                            Email *
+                          </label>
+                          <input
+                            type="email"
+                            className="form-control shadow-none"
+                            id="contact_email"
+                            name="email"
+                            required
+                          />
+                        </div>
+                        <div className="form-group mb-4 pb-2">
+                          <label
+                            htmlFor="contact_message"
+                            className="form-label"
+                          >
+                            Tin nhắn *
+                          </label>
+                          <textarea
+                            className="form-control shadow-none"
+                            id="contact_message"
+                            name="message"
+                            rows="3"
+                            required
+                          ></textarea>
+                        </div>
+                        {!isSendEmail && (
+                          <button className="btn btn-primary w-100">
+                            Gửi tin nhắn
+                          </button>
+                        )}
+                        {isSendEmail && (
+                          <button className="btn btn-primary w-100" disabled>
+                            <i className="fas fa-spinner fa-spin"></i>
+                          </button>
+                        )}
+                      </form>
+                    </div>
+                  </div>
+                  <div className="col-lg-6 mt-5 mt-lg-0">
+                    <div className="contact-info">
+                      <div className="block mt-0">
+                        <h4 className="h5">Vẫn còn câu hỏi?</h4>
+                        <div className="content">
+                          Chúng tôi sẵn sàng hỗ trợ bất kỳ lúc nào thông qua
+                          <br /> <a href="tel:6783163182">
+                            +1 678 316 3182
+                          </a>{" "}
+                          hoặc <br />
+                          <a
+                            href="https://www.facebook.com/badigitalwebapp/"
+                            target="_blank"
+                          >
+                            Fanpage
+                          </a>{" "}
+                          của chúng tôi
+                          <br />
+                          Ngày làm việc: Thứ 2 - Thứ 6
+                          <br />
+                          Giờ làm việc: 7AM - 11:30PM Giờ khu vực Georgia tại Mỹ
+                        </div>
+                      </div>
+                      <div className="block">
+                        <ul className="list-unstyled list-inline my-4 social-icons">
+                          <li className="list-inline-item me-3">
+                            <a
+                              title="Explorer Facebook Profile"
+                              className="text-black"
+                              href="https://www.facebook.com/badigitalwebapp/"
+                              target="_blank"
+                            >
+                              <i className="fab fa-facebook-f"></i>
+                            </a>
+                          </li>
+                          <li className="list-inline-item me-3">
+                            <a
+                              title="Explorer Instagram Profile"
+                              className="text-black"
+                              href="https://www.instagram.com/badigitalwebapp/"
+                              target="_blank"
+                            >
+                              <i className="fab fa-instagram"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
       </section>
