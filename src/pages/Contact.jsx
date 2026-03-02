@@ -130,6 +130,7 @@ export default function Contact() {
                 Loading…
               </iframe>
             </div>
+            
             <div className="col-lg-10">
               <div className="shadow rounded p-5 bg-white">
                 <div className="row-custom">
@@ -242,7 +243,6 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-          </div>
         </div>
       </section>
     </>
