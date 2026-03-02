@@ -10991,6 +10991,10 @@ a.link-website:hover {
   color: #fff;
 }
 
+.goog-te-combo option {
+  color: #000;
+}
+
 #step-three {
   position: fixed;
   bottom: 20px;
