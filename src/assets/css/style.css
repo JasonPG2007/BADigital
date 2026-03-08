@@ -56,6 +56,10 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+img {
+  object-fit: cover;
+}
+
 [class^="fa-"],
 .fa {
   font-family: "Font Awesome 6 Free" !important;
@@ -9248,6 +9252,21 @@ a:hover {
   margin-bottom: 30px;
 }
 
+.template-notice {
+  background: #eefaf1;
+  border-left: 4px solid #20ab47;
+  border-right: 4px solid #20ab47;
+  padding: 14px 18px;
+  margin: 10px 10px;
+  text-align: center;
+  color: #2f2f2f;
+  border-radius: 8px;
+}
+
+.template-notice strong {
+  color: #20ab47;
+}
+
 .bg-cover {
   background-size: cover;
   background-position: center center;
@@ -10830,7 +10849,8 @@ th {
   white-space: nowrap;
 }
 .img-projects {
-  width: 100%;
+  width: 93%;
+  margin: auto;
   height: 214px;
   overflow: hidden;
   margin-bottom: 20px;
@@ -10839,22 +10859,60 @@ th {
   width: 100%;
   height: 214px;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
   margin-bottom: 20px;
   transition: all 0.2s ease-in-out;
 }
 a.link-website {
   color: #040404;
+  font-style: italic;
 }
 a.link-website:hover {
   text-decoration: underline !important;
 }
+
+.card-project {
+  position: relative;
+  border-radius: 10px;
+  padding-top: 10px;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.card-project::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  background-color: red;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  filter: blur(10px);
+  z-index: -1;
+}
+.card-project:hover::before {
+  opacity: 1;
+  animation: hueRotate 3s linear infinite;
+}
+
+@keyframes hueRotate {
+  0% {
+    filter: blur(5px) hue-rotate(0deg);
+  }
+  100% {
+    filter: blur(5px) hue-rotate(360deg);
+  }
+}
+
 .card-project:hover img {
   transform: scale(1.1);
   border-top-left-radius: 19%;
   border-top-right-radius: 19%;
 }
+
 .info-project {
   padding-bottom: 20px;
 }
@@ -11043,6 +11101,9 @@ a.link-website:hover {
   }
 }
 @media screen and (max-width: 992px) {
+  footer {
+    text-align: center;
+  }
   .product-image {
     width: 100%;
   }

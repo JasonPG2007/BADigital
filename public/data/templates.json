@@ -1,0 +1,17 @@
+[
+  {
+    "productId": 601710191,
+    "primaryColor": "#C9A96E",
+    "templateCode": "NS-001",
+    "productLink": "https://templatebadigital2.netlify.app/",
+    "productName": "Website giới thiệu dịch vụ làm đẹp",
+    "description": [
+      "Giao diện sang trọng dành cho các salon làm đẹp",
+      "Hiển thị rõ dịch vụ, bảng giá và hình ảnh thực tế",
+      "Tối ưu trải nghiệm trên điện thoại - nơi khách hàng truy cập nhiều nhất",
+      "Tích hợp form liên hệ giúp khách đặt lịch nhanh chóng"
+    ],
+    "productImage": "Ipad_lumiere_dark.png",
+    "categoryName": "Nail Salon"
+  }
+]

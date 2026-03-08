@@ -39,6 +39,7 @@ export default function ProjectDetail() {
                 src={`/images/projects/${data.productImage}`}
                 alt={`Dự án của ${data.customerName}`}
                 id="mainImage"
+                loading="lazy"
               />
               <a
                 href={data.productLink}

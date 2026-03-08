@@ -10,6 +10,7 @@ function Home() {
   // const [packageId, setPackageId] = useState([]);
   // const [categories, setCategories] = useState([]);
   const [projects, setProjects] = useState([]);
+  const [templates, setTemplates] = useState([]);
   // let digitOrder = 1;
   // const [errorPhone, setErrorPhone] = useState("");
   // let [isSubmit, setIsSubmit] = useState("");
@@ -27,6 +28,7 @@ function Home() {
   // const API_URL_Category =
   //   "https://badigitalapi-g6hsh5eqh2e8hua9.centralus-01.azurewebsites.net/api/ServiceCategory";
   const API_URL_Project = "data/projects.json";
+  const API_URL_Template = "data/templates.json";
   // const newOrderId = Math.floor(100000000 + Math.random() * 900000000);
   // // End Variables
 
@@ -58,7 +60,17 @@ function Home() {
         setProjects(response.data);
       })
       .catch((error) => {
-        console.error("There was an error fetching the data:", error);
+        console.error("There was an error fetching the projects:", error);
+      });
+
+    // Fetch templates
+    axios
+      .get(API_URL_Template)
+      .then((response) => {
+        setTemplates(response.data);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the templates:", error);
       });
   }, []);
 
@@ -254,88 +266,111 @@ function Home() {
         </div>
       </section>
 
-      {/* {categories.length > 0 ? (
-        // Fetch data
-        categories.map((category) => (
-          <section
-            className="section show-data"
-            key={category.serviceCategoryId}
-          >
-            <div className="container">
-              <div className="row-custom-2">
-                <div className="col-lg-4 col-md-6">
-                  <div
-                    className="section-title pt-4"
-                    style={{ paddingLeft: "15px" }}
-                  >
-                    <p className="text-primary text-uppercase fw-bold mb-3">
-                      {t("body.our-service-packages")}
-                    </p>
-
-                    <h1>{category.cateServiceName}</h1>
-
-                    <p>{category.description}</p>
-                  </div>
+      {/* SHOW TEMPLATES */}
+      {templates.length > 0 ? (
+        <section className="position-relative show-data">
+          <div className="section container" style={{ paddingBottom: "0" }}>
+            <div className="row justify-content-center">
+              <div className="mb-4">
+                <div className="section-title text-center">
+                  <p className="text-primary text-uppercase fw-bold mb-3">
+                    Thư Viện
+                  </p>
+                  <h1>Mẫu Website</h1>
                 </div>
-                {packages.map((itemPackage) => (
-                  <div
-                    className="col-lg-4 col-md-6 service-item"
-                    key={itemPackage.packageId}
-                  >
-                    <a
-                      className="text-black"
-                      href="javascript:void(0)"
-                      title="Đặt gói này"
-                      id="step-one"
-                      onClick={() => {
-                        document
-                          .getElementById("popup-overlay-manicure")
-                          .classList.add("show");
-                        document.body.style.overflow = "hidden";
-                        {
-                          (setPackageName(itemPackage.packageName),
-                            setPackageId(itemPackage.packageId));
-                        }
-                      }}
+                <div className="row justify-content-center">
+                  {templates.map((template) => (
+                    <div
+                      className="text-center col-lg-3 col-md-6 mb-4"
+                      key={template.productId}
+                      id="step-two"
                     >
-                      <div className="block">
-                        <span className="colored-box text-center h3 mb-4">
-                          0{digitOrder++}
-                        </span>
-                        <h3 className="mb-3 service-title">
-                          {itemPackage.packageName}
-                        </h3>
-                        <p className="mb-0 service-description">
-                          {itemPackage.describe}
-                        </p>
+                      <div className="rounded shadow">
+                        <div className="card-project">
+                          <div className="img-projects">
+                            <a href={`/template/${template.productId}`}>
+                              <img
+                                src={`/images/templates/${template.productImage}`}
+                                alt="template picture"
+                                loading="lazy"
+                              />
+                            </a>
+                          </div>
+                          <div className="info-project">
+                            <a
+                              href={`/template/${template.productId}`}
+                              title="Xem thêm"
+                            >
+                              <h3 style={{ color: template.primaryColor }}>
+                                {template.customerName}
+                              </h3>
+                            </a>
+                            <a
+                              href={`/category?name=${template.categoryName}`}
+                              title="Xem thêm"
+                            >
+                              <p
+                                style={{
+                                  color: template.primaryColor,
+                                  textDecoration: "underline",
+                                }}
+                              >
+                                Category: {template.categoryName}
+                              </p>
+                            </a>
+                            <a
+                              href={template.productLink}
+                              target="_blank"
+                              className="link-website"
+                              title={`Mở website của ${template.customerName}`}
+                            >
+                              Website{" "}
+                              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                          </div>
+                        </div>
                       </div>
-                    </a>
-                  </div>
-                ))}
+                    </div>
+                  ))}
+                </div>
+                {templates.length > 12 && (
+                  <a
+                    className="btn btn-primary btn-show-projects"
+                    href="/templates"
+                  >
+                    Xem tất cả{" "}
+                    <span
+                      style={{ fontSize: "14px" }}
+                      className="ms-2 fas fa-arrow-right"
+                    ></span>
+                  </a>
+                )}
               </div>
             </div>
-          </section>
-        ))
+          </div>
+        </section>
       ) : (
-        // End fetch data
-        <div className="loading-back">
-          <div className="loading"></div>
-          <p className="follow-loading">
-            {!isTimeOut
-              ? "Đang kết nối đến máy chủ..."
-              : "Không thể kết nối đến máy chủ. Vui lòng kiểm tra lại kết nối mạng..."}
-          </p>
-          <span style={{ display: "none" }}>
-            {setTimeout(() => {
-              setIsTimeOut(true);
-            }, 60000)}
-          </span>
+        <div className="section container">
+          <div className="row justify-content-center">
+            <div className="loading-back">
+              <div className="loading"></div>
+              <p className="follow-loading">
+                {!isTimeOut
+                  ? "Đang kết nối đến máy chủ..."
+                  : "Không thể kết nối đến máy chủ. Vui lòng kiểm tra lại kết nối mạng..."}
+              </p>
+              <span style={{ display: "none" }}>
+                {setTimeout(() => {
+                  setIsTimeOut(true);
+                }, 60000)}
+              </span>
+            </div>
+          </div>
         </div>
       )}
-*/}
-
+      {/* END SHOW TEMPLATES */}
+      {/* SHOW PROJECTS */}
       {projects.length > 0 ? (
-        // SHOW PROJECTS
         <section className="position-relative show-data">
           <div className="section container">
             <div className="row justify-content-center">
@@ -405,7 +440,6 @@ function Home() {
           </div>
         </section>
       ) : (
-        // END SHOW PROJECTS
         <div className="section container">
           <div className="row justify-content-center">
             <div className="loading-back">
@@ -424,6 +458,7 @@ function Home() {
           </div>
         </div>
       )}
+      {/* END SHOW PROJECTS */}
 
       <section className="homepage_tab position-relative" id="payment-info">
         <div className="section container">
@@ -674,7 +709,6 @@ function Home() {
           </div>
         </div>
       </section>
-
       <section className="section">
         <div className="container">
           <div className="row-custom align-items-center justify-content-between">
@@ -761,7 +795,6 @@ function Home() {
           </div>
         </div>
       </section>
-
       {/* <section
         className="section testimonials overflow-hidden bg-tertiary"
         id="popular-website"
@@ -1023,7 +1056,6 @@ function Home() {
           </a>
         </div>
       </section> */}
-
       {/* Popup for order */}
       {/* <div className="popup-overlay" id="popup-overlay-manicure">
         <div className="popup-content">
@@ -1227,7 +1259,6 @@ function Home() {
         </div>
       </div> */}
       {/* End Popup for order */}
-
       <section className="section">
         <div className="container">
           <div className="row justify-content-center align-items-center">

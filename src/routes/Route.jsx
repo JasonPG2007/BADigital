@@ -18,6 +18,8 @@ import Projects from "../pages/Projects";
 import ProjectDetail from "../pages/ProjectDetail";
 import ForgotPassword from "../pages/ForgotPassword";
 import SignUp from "../pages/SignUp";
+import TemplateDetail from "../pages/TemplateDetail";
+import Templates from "../pages/Templates";
 const Manage = lazy(() => import("../pages/Manage/Layout/Manage"));
 
 export default function routes() {
@@ -58,6 +60,8 @@ export default function routes() {
         <Route path="/manage/*" element={<Manage></Manage>} />
         <Route path="/projects" element={<Projects></Projects>} />
         <Route path="/project/*" element={<ProjectDetail></ProjectDetail>} />
+        <Route path="/templates" element={<Templates></Templates>} />
+        <Route path="/template/*" element={<TemplateDetail></TemplateDetail>} />
         <Route
           path="/forgot-password"
           element={<ForgotPassword></ForgotPassword>}
