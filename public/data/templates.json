@@ -13,5 +13,20 @@
     ],
     "productImage": "Ipad_lumiere_dark.png",
     "categoryName": "Nail Salon"
+  },
+  {
+    "productId": 623452788,
+    "primaryColor": "#c9737a",
+    "templateCode": "NS-002",
+    "productLink": "https://templatebadigital3.netlify.app/",
+    "productName": "Website tiệm nail & spa hiện đại",
+    "description": [
+      "Thiết kế hiện đại giúp tiệm nail tạo ấn tượng chuyên nghiệp với khách hàng",
+      "Trình bày rõ các dịch vụ như nail, pedicure, spa và chăm sóc da",
+      "Hiển thị bộ sưu tập mẫu nail giúp khách dễ dàng lựa chọn",
+      "Tích hợp đặt lịch và thông tin liên hệ nhanh chóng"
+    ],
+    "productImage": "Laptop_Glow_Nails_Spa.png",
+    "categoryName": "Nail Salon"
   }
 ]
