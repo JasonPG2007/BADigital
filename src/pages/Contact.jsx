@@ -6,6 +6,12 @@ export default function Contact() {
   const [isSendEmail, setIsSendEmail] = useState("");
 
   const sendEmail = (e) => {
+    // Send event to Google Analytics
+    window.gtag("event", "contact_form_submit", {
+      event_category: "form",
+      event_label: "contact page",
+    });
+
     e.preventDefault();
     setIsSendEmail(true);
     emailjs
